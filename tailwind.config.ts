@@ -9,9 +9,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        accent: "#f37522",
+        "black": {
+          DEFAULT: "#000000",
+        }
       },
+      screens: {
+        'pointer': {'raw': '(pointer: fine)'},
+      },
+      animation: {
+        'spin-slow': 'spin 5s linear infinite',
+      }
     },
   },
   plugins: [],
