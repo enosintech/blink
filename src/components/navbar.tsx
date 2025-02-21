@@ -18,11 +18,11 @@ const Navbar = () => {
         </div>
 
         <div className='w-full h-full flex items-center justify-between px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32 relative z-10 opacity-0 nav-bar'>
-            <Link href={"/"} className='relative w-28 sm:w-36 md:w-40 2xl:w-[10vw] h-12 actionable'>
+            <Link href={"/"} className='relative w-24 sm:w-36 md:w-40 2xl:w-[10vw] h-12 actionable'>
                 <Image fill alt="blink logo" src="/images/logo.png" className='object-contain overflow-visible' />
             </Link>
             <div className='lg:hidden cursor-pointer actionable'>
-                <Menu className='size-8 sm:size-10 md:size-12' />
+                <Menu className='size-7 sm:size-10 md:size-12' />
             </div>
             <div className='lg:flex hidden text-base 2xl:text-[1vw] items-center gap-14'>
                 {navLinks.map((link) => (
