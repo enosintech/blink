@@ -30,17 +30,11 @@ const Scroller = () => {
                 y: availableHeight,
                 ease: "none",
                 scrollTrigger: {
-                  trigger: ".scroller",
-                    start: "clamp(top top)",
-                    end: () => `+=${maxScroll}`,
-                    scrub: 0.5,
-                    invalidateOnRefresh: true,
-                    onUpdate: self => {
-                        const progress = self.progress;
-                        const maxY = availableHeight;
-                        const newY = Math.min(maxY, Math.max(0, progress * maxY));
-                        gsap.set(rocketRef.current, { y: newY });
-                    }
+                  trigger: document.documentElement,
+                  start: "clamp(top top)",
+                  end: "bottom bottom",
+                  scrub: true,
+                  invalidateOnRefresh: true,
                 }
             });
         }
@@ -49,14 +43,13 @@ const Scroller = () => {
     }, [lenis?.rootElement.offsetHeight]);
 
   return (
-    <div className='fixed top-0 left-0 h-screen w-14 pt-24 scroller pointer-events-none z-40'>
+    <div className='fixed top-0 left-0 h-screen w-8 sm:w-10 lg:w-14 pt-24 scroller opacity-0 pointer-events-none z-40'>
       <div className='w-full h-full flex flex-col items-center'>
-        <div ref={scrollLineRef} className='w-0 h-[90%] scroll-container border border-white flex flex-col items-center'>
-            <div ref={rocketRef} className='size-12 rotate-180'>
+        <div ref={scrollLineRef} className='w-0 h-[90%] scroll-container border-[0.5px] border-white flex flex-col items-center'>
+            <div ref={rocketRef} className='size-8 sm:size-10 lg:size-12 rotate-180'>
                 <Lottie animationData={rocket} loop />
             </div>
         </div>
-        <div className='size-3 -translate-y-1 rounded-full bg-white'></div>
       </div>
     </div>
   )

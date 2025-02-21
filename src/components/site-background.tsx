@@ -36,7 +36,7 @@ const SiteBackground = () => {
     let velocity = 0.01; 
     const acceleration = 0.001; 
     const friction = 0.99; 
-    const minVelocity = 0.005;
+    const minVelocity = 0.001;
     const maxVelocity = 0.06;
 
     const lenis = useLenis(() => {
@@ -48,15 +48,30 @@ const SiteBackground = () => {
         }
     }, [loadingValue, timelineComplete])
 
+    useLenis(({ scroll }) => {
+        velocity = Math.min(Math.max(velocity + acceleration, minVelocity), maxVelocity);
+            gsap.to(uniformsRef.current.u_time, {
+              value: uniformsRef.current.u_time.value + velocity,
+              duration: 0.2,
+              ease: "power2.out",
+        });
+    }, [velocity, acceleration, minVelocity, maxVelocity])
+
     useGSAP(() => {
 
-        if(loadingValue !== 100) {
-            velocity = Math.min(Math.max(velocity + acceleration, minVelocity), maxVelocity);
+        gsap.set(".gradient", { opacity: 1})
+
+        if (loadingValue !== 100) {
+            const loadingFactor = loadingValue / 100;
+            const adjustedAcceleration = acceleration * loadingFactor * 10; 
+        
+            velocity = Math.min(Math.max(velocity + adjustedAcceleration, minVelocity), maxVelocity);
+        
             gsap.to(uniformsRef.current.u_time, {
-                value: uniformsRef.current.u_time.value + velocity,
+                value: uniformsRef.current.u_time.value + velocity * loadingFactor, 
                 duration: 0.2,
                 ease: "power2.out",
-            })
+            });
         }
 
 
@@ -77,17 +92,60 @@ const SiteBackground = () => {
                 value: uniformsRef.current.u_time.value + 2.0,
                 duration: 2.5,
             });
+
+            tl.to(".description-text", {
+                opacity: 1,
+                duration: 2.5,
+            }, "<")
+
+            tl.to(".action-button", {
+                opacity: 1,
+                duration: 2.5,
+            }, "<")
+
+            tl.to(".scroller", {
+                opacity: 1,
+                duration: 2.5,
+            }, "<")
+
+            tl.to(".nav-bar", {
+                opacity: 1,
+                duration: 2.5,
+            }, "<")
+
+            tl.to(".main-text", {
+                opacity: 1,
+                duration: 2.5
+            }, "<")
     
             tl.to(uniformsRef.current.u_amplitude, {
                 value: 1.0,
+                duration: 2.5,
             }, "<")
 
             tl.to(".gradient", {
                 opacity: 0.55,
+                duration: 2.5,
             }, "<")
         }
 
     }, [loadingValue, velocity])
+
+    useGSAP(() => {
+
+        gsap.fromTo(".gradient", {
+            opacity: 0.55
+        }, {
+            opacity: 0.25,
+            scrollTrigger: {
+                trigger: ".bg-trigger",
+                start: "top bottom",
+                end: "top center",
+                scrub: true
+            }
+        })
+
+    }, [])
 
     useEffect(() => {
 
@@ -182,8 +240,10 @@ const SiteBackground = () => {
 
   return (
     <>
-        <div className='fixed w-full bg-black z-[-1] top-0 left-0 gradient' style={{ height: height ? height : "100svh", opacity: `${loadingValue}%` }}>
-            <div ref={containerRef} className='w-full h-full'></div>
+        <div className='fixed w-full bg-black z-[-1] top-0 left-0' style={{ height: height ? height : "100svh", opacity: `${loadingValue}%` }}>
+            <div className='w-full h-full gradient opacity-100'>
+                <div ref={containerRef} className='w-full h-full'></div>
+            </div>
         </div>
         <div className='fixed z-[1] top-0 left-0 w-full vanish-down' style={{ height: height ? height : "100svh" }} >
             <div style={{ height: `${loadingValue}%`}} className='mx-auto w-fit max-h-[90%] flex flex-col items-center gap-2 bottom-0 absolute left-0 right-0'>
