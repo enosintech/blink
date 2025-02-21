@@ -237,7 +237,7 @@ const SiteBackground = () => {
 
   return (
     <>
-        <div className='fixed w-full bg-black z-[-1] top-0 left-0 h-[1100px] sm:h-[100lvh]' style={{ opacity: `${loadingValue}%` }}>
+        <div className='fixed top-0 left-0 w-full bg-black z-[-1] top-0 left-0 h-[1100px] sm:h-[100lvh]' style={{ opacity: `${loadingValue}%` }}>
             <div className='w-full h-full gradient opacity-100'>
                 <div ref={containerRef} className='w-full h-full'></div>
             </div>
@@ -278,9 +278,8 @@ const fragmentShader = `
         
         float pattern = abs(sin(u_time - uv.y - uv.x));
         
-        // Reduce orange intensity by powering up pattern value and reducing mix factor
-        pattern = pow(pattern, 4.0); // Makes bright spots smaller
-        vec3 finalColor = mix(blackColor, orangeColor, pattern * 0.4); // Reduced from 0.8 to 0.3
+        pattern = pow(pattern, 4.0); 
+        vec3 finalColor = mix(blackColor, orangeColor, pattern * 0.4);
         
         gl_FragColor = vec4(finalColor, 1.0);
     }
