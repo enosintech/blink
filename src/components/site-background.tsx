@@ -241,7 +241,7 @@ const SiteBackground = () => {
 
   return (
     <>
-        <div className='fixed w-full bg-black z-[-1] top-0 left-0' style={{ height: height ? height : "100svh", opacity: `${loadingValue}%` }}>
+        <div className='fixed w-full bg-black z-[-1] top-0 left-0 h-[1100px] sm:h-[100lvh]' style={{ opacity: `${loadingValue}%` }}>
             <div className='w-full h-full gradient opacity-100'>
                 <div ref={containerRef} className='w-full h-full'></div>
             </div>
