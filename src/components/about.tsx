@@ -1,7 +1,6 @@
 "use client";
 
 import { triggerToAnimations } from '@/lib/animations';
-import { gsap } from '@/lib/gsap-loader';
 import { useGSAP } from '@gsap/react';
 import Image from 'next/image';
 import Link from 'next/link';
