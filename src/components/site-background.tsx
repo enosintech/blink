@@ -9,10 +9,6 @@ import { gsap } from '@/lib/gsap-loader';
 import { useGSAP } from '@gsap/react';
 import { useLoadingValue } from '@/context/loadingValueContext';
 import { useLenis } from 'lenis/react';
-import rocket from "../assets/animations/rocket.json";
-import dynamic from 'next/dynamic';
-
-const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const SiteBackground = () => {
 
@@ -247,12 +243,7 @@ const SiteBackground = () => {
             </div>
         </div>
         <div className='fixed z-[1] top-0 left-0 w-full vanish-down' style={{ height: height ? height : "100svh" }} >
-            <div style={{ height: `${loadingValue}%`}} className='mx-auto w-fit max-h-[90%] flex flex-col items-center gap-2 bottom-0 absolute left-0 right-0'>
-                <div className='size-12 -translate-y-5'>
-                    <Lottie animationData={rocket} loop />
-                </div>
-                <div className='h-full w-0 border border-white transition-all'></div>
-            </div>
+
         </div>
     </>
   )
