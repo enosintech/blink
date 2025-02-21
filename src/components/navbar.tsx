@@ -31,7 +31,7 @@ const Navbar = () => {
                     </Link>
                 ))}
                 <div className='rounded-full grid place-items-center bg-accent pointer:hover:bg-neutral-900 cursor-pointer actionable transition-all px-3 py-2'>
-                    <p className='font-medium'>Let's Talk</p>
+                    <p className='font-medium'>Let&apos;s Talk</p>
                 </div>
             </div>  
         </div>

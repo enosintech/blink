@@ -22,7 +22,6 @@ const Scroller = () => {
 
         if(rocketRef.current && scrollLineRef.current && lenis?.rootElement.offsetHeight) {
 
-            const maxScroll = lenis?.rootElement.offsetHeight;
             const scrollLine = scrollLineRef.current;
             const availableHeight = scrollLine?.offsetHeight;
     

@@ -48,7 +48,7 @@ const SiteBackground = () => {
         }
     }, [loadingValue, timelineComplete])
 
-    useLenis(({ scroll }) => {
+    useLenis(() => {
         velocity = Math.min(Math.max(velocity + acceleration, minVelocity), maxVelocity);
             gsap.to(uniformsRef.current.u_time, {
               value: uniformsRef.current.u_time.value + velocity,
@@ -174,17 +174,17 @@ const SiteBackground = () => {
 
         let animationFrameId: number;
 
-          const animate = () => {
-              animationFrameId = requestAnimationFrame(animate);
-              if (!rendererRef.current || !sceneRef.current || !cameraRef.current) return;
-  
-              rendererRef.current.render(sceneRef.current, cameraRef.current);
+        const animate = () => {
+            animationFrameId = requestAnimationFrame(animate);
+            if (!rendererRef.current || !sceneRef.current || !cameraRef.current) return;
 
-              velocity = Math.max(velocity * friction, minVelocity);
+            rendererRef.current.render(sceneRef.current, cameraRef.current);
 
-          }
+            velocity = Math.max(velocity * friction, minVelocity);
+
+        }
   
-          animate();
+        animate();
 
         const handleResize = () => {
             if (!containerRef.current || !rendererRef.current) return;
@@ -200,6 +200,7 @@ const SiteBackground = () => {
 
         return () => {
             window.removeEventListener('resize', handleResize);
+            cancelAnimationFrame(animationFrameId);
             rendererRef.current?.dispose();
         };
     }, [velocity, friction, minVelocity])
@@ -208,7 +209,7 @@ const SiteBackground = () => {
 
         if(!timelineComplete) return
     
-        const handleMouseMove = (event: MouseEvent) => {
+        const handleMouseMove = () => {
             velocity = Math.min(Math.max(velocity + acceleration, minVelocity), maxVelocity);
             gsap.to(uniformsRef.current.u_time, {
               value: uniformsRef.current.u_time.value + velocity,
