@@ -21,7 +21,7 @@ export const LoadingValueProvider: React.FC<{children: React.ReactNode}> = ({ ch
                 }
                 return prev + 1;
             })
-        }, 10)
+        }, 28)
         return () => clearInterval(interval);
     }, [])
 
