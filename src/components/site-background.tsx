@@ -49,13 +49,31 @@ const SiteBackground = () => {
     }, [loadingValue, timelineComplete])
 
     useLenis(() => {
-        velocity = Math.min(Math.max(velocity + acceleration, minVelocity), maxVelocity);
+
+        if(!timelineComplete) return;
+
+        const animate = () => {
+            velocity = Math.max(velocity * friction, minVelocity);
             gsap.to(uniformsRef.current.u_time, {
               value: uniformsRef.current.u_time.value + velocity,
               duration: 0.2,
               ease: "power2.out",
-        });
-    }, [velocity, acceleration, minVelocity, maxVelocity])
+            });
+            requestAnimationFrame(animate);
+        };
+        
+        if(lenis?.isScrolling) {
+            velocity = Math.min(Math.max(velocity + acceleration, minVelocity), maxVelocity);
+                gsap.to(uniformsRef.current.u_time, {
+                  value: uniformsRef.current.u_time.value + velocity,
+                  duration: 0.2,
+                  ease: "power2.out",
+            });
+        } else {
+            animate();
+        }
+        
+    }, [velocity, acceleration, minVelocity, maxVelocity, timelineComplete])
 
     useGSAP(() => {
 
@@ -217,18 +235,6 @@ const SiteBackground = () => {
               ease: "power2.out",
             });
           };
-      
-          const animate = () => {
-            velocity = Math.max(velocity * friction, minVelocity);
-            gsap.to(uniformsRef.current.u_time, {
-              value: uniformsRef.current.u_time.value + velocity,
-              duration: 0.2,
-              ease: "power2.out",
-            });
-            requestAnimationFrame(animate);
-          };
-      
-          animate();
       
           window.addEventListener('mousemove', handleMouseMove as EventListener);
       
