@@ -9,7 +9,6 @@ import { useLenis } from "lenis/react";
 
 import rocket from "../assets/animations/rocket.json";
 import { useViewportHeight } from "@/hooks/useVIewportHeight";
-import { triggerToAnimations } from "@/lib/animations";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
@@ -43,30 +42,13 @@ const Scroller = () => {
 
     }, [lenis?.rootElement.offsetHeight]);
 
-    useGSAP(() => {
-
-      if(rocketRef.current) {
-        triggerToAnimations(rocketRef.current, {
-          clipPath: "none"
-        }, {
-          trigger: ".bg-trigger",
-          start: "top bottom",
-          end: "top 97%",
-          scrub: true,
-        })
-      }
-
-    }, [])
-
     const height = useViewportHeight();
 
   return (
     <div style={{ height: height ? height : "100svh"}} className='fixed top-0 left-0 w-8 sm:w-10 lg:w-14 pt-24 scroller opacity-0 pointer-events-none z-40'>
       <div className='w-full h-full flex flex-col items-center'>
         <div ref={scrollLineRef} className='w-0 h-[90%] rotate-180 scroll-container border-[0.5px] border-white flex flex-col items-center relative'>
-            <div ref={rocketRef} className='size-8 sm:size-10 lg:size-12 rotate-180 transition-all' style={{
-              clipPath:"inset(0 0 22% 0)",
-            }}>
+            <div ref={rocketRef} className='size-8 sm:size-10 lg:size-12 rotate-180 transition-all'>
                 <Lottie animationData={rocket} loop />
             </div>
         </div>
