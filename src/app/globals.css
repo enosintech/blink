@@ -5,7 +5,7 @@
 .gradient-blur {
   position: absolute;
   inset: 0 0 auto 0;
-  height: 65%;
+  height: 100%;
   pointer-events: none;
 }
   

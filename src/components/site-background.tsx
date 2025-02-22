@@ -24,7 +24,7 @@ const SiteBackground = () => {
         u_gradientX: { value: 0.0 },
         u_gradientY: { value: 0.0 },
         u_scale: { value: 1.0 },
-        u_amplitude: { value: 1.3}
+        u_amplitude: { value: 2.0}
     });
 
     const { loadingValue } = useLoadingValue();
@@ -111,7 +111,7 @@ const SiteBackground = () => {
             }, "<")
 
             tl.to(".gradient", {
-                opacity: 0.55,
+                opacity: 0.65,
                 duration: 2.5,
             }, "<")
         }

@@ -33,7 +33,7 @@ const Scroller = () => {
                   trigger: document.documentElement,
                   start: "clamp(top top)",
                   end: "bottom bottom",
-                  scrub: 5,
+                  scrub: 2.5,
                   invalidateOnRefresh: true,
                 }
             });
