@@ -43,7 +43,7 @@ const Services = () => {
         </motion.div>
 
         <div className='w-full h-[100svh]  sm:h-[75svh] md:h-[100svh] lg:h-[60svh] xl:h-[70svh] 2xl:h-[80svh] mt-10 lg:flex-row flex-col-reverse flex gap-2 md:gap-4'>
-            <div className="lg:w-[70%] w-full h-[50%] sm:h-[60%] lg:h-full grid grid-row-2 grid-cols-3 gap-2 md:gap-4">
+            <div className="lg:w-[70%] w-full h-[45%] sm:h-[60%] lg:h-full grid grid-row-2 grid-cols-3 gap-2 md:gap-4">
                 {services.map((service, idx) => (
                     <Tilt key={service.name}>
                         <div className={`w-full h-full ${activeIndex === idx ? "bg-accent text-black border-none" : "bg-black border-accent border-2"} transition-all rounded-lg border-2 flex flex-col p-2 xl:p-3 justify-between`} onClick={() => setActiveIndex(idx)}>
@@ -55,7 +55,7 @@ const Services = () => {
                     </Tilt>
                 ))}
             </div>
-            <div className='w-full lg:w-[30%] h-[50%] sm:h-[40%] lg:h-full bg-black border-accent border-2 rounded-lg relative p-3 px-4'>
+            <div className='w-full lg:w-[30%] h-[55%] sm:h-[40%] lg:h-full bg-black border-accent border-2 rounded-lg relative p-3 px-4'>
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={services[activeIndex].name}
