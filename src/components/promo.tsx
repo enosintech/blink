@@ -30,7 +30,7 @@ const Promo = () => {
 
         <div className="w-full h-[280px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] rounded-lg bg-neutral-950 p-2 mt-10">
             <div className="w-full h-full rounded-md bg-black overflow-hidden relative">
-                <video preload="none" className="w-full h-full object-cover" muted={false} controls>
+                <video preload="none" className="w-full h-full object-cover bg-black" muted={false} controls>
                     <source src="/videos/showreel.mp4" type="video/mp4" />
                 </video>
             </div>
