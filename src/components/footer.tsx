@@ -17,11 +17,11 @@ const Footer = () => {
             </div>
             <div className="w-full lg:w-1/2 h-[65%] sm:h-[60%] mt-5 lg:mt-0 lg:h-full px-4 flex flex-col justify-between">
                 <div>
-                    <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold">DO YOU HAVE A PROJECT IN MIND?</p>
+                    <p className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold">DO YOU HAVE A PROJECT IN MIND?</p>
                     <div className="mt-5 lg:mt-10">
-                        <p className="sm:text-base text-sm font-semibold">CONTACT US AT</p>
+                        <p className="sm:text-base text-xs font-semibold">CONTACT US AT</p>
                         <a href="mailTo:info@blink.co.zm" className='w-fit'>
-                            <p className='text-lg sm:text-xl lg:text-2xl tracking-tight pointer:hover:text-accent pointer:active:opacity-80 transition-all actionable'>INFO@BLINK.CO.ZM</p>
+                            <p className='text-base sm:text-xl lg:text-2xl tracking-tight pointer:hover:text-accent pointer:active:opacity-80 transition-all actionable'>INFO@BLINK.CO.ZM</p>
                         </a>
                     </div>
                 </div>
@@ -33,11 +33,11 @@ const Footer = () => {
                         </p>
                     </div>
                     <div className="mt-6 sm:mt-10">
-                        <p className="sm:text-base text-sm font-semibold">CONNECT WITH US ON</p>
+                        <p className="md:text-base sm:text-sm text-xs font-semibold">CONNECT WITH US ON</p>
                         <div className="flex items-center gap-x-4 gap-y-1 flex-wrap mt-1 sm:mt-0">
                             {socials.map((social) => (
                                 <a key={social.name} target="_blank" className="actionable pointer:hover:text-accent pointer:active:opacity-80 cursor-pointer">
-                                    <p className='text-sm sm:text-base'>{social.name}</p>
+                                    <p className='text-xs sm:text-sm md:text-base'>{social.name}</p>
                                 </a>
                             ))}
                         </div>
