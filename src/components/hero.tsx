@@ -9,7 +9,7 @@ const Hero = () => {
     const height = useViewportHeight();
 
   return (
-    <div style={{ height: height ? height : "100svh" }} className="pt-20 w-full">
+    <div style={{ height: height ? height : "100svh" }} className="pt-20 w-full hero">
       <div className="w-full h-full pl-10 sm:pl-14 md:pl-20 lg:pl-24 xl:pl-32 flex flex-col pt-10 md:pt-0 justify-start md:justify-center">
         <div className='flex flex-col gap-8 md:gap-10 lg:gap-12'>
             <div className='flex flex-col gap-3 md:gap-6'>

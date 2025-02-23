@@ -48,6 +48,8 @@ const SiteBackground = () => {
 
         gsap.set(".gradient", { opacity: 1})
 
+        gsap.set(uniformsRef.current.u_amplitude, { value: 2.0})
+
         if (loadingValue !== 100) {
             const loadingFactor = loadingValue / 100;
             const adjustedAcceleration = acceleration * loadingFactor * 10; 
@@ -106,7 +108,7 @@ const SiteBackground = () => {
             }, "<")
     
             tl.to(uniformsRef.current.u_amplitude, {
-                value: 1.0,
+                value: 1.5,
                 duration: 2.5,
             }, "<")
 
@@ -114,6 +116,7 @@ const SiteBackground = () => {
                 opacity: 0.65,
                 duration: 2.5,
             }, "<")
+
         }
 
     }, [loadingValue, velocity])
@@ -129,6 +132,40 @@ const SiteBackground = () => {
                 start: "top bottom",
                 end: "top center",
                 scrub: true
+            }
+        })
+
+        gsap.fromTo(".gradient", {
+            opacity: 0.25
+        }, {
+            opacity: 1,
+            scrollTrigger: {
+                trigger: "footer",
+                start: "top bottom",
+                end: "top center",
+                scrub: true,
+            }
+        })
+
+        gsap.fromTo(uniformsRef.current.u_amplitude, {
+            value: 1.5
+        } ,{
+            value: 1.0,
+            scrollTrigger: {
+                trigger: ".bg-trigger",
+                start: "top bottom",
+                end: "top center",
+                scrub: true
+            }
+        })
+
+        gsap.to(uniformsRef.current.u_amplitude, {
+            value: 2.0,
+            scrollTrigger: {
+                trigger: "footer",
+                start: "top bottom",
+                end: "top center",
+                scrub: true,
             }
         })
 
@@ -237,7 +274,7 @@ const SiteBackground = () => {
 
   return (
     <>
-        <div className='fixed top-0 left-0 w-full bg-black z-[-1] top-0 left-0 h-[1100px] sm:h-[100lvh]' style={{ opacity: `${loadingValue}%` }}>
+        <div className='fixed top-0 left-0 w-full bg-black z-[-1] h-[1100px] sm:h-[100lvh]' style={{ opacity: `${loadingValue}%` }}>
             <div className='w-full h-full gradient opacity-100'>
                 <div ref={containerRef} className='w-full h-full'></div>
             </div>
