@@ -142,3 +142,30 @@ export const clients = [
         image: "/images/rubis.webp",
     },
 ]
+
+export const socials = [
+    {
+        name: "Facebook",
+        link: "#",
+    },
+    {
+        name: "LinkedIn",
+        link: "#",
+    },
+    {
+        name: "Instagram",
+        link: "#",
+    },
+    {
+        name: "Behance",
+        link: "#",
+    },
+    {
+        name: "Twitter/X",
+        link: "#",
+    },
+    {
+        name: "TikTok",
+        link: "#",
+    },
+]

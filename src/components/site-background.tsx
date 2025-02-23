@@ -164,7 +164,7 @@ const SiteBackground = () => {
             scrollTrigger: {
                 trigger: "footer",
                 start: "top bottom",
-                end: "top center",
+                end: "top top",
                 scrub: true,
             }
         })
