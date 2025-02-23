@@ -1,6 +1,9 @@
 import About from '@/components/about';
+import Clients from '@/components/clients';
 import Hero from '@/components/hero'
+import Highlights from '@/components/highlights';
 import Services from '@/components/services';
+import Work from '@/components/work';
 import React from 'react'
 
 const Home = () => {
@@ -9,6 +12,9 @@ const Home = () => {
       <Hero />
       <About />
       <Services />
+      <Highlights />
+      <Work />
+      <Clients />
     </div>
   )
 }

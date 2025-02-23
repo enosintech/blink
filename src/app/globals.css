@@ -2,6 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+.client-carousel {
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 15%, black 85%, rgba(0, 0, 0, 0) 100%),
+                      linear-gradient(to left, rgba(0, 0, 0, 0) 0%, black 15%, black 85%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 15%, black 85%, rgba(0, 0, 0, 0) 100%),
+              linear-gradient(to left, rgba(0, 0, 0, 0) 0%, black 15%, black 85%, rgba(0, 0, 0, 0) 100%);
+
+  -webkit-mask-composite: multiply;
+  mask-composite: intersect;
+}
+
+.rectangle {
+  position: relative;
+  background: black; /* Solid black center */
+}
+
+@media ( max-width: 1024px) {
+  .rectangle {
+    -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 10%, black 90%, rgba(0, 0, 0, 0) 100%),
+                        linear-gradient(to left, rgba(0, 0, 0, 0) 0%, black 10%, black 90%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 10%, black 90%, rgba(0, 0, 0, 0) 100%),
+                linear-gradient(to left, rgba(0, 0, 0, 0) 0%, black 10%, black 90%, rgba(0, 0, 0, 0) 100%);
+  
+    -webkit-mask-composite: multiply;
+    mask-composite: intersect;
+  }
+}
+
+@media (min-width: 1024px) {
+  .rectangle {
+    -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 15%, black 85%, rgba(0, 0, 0, 0) 100%),
+                        linear-gradient(to left, rgba(0, 0, 0, 0) 0%, black 15%, black 85%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 15%, black 85%, rgba(0, 0, 0, 0) 100%),
+                linear-gradient(to left, rgba(0, 0, 0, 0) 0%, black 15%, black 85%, rgba(0, 0, 0, 0) 100%);
+  
+    -webkit-mask-composite: multiply;
+    mask-composite: intersect;
+  }
+}
+
 .gradient-blur {
   position: absolute;
   inset: 0 0 auto 0;
