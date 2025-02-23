@@ -69,7 +69,7 @@ const Work = () => {
         const nextIndex = (newIndex + 1) % work.length;
     
         // Reset all cards
-        cardsRef.current.forEach((card, index) => {
+        cardsRef.current.forEach((card) => {
           if (card) {
             timeline.set(card, {
               x: 0,
