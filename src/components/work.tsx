@@ -13,7 +13,7 @@ const WorkListing = ({ children, title, type, categories } : { children: ReactNo
         <div className='w-full flex-1 rounded-md overflow-hidden relative'>
 
             <div className="absolute w-full h-[20%] md:h-[15%] z-10 flex items-center justify-center">
-                <div className="text-accent text-[10px] leading-[1rem] sm:text-xs h-[60%] md:text-sm bg-neutral-950 px-3 md:px-4 rounded-full gap-2 md:gap-3 font-bold flex items-center justfiy-evenly">
+                <div className="text-accent text-[8px] leading-[1rem] sm:text-xs h-[60%] md:text-sm bg-neutral-950 px-3 md:px-4 rounded-full gap-2 md:gap-3 font-bold flex items-center justfiy-evenly">
                     <div className="actionable pointer:hover:opacity-80 pointer:active:opacity-60 cursor-pointer">
                         <p>VIEW ON BEHANCE</p>
                     </div>
@@ -205,7 +205,7 @@ const Work = () => {
             </motion.p>
         </motion.div>
 
-        <div className='carousel rectangle relative w-full h-[80svh] sm:h-[100svh] mt-3 flex items-center justify-center overflow-hidden' ref={carouselRef} onTouchStart={onTouchStart}
+        <div className='carousel rectangle relative w-full h-[100svh] mt-3 flex items-center justify-center overflow-hidden' ref={carouselRef} onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
         >

@@ -42,7 +42,7 @@ const Services = () => {
             </motion.p>
         </motion.div>
 
-        <div className='w-full h-[60svh] sm:h-[75svh] md:h-[100svh] lg:h-[60svh] xl:h-[70svh] 2xl:h-[80svh] mt-10 lg:flex-row flex-col-reverse flex gap-2 md:gap-4'>
+        <div className='w-full h-[75svh] md:h-[100svh] lg:h-[60svh] xl:h-[70svh] 2xl:h-[80svh] mt-10 lg:flex-row flex-col-reverse flex gap-2 md:gap-4'>
             <div className="lg:w-[70%] w-full h-[50%] sm:h-[60%] lg:h-full grid grid-row-2 grid-cols-3 gap-2 md:gap-4">
                 {services.map((service, idx) => (
                     <Tilt key={service.name}>
