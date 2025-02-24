@@ -39,7 +39,7 @@ const AboutUsNav = () => {
     const height = useViewportHeight();
     
   return (
-    <div className="pt-24 w-full flex flex-col justify-between" style={{ height : windowWidth < 640 ? height ? height : "95svh" : windowWidth < 1024 ? height ? height * 0.85 : "85svh" : height ? height * 0.80 : "80svh"}}>
+    <div className="pt-24 w-full flex flex-col justify-between" style={{ height : windowWidth < 640 ? height ? height : "93svh" : windowWidth < 1024 ? height ? height * 0.85 : "85svh" : height ? height * 0.80 : "80svh"}}>
       <div className='w-full py-1'>
         <div className="border-2 border-white grid place-items-center p-2 w-fit rounded-full">
             <p className="font-semibold text-xs lg:text-base">ESTABLISHED IN 2022</p>
