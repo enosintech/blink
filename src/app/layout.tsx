@@ -6,6 +6,7 @@ import Cursor from "@/components/cursor";
 import SmoothScroll from "@/components/smooth-scroll";
 import SiteBackground from "@/components/site-background";
 import { LoadingValueProvider } from "@/context/loadingValueContext";
+import { ViewTransitions } from "next-view-transitions"
 import Scroller from "@/components/scroller";
 import Navbar from "@/components/navbar";
 
@@ -17,20 +18,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${mont.className} text-white bg-black antialiased`}
-      >
-        <LoadingValueProvider>
-          <SmoothScroll>
-            <Navbar />
-            <Cursor />
-            <Scroller />
-            <SiteBackground />
-            {children}
-          </SmoothScroll>
-        </LoadingValueProvider>
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en">
+        <body
+          className={`${mont.className} text-white bg-black antialiased`}
+        >
+          <LoadingValueProvider>
+            <SmoothScroll>
+              <Navbar />
+              <Cursor />
+              <Scroller />
+              <SiteBackground />
+              {children}
+            </SmoothScroll>
+          </LoadingValueProvider>
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }

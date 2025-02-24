@@ -9,6 +9,7 @@ import { gsap } from '@/lib/gsap-loader';
 import { useGSAP } from '@gsap/react';
 import { useLoadingValue } from '@/context/loadingValueContext';
 import { useLenis } from 'lenis/react';
+import { usePathname } from 'next/navigation';
 
 const SiteBackground = () => {
 
@@ -29,10 +30,12 @@ const SiteBackground = () => {
 
     const { loadingValue } = useLoadingValue();
 
+    const pathname = usePathname();
+
     let velocity = 0.01; 
     const acceleration = 0.001; 
     const friction = 0.99; 
-    const minVelocity = 0.001;
+    const minVelocity = 0.004;
     const maxVelocity = 0.06;
 
     const lenis = useLenis(() => {
@@ -81,31 +84,6 @@ const SiteBackground = () => {
                 value: uniformsRef.current.u_time.value + 2.0,
                 duration: 2.5,
             });
-
-            tl.to(".description-text", {
-                opacity: 1,
-                duration: 2.5,
-            }, "<")
-
-            tl.to(".action-button", {
-                opacity: 1,
-                duration: 2.5,
-            }, "<")
-
-            tl.to(".scroller", {
-                opacity: 1,
-                duration: 2.5,
-            }, "<")
-
-            tl.to(".nav-bar", {
-                opacity: 1,
-                duration: 2.5,
-            }, "<")
-
-            tl.to(".main-text", {
-                opacity: 1,
-                duration: 2.5
-            }, "<")
     
             tl.to(uniformsRef.current.u_amplitude, {
                 value: 1.5,
@@ -123,53 +101,57 @@ const SiteBackground = () => {
 
     useGSAP(() => {
 
-        gsap.fromTo(".gradient", {
-            opacity: 0.55
-        }, {
-            opacity: 0.25,
-            scrollTrigger: {
-                trigger: ".bg-trigger",
-                start: "top bottom",
-                end: "top center",
-                scrub: true
-            }
-        })
+        if(pathname === "/") {
 
-        gsap.fromTo(".gradient", {
-            opacity: 0.25
-        }, {
-            opacity: 1,
-            scrollTrigger: {
-                trigger: "footer",
-                start: "top bottom",
-                end: "top center",
-                scrub: true,
-            }
-        })
+            gsap.fromTo(".gradient", {
+                opacity: 0.55
+            }, {
+                opacity: 0.25,
+                scrollTrigger: {
+                    trigger: ".bg-trigger",
+                    start: "top bottom",
+                    end: "top center",
+                    scrub: true
+                }
+            })
 
-        gsap.fromTo(uniformsRef.current.u_amplitude, {
-            value: 1.5
-        } ,{
-            value: 1.0,
-            scrollTrigger: {
-                trigger: ".bg-trigger",
-                start: "top bottom",
-                end: "top center",
-                scrub: true
-            }
-        })
+            gsap.fromTo(".gradient", {
+                opacity: 0.25
+            }, {
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: "footer",
+                    start: "top bottom",
+                    end: "top center",
+                    scrub: true,
+                }
+            })
 
-        gsap.to(uniformsRef.current.u_amplitude, {
-            value: 2.0,
-            scrollTrigger: {
-                trigger: "footer",
-                start: "top bottom",
-                end: "top top",
-                scrub: true,
-            }
-        })
+            gsap.fromTo(uniformsRef.current.u_amplitude, {
+                value: 1.5
+            } ,{
+                value: 1.0,
+                scrollTrigger: {
+                    trigger: ".bg-trigger",
+                    start: "top bottom",
+                    end: "top center",
+                    scrub: true
+                }
+            })
 
-    }, [])
+            gsap.to(uniformsRef.current.u_amplitude, {
+                value: 2.0,
+                scrollTrigger: {
+                    trigger: "footer",
+                    start: "top bottom",
+                    end: "top top",
+                    scrub: true,
+                }
+            })
+
+        }
+
+    }, [pathname])
 
     useEffect(() => {
 
@@ -210,6 +192,14 @@ const SiteBackground = () => {
   
         animate();
 
+        return () => {
+            cancelAnimationFrame(animationFrameId);
+            rendererRef.current?.dispose();
+        };
+    }, [velocity, friction, minVelocity])
+
+    useEffect(() => {
+
         const handleResize = () => {
             if (!containerRef.current || !rendererRef.current) return;
             
@@ -220,14 +210,13 @@ const SiteBackground = () => {
             uniformsRef.current.u_resolution.value.x = containerRef.current.clientWidth;
             uniformsRef.current.u_resolution.value.y = containerRef.current.clientHeight;
         };
+
         window.addEventListener('resize', handleResize);
 
         return () => {
             window.removeEventListener('resize', handleResize);
-            cancelAnimationFrame(animationFrameId);
-            rendererRef.current?.dispose();
-        };
-    }, [velocity, friction, minVelocity])
+        }
+    }, [])
 
     useEffect(() => {
 
@@ -268,7 +257,7 @@ const SiteBackground = () => {
         return () => {
         window.removeEventListener('mousemove', handleMouseMove as EventListener);
         };
-    }, [timelineComplete, velocity, acceleration, minVelocity, maxVelocity])
+    }, [timelineComplete, velocity, acceleration, minVelocity, maxVelocity, pathname])
 
     const height = useViewportHeight();
 

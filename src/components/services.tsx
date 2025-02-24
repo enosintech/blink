@@ -23,7 +23,7 @@ const Services = () => {
     };
 
   return (
-    <div className='w-full pt-14 lg:pt-24 pb-10 px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32'>
+    <div className='w-full pt-5 md:pt-14 lg:pt-24 pb-10 px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32'>
 
         <motion.div
             ref={headingRef}
@@ -47,15 +47,15 @@ const Services = () => {
                 {services.map((service, idx) => (
                     <Tilt key={service.name}>
                         <div className={`w-full h-full ${activeIndex === idx ? "bg-accent text-black border-none" : "bg-black border-accent border-2"} transition-all rounded-lg border-2 flex flex-col p-2 xl:p-3 justify-between`} onClick={() => setActiveIndex(idx)}>
-                            <div className="relative size-8 sm:size-10 md:size-14 xl:size-16">
+                            <div className="relative size-8 sm:size-10 md:size-14 xl:size-16 2xl:size-[4vw]">
                                 <Image src={service.icon} alt="service icon" fill className={`object-cover ${activeIndex === idx ? "" : "invert"}`} />
                             </div>
-                            <p className="font-bold tracking-tight text-xs sm:text-sm md:text-base xl:text-lg 2xl:text-xl">{service.name}</p>
+                            <p className="font-bold tracking-tight text-[10px] leading-[1rem] sm:text-sm md:text-base xl:text-lg 2xl:text-[1.4vw]">{service.name}</p>
                         </div>
                     </Tilt>
                 ))}
             </div>
-            <div className='w-full lg:w-[30%] h-[55%] sm:h-[40%] lg:h-full bg-black border-accent border-2 rounded-lg relative p-3 px-4'>
+            <div className='w-full lg:w-[30%] h-[55%] sm:h-[40%] lg:h-full bg-black border-accent border-2 rounded-lg relative pt-6 lg:pt-4 p-3 px-4'>
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={services[activeIndex].name}
@@ -66,14 +66,14 @@ const Services = () => {
                         className="space-y-2 md:space-y-4 w-full h-full flex flex-col relative"
                     >
                         <div className="space-y-2 md:space-y-4"> 
-                            <div className="relative size-10 md:size-14 xl:size-16">
+                            <div className="relative size-10 md:size-14 xl:size-16 2xl:size-[4vw]">
                                 <Image src={services[activeIndex].icon} alt="service icon" fill className="object-cover invert" />
                             </div>
 
-                            <p className="font-bold tracking-tight text-xl md:size-2xl 2xl:text-3xl">{services[activeIndex].name}</p>
+                            <p className="font-bold tracking-tight text-xl md:size-2xl 2xl:text-[1.8vw] leading-[2.2rem]">{services[activeIndex].name}</p>
                         </div>
 
-                        <p className="text-white/70 mt-5 font-medium text-sm md:text-base 2xl:text-lg">{services[activeIndex].description}</p>
+                        <p className="text-white/70 mt-5 font-medium text-sm md:text-base 2xl:text-[1.2vw]">{services[activeIndex].description}</p>
 
                         <Link href={services[activeIndex].link} className="mt-3 actionable">
                             <p className="text-accent text-sm md:text-base xl:text-lg font-bold pointer:hover:opacity-80 pointer:active:opacity-60">Learn More</p>

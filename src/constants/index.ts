@@ -1,15 +1,15 @@
 export const navLinks = [
     {
         name: "About Us",
-        link: "#"
+        link: "/about-us"
     },
     {
         name: "Our Work",
-        link: "#"
+        link: "/work"
     },
     {
         name: "Services",
-        link: "#"
+        link: "/services"
     },
 ]
 

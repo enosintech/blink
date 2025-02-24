@@ -185,7 +185,7 @@ const Work = () => {
       }, [currentIndex]);
 
   return (
-    <div className='w-full pt-14 lg:pt-24 pb-10 px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32 flex items-center flex-col justify-center'>
+    <div className='w-full pt-10 lg:pt-24 pb-10 px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32 flex items-center flex-col justify-center'>
         
         <motion.div
             ref={headingRef}
