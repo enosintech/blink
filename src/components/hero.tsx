@@ -35,6 +35,10 @@ const Hero = () => {
           opacity: 1
         }, "<")
 
+        tl.to(".gradient", {
+          opacity: 0.65,
+          duration: 2.5,
+        }, "<")
 
       }
     }, [loadingValue])

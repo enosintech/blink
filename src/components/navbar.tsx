@@ -110,7 +110,7 @@ const Navbar = () => {
         <div className="absolute w-full h-0 top-[100%]  left-0 bg-[rgba(0,0,0,0.3)] mobile-nav pointer-events-none opacity-0 backdrop-blur flex flex-col lg:hidden font-semibold sm:text-base text-sm">
             {navLinks.map((link) => (
                 <Link href={link.link} key={link.name} className={`w-0 ${pathname === "/" ? "h-1/4" : "h-1/3"} px-10 mobile-nav-buttons sm:px-14 md:px-20 flex items-center border-t border-accent pointer:hover:opacity-80 pointer:active:opacity-60 cursor-pointer actionable`}>
-                    <p className={`${pathname === link.link ? "text-accent" : "text-white"} opacity-0 mobile-nav-text`}>{link.name}</p>
+                    <p className={`${pathname.startsWith(link.link) ? "text-accent" : "text-white"} opacity-0 mobile-nav-text`}>{link.name}</p>
                 </Link>
             ))}
             {pathname === "/" && 
@@ -160,7 +160,7 @@ const Navbar = () => {
             <div className='lg:flex hidden text-base 2xl:text-[1vw] items-center gap-14'>
                 {navLinks.map((link) => (
                     <Link href={link.link} key={link.name}>
-                        <p className={`font-medium actionable pointer:hover:text-accent pointer:active:opacity-75 transition-all ${pathname === link.link ? "text-accent" : "text-white"}`}>{link.name}</p>
+                        <p className={`font-medium actionable pointer:hover:text-accent pointer:active:opacity-75 transition-all ${pathname.startsWith(link.link) ? "text-accent" : "text-white"}`}>{link.name}</p>
                     </Link>
                 ))}
                 {pathname === "/" && 
