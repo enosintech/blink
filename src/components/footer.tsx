@@ -22,16 +22,16 @@ const Footer = () => {
   return (
     <footer className="w-full pt-14 lg:pt-24 pb-10 px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32" style={{ height: height ? height : "100svh"}}>
         <div className="w-full h-full lg:flex-row flex-col flex items-center gap-10 relative">
-            <div onClick={handleBackToTop} className="flex items-center absolute bottom-4 left-0 gap-3 w-fit mt-6 actionable cursor-pointer pointer:hover:opacity-80 pointer:active:opacity-60">
+            <div onClick={handleBackToTop} className="items-center absolute bottom-4 hidden lg:flex left-0 gap-3 w-fit mt-6 actionable cursor-pointer pointer:hover:opacity-80 pointer:active:opacity-60">
                 <div className="rounded-full p-3 w-fit grid place-items-center bg-black text-accent border border-accent">
                     <ChevronUp className='size-5 xl:size-6 2xl:size-[1.8vw]' />
                 </div>
                 <p className="text-base xl:text-lg 2xl:text-[1.1vw]">BACK TO TOP</p>        
             </div>
-            <div className="aspect-square md:size-[30vw] size-[35vw] lg:size-[25vw] flex flex-col items-center relative overflow-hidden">
+            <div className="aspect-square md:size-[30vw] size-[25vw] lg:size-[25vw] flex flex-col items-center relative overflow-hidden">
                 <Image src="/images/blink-eye.gif" alt="eye animation" fill className="object-contain" unoptimized />
             </div>
-            <div className="w-full lg:w-1/2 h-[70%] sm:h-[60%] mt-5 lg:mt-0 lg:h-full px-4 flex flex-col justify-between">
+            <div className="w-full lg:w-1/2 h-[80%] sm:h-[60%] mt-5 lg:mt-0 lg:h-full px-4 flex flex-col justify-between">
                 <div>
                     <p className="text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold">DO YOU HAVE A PROJECT IN MIND?</p>
                     <div className="mt-5 lg:mt-10">
