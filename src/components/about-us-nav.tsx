@@ -39,7 +39,7 @@ const AboutUsNav = () => {
     const height = useViewportHeight();
     
   return (
-    <div className="pt-24 w-full flex flex-col justify-between" style={{ height : windowWidth < 1024 ? height ? height * 0.85 : "85svh" : height ? height * 0.80 : "80svh"}}>
+    <div className="pt-24 w-full flex flex-col justify-between" style={{ height : windowWidth < 640 ? height ? height : "95svh" : windowWidth < 1024 ? height ? height * 0.85 : "85svh" : height ? height * 0.80 : "80svh"}}>
       <div className='w-full py-1'>
         <div className="border-2 border-white grid place-items-center p-2 w-fit rounded-full">
             <p className="font-semibold text-xs lg:text-base">ESTABLISHED IN 2022</p>
@@ -49,13 +49,13 @@ const AboutUsNav = () => {
         <div className="w-full h-[90%] flex lg:flex-row flex-col justify-between">
             <div className='flex flex-col lg:max-w-[40%]'>
                 <div>
-                    <p className="text-xs lg:text-base">Who are We</p>
+                    <p className="text-[10px] lg:text-base">Who are We</p>
                 </div>
                 <div className="mt-4">
-                    <p className="text-sm lg:text-lg 2xl:text-2xl font-medium">Blink is an award-winning marketing agency based in Lusaka, Zambia, renowned for its innovative strategies, creative excellence, and exceptional brand-building expertise that helps businesses stand out in a competitive market.</p>
+                    <p className="text-xs lg:text-lg 2xl:text-2xl font-medium">Blink is an award-winning marketing agency based in Lusaka, Zambia, renowned for its innovative strategies, creative excellence, and exceptional brand-building expertise that helps businesses stand out in a competitive market.</p>
                 </div>
             </div>
-            <div className='lg:w-[40%] 2xl:w-[35%] w-full lg:h-[90%] h-[60%]'>
+            <div className='lg:w-[40%] 2xl:w-[35%] w-full lg:h-[90%] h-[60%] mt-3 sm:mt-0'>
                 <p className="font-semibold text-sm lg:text-base mb-3">3 Years of Blink</p>
                 <div className="w-full h-[80%] lg:h-[90%] bg-black rounded border border-accent overflow-hidden">
                     <video className="w-full h-full object-cover" muted controls playsInline={true} preload="metadata">
