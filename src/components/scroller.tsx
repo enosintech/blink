@@ -5,7 +5,6 @@ import dynamic from "next/dynamic";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap-loader";
-import { useLenis } from "lenis/react";
 
 import rocket from "../assets/animations/rocket.json";
 import { useViewportHeight } from "@/hooks/useVIewportHeight";
@@ -17,8 +16,6 @@ const Scroller = () => {
 
     const rocketRef = useRef<HTMLDivElement | null>(null);
     const scrollLineRef = useRef<HTMLDivElement | null>(null);
-
-    const lenis = useLenis();
 
     const pathname = usePathname();
 
