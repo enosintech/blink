@@ -28,7 +28,7 @@ const Services = () => {
   return (
     <div className="pt-24 px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32">
       <p className='text-sm lg:text-base font-medium'>
-        At Blink, we blend creativity with strategy to craft marketing solutions that captivate audiences and drive results. Whether you're looking to build a strong brand identity, develop engaging content, or execute high-impact digital campaigns, our team is here to turn your vision into reality. From branding and design to social media management, content creation, and performance marketing, we offer a full suite of services tailored to your unique needs. With a data-driven approach and a passion for storytelling, we help businesses stand out in a crowded marketplace, connect with their audience, and achieve meaningful growth. Explore our services and discover how Blink can bring your brand to life.
+        At Blink, we blend creativity with strategy to craft marketing solutions that captivate audiences and drive results. Whether you&apos;re looking to build a strong brand identity, develop engaging content, or execute high-impact digital campaigns, our team is here to turn your vision into reality. From branding and design to social media management, content creation, and performance marketing, we offer a full suite of services tailored to your unique needs. With a data-driven approach and a passion for storytelling, we help businesses stand out in a crowded marketplace, connect with their audience, and achieve meaningful growth. Explore our services and discover how Blink can bring your brand to life.
       </p>
       <div className="mt-20">
         <p className='font-bold text-xl lg:text-2xl'>Our Core Services</p>
