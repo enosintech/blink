@@ -137,6 +137,33 @@ export const work = [
     },
 ]
 
+export const videofolio = [
+    {
+        name: "PMC Promo Drama",
+        link: "https://www.youtube.com/embed/cZfq3bdmpVs?si=tn45eYy515u8haiI"
+    },
+    {
+        name: "Kobold Metals Safety Animation",
+        link: "https://www.youtube.com/embed/Y74PylvJsa8?si=IK-ivkfV9xvK-xIY",
+    },
+    {
+        name: "Cultural Induction Video ~ KoBold",
+        link: "https://www.youtube.com/embed/VZNLOnoUUj0?si=BTZhgw6wPsDBVU3g",
+    },
+    {
+        name: "Ethics Training Induction ~ Kobold",
+        link: "https://www.youtube.com/embed/Y9ecRoYKPUE?si=36l2YHotW9CRBPFZ",
+    },
+    {
+        name: "Zedmobile Unlimited Voice & Data",
+        link: "https://www.youtube.com/embed/kEAMqhcarA4?si=A1qOLFJgYMQmlDVF",
+    },
+    {
+        name: "Zambia Sugar",
+        link: "https://www.youtube.com/embed/isq4Y-6GnC8?si=qVT91X9xcmX_WFv6",
+    },
+]
+
 export const clients = [
     {
         name: "Zambia Sugar",
