@@ -52,6 +52,27 @@ export const services = [
     },
 ];
 
+export const digitalPackagegs = [
+    {
+        name: "Gold Digital Package",
+        icon: "/images/gold.png",
+        points: ["Social Media Starter Kit", "Content Strategy", "1 month content calender", "2 Still Graphics per week for one month" ],
+        price: "4999"
+    },
+    {
+        name: "Platinum Digital Package",
+        icon: "/images/platinum.png",
+        points: ["Social Media Starter Kit", "Content Strategy", "1 month content calender","1 month digital performance report", "3 Still Graphics per week for one month" ],
+        price: "7999"
+    },
+    {
+        name: "Diamond Digital Package",
+        icon: "/images/diamond.png",
+        points: ["Social Media Starter Kit", "Content Strategy", "1 month content calender","1 month digital performance report", "4 Still Graphics per week for one month", "1 Basic Reel Per month", "1 Social Media Campaign" ],
+        price: "9999"
+    }
+]
+
 export const work = [
     {
         name: "Barloworld",
