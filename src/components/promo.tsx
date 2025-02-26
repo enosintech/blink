@@ -118,7 +118,7 @@ const Promo = () => {
       </motion.div>
 
       <div 
-        className="w-full h-[280px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] rounded-md bg-black p-2 mt-10"
+        className="w-full h-[280px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[90svh] rounded-md bg-black p-2 mt-10"
       >
         <div className="w-full h-full rounded bg-black overflow-hidden relative">
           <video 

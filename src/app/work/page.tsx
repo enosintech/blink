@@ -38,7 +38,7 @@ const Work = () => {
             <CarouselContent>
               {work.map((work) => (
                 <CarouselItem key={work.name} className='xl:basis-1/2'>
-                  <div className="py-4 pt-3 px-4 bg-black border border-accent rounded-md">
+                  <div className="py-4 pt-3 px-4 bg-black border border-accent rounded-md 2xl:min-h-[750px]">
                     <div>
                       <p className='font-semibold text-xl'>{work.name}</p>
                       <p className="mt-1 text-muted-foreground text-base">{work.type}</p>
@@ -81,7 +81,7 @@ const Work = () => {
               <Carousel className="w-full min-w-full translate-x-[15%] lg:translate-x-0">
                 <CarouselContent>
                   {videofolio.map((video) => (
-                    <CarouselItem key={video.name} className="lg:basis-1/2 xl:basis-1/3">
+                    <CarouselItem key={video.name} className="lg:basis-1/2 xl:basis-1/3 2xl:min-h-[650px]">
                       <div className="py-4 pt-3 px-4 bg-black border border-accent rounded-md">
                         <div className="w-full h-60 rounded">
                           <iframe className='w-full h-full object-cover' src={video.link} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
