@@ -45,7 +45,7 @@ const Hero = () => {
 
   return (
     <div style={{ height: height ? height : "100svh" }} className="pt-20 w-full hero">
-      <div className="w-full h-full pl-10 sm:pl-14 md:pl-20 lg:pl-24 xl:pl-32 flex flex-col pt-10 md:pt-0 justify-start md:justify-center">
+      <div className="w-full h-full pl-10 sm:pl-14 md:pl-20 lg:pl-24 xl:pl-32 flex flex-col pt-10 md:pt-0 justify-center">
         <div className='flex flex-col gap-8 md:gap-10 lg:gap-12'>
             <div className='flex flex-col gap-3 md:gap-6'>
                 <p className='font-extrabold lg:font-bold text-4xl max-w-[75%] sm:max-w-full md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[5vw] 2xl:leading-none main-text opacity-0'>WE DESIRE TO CREATE</p>
