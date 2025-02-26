@@ -7,8 +7,8 @@ const OurSpace = () => {
     const height = useViewportHeight();
   
     return (
-      <div className="w-full bg-red-500" style={{height: height ? height : "100svh"}}>
-        our space
+      <div className="w-full" style={{height: height ? height : "100svh"}}>
+        i should definitely use a carousel with an activeIndex for each image on this one. Easy. 
       </div>
     )
 }
