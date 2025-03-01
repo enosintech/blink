@@ -11,6 +11,10 @@ export const navLinks = [
         name: "Services",
         link: "/services"
     },
+    {
+        name: "Blink Productions",
+        link: "/blink-productions"
+    },
 ]
 
 export const services = [

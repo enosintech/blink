@@ -118,9 +118,9 @@ const Promo = () => {
       </motion.div>
 
       <div 
-        className="w-full h-[280px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[90svh] rounded-md bg-black p-2 mt-10"
+        className="w-full h-[280px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[90svh] mt-10"
       >
-        <div className="w-full h-full rounded bg-black overflow-hidden relative">
+        <div className="w-full h-full rounded-lg border border-accent deep-shadow bg-black overflow-hidden relative">
           <video 
             ref={videoRef}
             preload="metadata" 
@@ -133,12 +133,12 @@ const Promo = () => {
           
           <div 
             ref={controlsRef}
-            className="absolute bottom-0 left-0 right-0 bg-black/70 backdrop-blur-md h-[15%] flex flex-col"
+            className="absolute bottom-0 left-0 right-0 bg-black/70 backdrop-blur-md h-[12%] flex flex-col"
           >
 
             <div 
               ref={progressRef}
-              className="w-full h-[15%] bg-black/30 cursor-pointer"
+              className="w-full h-[8%] bg-black/30 cursor-pointer"
               onClick={handleProgressBarClick}
             >
               <div 
@@ -148,27 +148,27 @@ const Promo = () => {
               />
             </div>
             
-            <div className="flex items-center justify-between w-full h-[85%] pr-2">
+            <div className="flex items-center justify-between w-full h-[92%] pr-2">
                 <div className="flex h-full bg-black">
-                    <div className="h-full w-10 md:w-14 lg:w-20 2xl:w-32 bg-black grid place-items-center">
+                    <div className="h-full w-10 md:w-14 lg:w-20 2xl:w-28 bg-black grid place-items-center">
                         <button 
                         onClick={togglePlay} 
                         className="text-white hover:text-accent transition-colors"
                         >
-                        {isPlaying ? <Pause className="size-4 md:size-[2.5vw]" /> : <Play className="size-4 md:size-[2.5vw]" />}
+                        {isPlaying ? <Pause className="size-4 md:size-6 xl:size-10" /> : <Play className="size-4 md:size-6 xl:size-10" />}
                         </button>
                     </div>
-                    <div className="h-full w-10 md:w-14 lg:w-20 2xl:w-32 bg-accent/80 grid place-items-center">
+                    <div className="h-full w-10 md:w-14 lg:w-20 2xl:w-28 bg-accent grid place-items-center">
                         <button 
                         onClick={toggleMute} 
                         className="text-white hover:text-accent transition-colors"
                         >
-                        {isMuted ? <VolumeX className="size-4 md:size-[2.5vw]" /> : <Volume2 className="size-4 md:size-[2.5vw]" />}
+                        {isMuted ? <VolumeX className="size-4 md:size-6 xl:size-10" /> : <Volume2 className="size-4 md:size-6 xl:size-10" />}
                         </button>
                     </div>
                 </div>
                 <div className="flex flex-col items-end gap-1">
-                    <p className="font-bold text-[8px] md:text-sm xl:text-base 2xl:text-[1.2vw]">3 Year Showreel</p>
+                    <p className="font-bold text-[8px] md:text-sm xl:text-base 2xl:text-lg">3 Year Showreel</p>
                     <div className="text-white text-[8px] md:text-sm">
                         {formatTime(currentTime)} / {formatTime(duration)}
                     </div>

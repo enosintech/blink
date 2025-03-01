@@ -42,15 +42,15 @@ const Services = () => {
             </motion.p>
         </motion.div>
 
-        <div className='w-full h-[100svh]  sm:h-[75svh] md:h-[100svh] lg:h-[60svh] xl:h-[70svh] 2xl:h-[80svh] mt-10 lg:flex-row flex-col-reverse flex gap-2 md:gap-4'>
+        <div className='w-full h-[600px]  sm:h-[650px] md:h-[750px] lg:h-[600px] xl:h-[650px] 2xl:h-[90vh] mt-10 lg:flex-row flex-col-reverse flex gap-2 md:gap-4'>
             <div className="lg:w-[70%] w-full h-[45%] sm:h-[60%] lg:h-full grid grid-row-2 grid-cols-3 gap-2 md:gap-4">
                 {services.map((service, idx) => (
                     <Tilt key={service.name}>
                         <div className={`w-full h-full ${activeIndex === idx ? "bg-accent text-black border-none" : "bg-black border-accent border-2"} transition-all rounded-lg border-2 flex flex-col p-2 xl:p-3 justify-between`} onClick={() => setActiveIndex(idx)}>
-                            <div className="relative size-8 sm:size-10 md:size-14 xl:size-16 2xl:size-[4vw]">
+                            <div className="relative size-8 sm:size-10 md:size-14 xl:size-16">
                                 <Image src={service.icon} alt="service icon" fill className={`object-cover ${activeIndex === idx ? "" : "invert"}`} />
                             </div>
-                            <p className="font-bold tracking-tight text-[10px] leading-[1rem] sm:text-sm md:text-base xl:text-lg 2xl:text-[1.4vw]">{service.name}</p>
+                            <p className="font-bold tracking-tight text-[10px] leading-[1rem] sm:text-sm md:text-base xl:text-lg 2xl:text-xl">{service.name}</p>
                         </div>
                     </Tilt>
                 ))}
@@ -66,16 +66,16 @@ const Services = () => {
                         className="space-y-2 md:space-y-4 w-full h-full flex flex-col relative"
                     >
                         <div className="space-y-2 md:space-y-4"> 
-                            <div className="relative size-10 md:size-14 xl:size-16 2xl:size-[4vw]">
+                            <div className="relative size-10 md:size-14 xl:size-16">
                                 <Image src={services[activeIndex].icon} alt="service icon" fill className="object-cover invert" />
                             </div>
 
-                            <p className="font-bold tracking-tight text-xl md:size-2xl 2xl:text-[1.8vw] leading-[2.2rem]">{services[activeIndex].name}</p>
+                            <p className="font-bold tracking-tight text-xl md:size-2xl 2xl:text-3xl">{services[activeIndex].name}</p>
                         </div>
 
-                        <p className="text-white/70 mt-5 font-medium text-sm md:text-base 2xl:text-[1.2vw]">{services[activeIndex].description}</p>
+                        <p className="text-white/70 mt-5 font-medium text-sm md:text-base 2xl:text-lg">{services[activeIndex].description}</p>
 
-                        <Link href={services[activeIndex].link} className="mt-3 actionable">
+                        <Link href={"/services"} className="mt-3 actionable">
                             <p className="text-accent text-sm md:text-base xl:text-lg font-bold pointer:hover:opacity-80 pointer:active:opacity-60">Learn More</p>
                         </Link>
                     </motion.div>

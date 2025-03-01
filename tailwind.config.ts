@@ -57,13 +57,20 @@ export default {
   			}
   		},
   		animation: {
-  			'spin-slow': 'spin 5s linear infinite'
+  			'spin-slow': 'spin 5s linear infinite',
+			'prompt-scroll': 'scroll 2s ease-in-out infinite'
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		keyframes: {
+			scroll: {
+				'0%, 100%': {  transform: "translateY(0)" },
+				'50%': { transform: "translateY(154%)" },
+			}
+		}
   	}
   },
   plugins: [require("tailwindcss-animate")],

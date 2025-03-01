@@ -2,7 +2,7 @@
 
 import { work } from '@/constants';
 import { gsap } from '@/lib/gsap-loader';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import React, { ReactNode, useEffect, useRef, useState } from 'react';
 import { motion, useInView } from "framer-motion";
@@ -12,16 +12,8 @@ const WorkListing = ({ children, title, type, categories } : { children: ReactNo
       <div className='w-full h-full flex flex-col p-1'>
         <div className='w-full flex-1 rounded-md overflow-hidden relative'>
 
-            <div className="absolute w-full h-[20%] md:h-[15%] z-10 flex items-center justify-center">
-                <div className="text-accent text-[8px] leading-[1rem] sm:text-xs h-[60%] md:text-sm bg-neutral-950 px-3 md:px-4 rounded-full gap-2 md:gap-3 font-bold flex items-center justfiy-evenly">
-                    <div className="actionable pointer:hover:opacity-80 pointer:active:opacity-60 cursor-pointer">
-                        <p>VIEW ON BEHANCE</p>
-                    </div>
-                    <div className="w-0 h-[60%] border-[0.5px] border-accent"></div>
-                    <div className="actionable pointer:hover:opacity-80 pointer:active:opacity-60 cursor-pointer">
-                        <p>VIEW IN WORK</p>
-                    </div>
-                </div>
+            <div className="absolute p-3 top-3 right-3 actionable cursor-pointer pointer:active:opacity-80 group rounded-full bg-neutral-950 border border-accent z-10 flex items-center justify-center">
+              <ArrowUpRight className="size-5 md:size-6 text-white pointer:group-hover:text-accent" />
             </div>
 
             {children}
@@ -31,11 +23,11 @@ const WorkListing = ({ children, title, type, categories } : { children: ReactNo
             <p className='text-white font-bold text-lg md:text-2xl px-1'>{title}</p>
           </div>
           <div className='w-full flex items-center flex-wrap gap-2 mt-2 mb-2'>
-            <div className='border-accent border-2 text-accent rounded-full px-2 py-1'>
-              <p className='font-semibold tracking-tighter text-xs truncate'>{type}</p>
+            <div className='border-accent border text-accent rounded-full px-2 py-1'>
+              <p className='font-semibold tracking-tighter text-[10px] leading-[1rem] truncate'>{type}</p>
             </div>
             {categories.map((cate) => (
-              <div key={cate} className='border-white border-2 text-white rounded-full px-2 py-1'>
+              <div key={cate} className='border-white border text-white rounded-full px-2 py-1'>
                 <p className='font-semibold tracking-tighter text-[10px] leading-[1rem] truncate'>{cate}</p>
               </div>
             ))}
@@ -205,7 +197,7 @@ const Work = () => {
             </motion.p>
         </motion.div>
 
-        <div className='carousel rectangle relative w-full h-[100svh] -mt-3 sm:mt-3 flex items-center justify-center overflow-hidden' ref={carouselRef} onTouchStart={onTouchStart}
+        <div className='carousel rectangle relative w-full h-[700px] md:h-[760px] xl:h-[800px] 2xl:h-[95vh] -mt-3 sm:mt-3 flex items-center justify-center overflow-hidden' ref={carouselRef} onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
         >
@@ -213,9 +205,9 @@ const Work = () => {
             <div
                 key={item.name}
                 ref={(el) => {(cardsRef.current[index] = el)}}
-                className='carousel-card absolute w-[85%] sm:w-[75%] md:w-[65%] lg:w-[55%] 2xl:w-[45%] h-[65%] md:h-[75%] lg:h-[80%] rounded-xl bg-neutral-950 p-2 transform transition-transform duration-500'
+                className='carousel-card absolute w-[90%] sm:w-[75%] md:w-[65%] lg:w-[55%] 2xl:w-[45%] h-[65%] md:h-[75%] lg:h-[80%] rounded-xl transform transition-transform duration-500'
             >
-                <div className="w-full h-full bg-black rounded-md">
+                <div className="w-full h-full bg-black rounded-xl deep-shadow border-accent border">
                     <WorkListing title={item.name} categories={item.categories} type={item.type}>
                         <div className='w-full h-full bg-black relative'>
                             {item.mediaType === "img" ?
@@ -235,13 +227,13 @@ const Work = () => {
         <div className='carousel-buttons w-fit flex items-center gap-3 -translate-y-10'>
             <div
                 onClick={handlePrevious}
-                className='bg-neutral-900 grid place-items-center rounded-full p-2 actionable pointer:hover:opacity-80 pointer:active:opacity-60 cursor-pointer'
+                className='bg-neutral-900 border-accent border grid place-items-center rounded-full p-2 actionable pointer:hover:opacity-80 pointer:active:opacity-60 cursor-pointer'
             >
                 <ChevronLeft className='text-accent size-8 xl:size-10' />
             </div>
             <div
                 onClick={handleNext}
-                className='bg-neutral-900 grid place-items-center rounded-full p-2 actionable pointer:hover:opacity-80 pointer:active:opacity-60 cursor-pointer'
+                className='bg-neutral-900 border-accent border grid place-items-center rounded-full p-2 actionable pointer:hover:opacity-80 pointer:active:opacity-60 cursor-pointer'
             >
                 <ChevronRight className='text-accent size-8 xl:size-10' />
             </div>
