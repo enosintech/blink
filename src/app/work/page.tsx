@@ -10,7 +10,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import React from 'react'
-import { videofolio, work } from '@/constants';
+import { work } from '@/constants';
 import SectionFooter from '@/components/section-footer';
 import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
@@ -28,17 +28,17 @@ const Work = () => {
   }, [])
 
   return (
-    <div className="pt-24 pl-10 sm:pl-14 md:pl-20 lg:pl-24 xl:pl-32 px-1 sm:px-14 md:px-20 lg:px-24 xl:px-32 w-screen overflow-x-hidden">
-      <p className='text-sm lg:text-base font-medium mt-10 max-w-[80%]'>At Blink, we create bold, data-driven marketing strategies that captivate audiences and drive real results. From eye-catching campaigns to seamless brand experiences, our work speaks for itself. Explore our latest projects and see how we turn ideas into impact.</p>
-      <div className="mt-20">
+    <div className="w-screen overflow-x-hidden">
+      <p className='px-10 pt-24 sm:px-14 md:px-20 lg:px-24 xl:px-32 text-sm lg:text-base font-medium mt-10 max-w-[80%]'>At Blink, we create bold, data-driven marketing strategies that captivate audiences and drive real results. From eye-catching campaigns to seamless brand experiences, our work speaks for itself. Explore our latest projects and see how we turn ideas into impact.</p>
+      <div className="mt-20 pl-10 sm:pl-14 md:pl-20 lg:pl-24 xl:pl-32">
         <p className='font-bold text-xl lg:text-2xl'>Our Recent Work</p>
-        <p className="mt-1 font-light">Explore work we have taken up recently</p>
+        <p className="mt-1 font-light">Explore some work we have taken up recently</p>
         <div className='w-[70%] xl:w-full mt-14 relative'>
           <Carousel className="w-full min-w-full translate-x-[15%] lg:translate-x-0">
             <CarouselContent>
               {work.map((work) => (
                 <CarouselItem key={work.name} className='xl:basis-1/2'>
-                  <div className="py-4 pt-3 px-4 bg-black border border-accent rounded-md 2xl:min-h-[750px]">
+                  <div className="py-4 pt-3 px-4 bg-black border border-accent rounded-md">
                     <div>
                       <p className='font-semibold text-xl'>{work.name}</p>
                       <p className="mt-1 text-muted-foreground text-base">{work.type}</p>
@@ -73,28 +73,6 @@ const Work = () => {
             <CarouselPrevious className='bg-neutral-900 border-accent text-accent pointer:hover:text-neutral-900 pointer:hover:bg-accent' />
             <CarouselNext className='bg-neutral-900 border-accent text-accent pointer:hover:text-neutral-900 pointer:hover:bg-accent' />
           </Carousel>
-        </div>
-        <div className="mt-20">
-          <p className='font-bold text-xl lg:text-2xl'>Videofolio</p>
-          <p className="mt-1 font-light">Our production team is always up for a challenge</p>
-          <div className='w-[70%] lg:w-full mt-14 relative'>
-              <Carousel className="w-full min-w-full translate-x-[15%] lg:translate-x-0">
-                <CarouselContent>
-                  {videofolio.map((video) => (
-                    <CarouselItem key={video.name} className="lg:basis-1/2 xl:basis-1/3 2xl:min-h-[650px]">
-                      <div className="py-4 pt-3 px-4 bg-black border border-accent rounded-md">
-                        <div className="w-full h-60 rounded">
-                          <iframe className='w-full h-full object-cover' src={video.link} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-                        </div>
-                        <p className="font-semibold text-accent mt-2">{video.name}</p>
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className='bg-neutral-900 border-accent text-accent pointer:hover:text-neutral-900 pointer:hover:bg-accent' />
-                <CarouselNext className='bg-neutral-900 border-accent text-accent pointer:hover:text-neutral-900 pointer:hover:bg-accent' />
-              </Carousel>
-          </div>
         </div>
         <SectionFooter />
       </div>

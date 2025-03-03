@@ -10,12 +10,12 @@ const SectionFooter = () => {
         <div>
             <div>
                 <p className="font-bold text-lg">CONTACT US AT</p>
-                <a href="mailTo:info@blink.co.zm">
+                <a href="mailTo:info@blink.co.zm" className='w-fit'>
                     <p className="pointer:hover:text-accent pointer:active:opacity-80 transition-all actionable font-medium">INFO@BLINK.CO.ZM</p>
                 </a>
             </div>
         </div>
-      <p className="text-accent text-xs font-bold absolute bottom-3">© {new Date().getFullYear()} Blink Marketing Solutions - All Rights Reserved</p>
+      <p className="text-accent text-[10px] sm:text-xs font-bold absolute bottom-3">© {new Date().getFullYear()} Blink Marketing Solutions - All Rights Reserved</p>
     </div>
   )
 }

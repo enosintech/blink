@@ -26,8 +26,8 @@ const Services = () => {
   }, [])
 
   return (
-    <div className="pt-24 pl-10 sm:pl-14 md:pl-20 lg:pl-24 xl:pl-32 px-1 sm:px-14 md:px-20 lg:px-24 xl:px-32">
-      <p className='text-sm lg:text-base font-medium'>
+    <div className="pt-24">
+      <p className='text-sm px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32 lg:text-base font-medium'>
         At Blink, we blend creativity with strategy to craft marketing solutions that captivate audiences and drive results. Whether you&apos;re looking to build a strong brand identity, develop engaging content, or execute high-impact digital campaigns, our team is here to turn your vision into reality. From branding and design to social media management, content creation, and performance marketing, we offer a full suite of services tailored to your unique needs. With a data-driven approach and a passion for storytelling, we help businesses stand out in a crowded marketplace, connect with their audience, and achieve meaningful growth. Explore our services and discover how Blink can bring your brand to life.
       </p>
       <div className="mt-20">
@@ -57,10 +57,10 @@ const Services = () => {
         </div>
       </div>
       <div className="mt-20"> 
-        <p className='font-bold text-xl lg:text-2xl'>SME Packages</p>
-        <p className='font-medium text-sm lg:text-base mt-5'>At Blink, we help small and medium-sized businesses grow with tailored, budget-friendly marketing. From branding to digital strategy, our SME packages deliver impactful solutions to engage your audience and drive success. Explore our packages and elevate your business today.</p>
+        <p className='font-bold text-xl lg:text-2xl px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32'>SME Packages</p>
+        <p className='font-medium text-sm lg:text-base mt-5 px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32'>At Blink, we help small and medium-sized businesses grow with tailored, budget-friendly marketing. From branding to digital strategy, our SME packages deliver impactful solutions to engage your audience and drive success. Explore our packages and elevate your business today.</p>
         <div className="mt-10">
-              <p className="font-semibold">Digital Packages</p>
+              <p className="font-semibold px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32">Digital Packages</p>
               <div className="w-[70%] mt-10 relative">
                 <Carousel className='w-full min-w-full translate-x-[15%] lg:translate-x-0'>
                   <CarouselContent>

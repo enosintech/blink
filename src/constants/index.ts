@@ -77,6 +77,53 @@ export const digitalPackagegs = [
     }
 ]
 
+export const team = [
+    {
+        image: "",
+        name: "Blu Bluseke",
+        position: "Chief Executive Officer",
+    },
+]
+
+export const officeImgs = [
+    {
+      id: 1,
+      type: "video",
+      src: "/videos/barlo.mp4",
+      description: "This is a Blink Video",
+    },
+    {
+      id: 2,
+      type: "image",
+      src: "/images/access-bank.jpg",
+      description: "This is the Blink Office",
+    },
+    {
+      id: 3,
+      type: "image",
+      src: "/images/access-bank.jpg",
+      description: "This is the Blink Office",
+    },
+    {
+      id: 4,
+      type: "image",
+      src: "/images/access-bank.jpg",
+      description: "This is the Blink Office",
+    },
+    {
+      id: 5,
+      type: "image",
+      src: "/images/access-bank.jpg",
+      description: "This is the Blink Office",
+    },
+    {
+      id: 6,
+      type: "image",
+      src: "/images/access-bank.jpg",
+      description: "This is the Blink Office",
+    },
+  ]
+
 export const work = [
     {
         name: "Barloworld",

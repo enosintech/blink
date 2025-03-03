@@ -1,48 +1,10 @@
 "use client";
 
+import { officeImgs } from '@/constants';
 import { useViewportHeight } from '@/hooks/useVIewportHeight';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react'
-
-const officeImgs = [
-  {
-    id: 1,
-    type: "video",
-    src: "",
-    description: "",
-  },
-  {
-    id: 2,
-    type: "image",
-    src: "",
-    description: "",
-  },
-  {
-    id: 3,
-    type: "image",
-    src: "",
-    description: "",
-  },
-  {
-    id: 4,
-    type: "image",
-    src: "",
-    description: "",
-  },
-  {
-    id: 5,
-    type: "image",
-    src: "",
-    description: "",
-  },
-  {
-    id: 6,
-    type: "image",
-    src: "",
-    description: "",
-  },
-]
 
 const OurSpace = () => {
     const height = useViewportHeight();
@@ -81,9 +43,10 @@ const OurSpace = () => {
         <video
           ref={videoRef}
           src={currentItem.src}
-          className="w-full h-full object-contain"
+          className="w-full h-full rounded-t-lg object-contain bg-black"
           controls
           playsInline
+          muted
         />
       );
     }
@@ -92,17 +55,17 @@ const OurSpace = () => {
       <Image
         src={currentItem.src}
         alt={currentItem.description}
-        className="object-contain"
+        className="object-contain rounded-t-lg bg-black w-full h-full"
         fill
       />
     );
   };
   
     return (
-      <div className="w-full" style={{height: height ? height : "100svh"}}>
+      <div className="w-full pt-20" style={{height: height ? height : "100svh"}}>
         <div className="w-full h-full">
-          <div className='w-full h-[80%] relative'>
-            <div className="w-full h-full relative">
+          <div className='w-full h-[80%] relative rounded-t-lg overflow-hidden'>
+            <div className="w-full h-full relative rounded-t-lg">
               {renderMedia()}
             </div>
 
@@ -128,14 +91,14 @@ const OurSpace = () => {
 
           </div>
 
-          <div className='w-full h-[20%] bg-primary flex overflow-x-auto'>
+          <div className='w-full h-[20%] rounded-b-lg bg-primary flex overflow-x-auto'>
         {officeImgs.map((item, index) => (
             <div
               key={item.id}
               ref={el => {thumbnailRefs.current[index] = el}}
               onClick={() => setActiveIndex(index)}
               className={`h-full min-w-[200px] cursor-pointer transition-all duration-300 overflow-hidden ${
-                index === activeIndex ? 'ring-2 ring-white opacity-100' : 'opacity-50 hover:opacity-75'
+                index === activeIndex ? 'ring-2 ring-accent opacity-100' : 'opacity-50 hover:opacity-75'
               }`}
             >
               {item.type === 'video' ? (

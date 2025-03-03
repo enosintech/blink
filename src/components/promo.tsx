@@ -127,6 +127,7 @@ const Promo = () => {
             className="w-full h-full object-cover bg-black cursor-pointer" 
             muted={isMuted}
             onClick={togglePlay}
+            playsInline
           >
             <source src="/videos/showreel.mp4" type="video/mp4" />
           </video>
