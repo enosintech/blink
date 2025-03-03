@@ -1,5 +1,6 @@
 "use client"
 
+import { team } from '@/constants';
 import { useViewportHeight } from '@/hooks/useVIewportHeight';
 import { gsap } from '@/lib/gsap-loader';
 import { useGSAP } from '@gsap/react';
@@ -37,17 +38,17 @@ const About = () => {
   }, [])
 
   return (
-    <div ref={sliderTrigger} className="w-full pt-20 overflow-x-hidden lg:client-carousel relative" style={{height: height ? height : "100svh"}}>
+    <div ref={sliderTrigger} className="w-full pt-20 px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32 relative" style={{height: height ? height : "100svh"}}>
       <div ref={slider} className='w-fit h-full flex relative'>
-        {[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].map((worker) => (
-          <div key={worker} className='w-[80vw] panel md:w-[70vw] lg:w-[40vw] h-full flex justify-start'>
+        {team.map((worker, idx) => (
+          <div key={idx} className='w-[80vw] panel md:w-[70vw] lg:w-[40vw] h-full flex justify-start'>
             <div className='flex flex-col w-[90%] h-[85%] sm:h-full'>
-              <div className='w-full h-[85%] rounded-lg border border-accent relative overflow-hidden'>
-                <Image src="/images/access-bank.jpg" alt="worker image" fill className='object-cover' />
+              <div className='w-full h-[85%] rounded-lg border border-accent relative overflow-hidden bg-black'>
+                <Image src={worker.image} alt="worker image" fill className='object-cover object-top' />
               </div>
               <div className="w-full h-[15%] mt-2">
-                <p className="font-semibold lg:text-lg">Blu Bluseke</p>
-                <p className='text-sm lg:text-base text-muted-foreground'>Chief Executive Officer</p>
+                <p className="font-semibold lg:text-lg">{worker.name}</p>
+                <p className='text-sm lg:text-base text-muted-foreground'>{worker.position}</p>
               </div>
             </div>
           </div>

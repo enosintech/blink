@@ -151,18 +151,18 @@ const Promo = () => {
             
             <div className="flex items-center justify-between w-full h-[92%] pr-2">
                 <div className="flex h-full bg-black">
-                    <div className="h-full w-10 md:w-14 lg:w-20 2xl:w-28 bg-black grid place-items-center">
+                    <div className="h-full px-4 md:px-6 xl:px-8 bg-black grid place-items-center">
                         <button 
                         onClick={togglePlay} 
                         className="text-white hover:text-accent transition-colors"
                         >
-                        {isPlaying ? <Pause className="size-4 md:size-6 xl:size-10" /> : <Play className="size-4 md:size-6 xl:size-10" />}
+                          {isPlaying ? <Pause className="size-4 md:size-6 xl:size-10" /> : <Play className="size-4 md:size-6 xl:size-10" />}
                         </button>
                     </div>
-                    <div className="h-full w-10 md:w-14 lg:w-20 2xl:w-28 bg-accent grid place-items-center">
+                    <div className="h-full px-4 md:px-6 xl:px-8 bg-accent grid place-items-center">
                         <button 
                         onClick={toggleMute} 
-                        className="text-white hover:text-accent transition-colors"
+                        className="text-white hover:text-black transition-colors"
                         >
                         {isMuted ? <VolumeX className="size-4 md:size-6 xl:size-10" /> : <Volume2 className="size-4 md:size-6 xl:size-10" />}
                         </button>

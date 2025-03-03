@@ -36,7 +36,7 @@ const Footer = () => {
                     <p className="text-base sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold">DO YOU HAVE A PROJECT IN MIND?</p>
                     <div className="mt-5 lg:mt-10">
                         <p className="sm:text-base text-xs font-semibold">CONTACT US AT</p>
-                        <a href="mailTo:info@blink.co.zm" className='w-fit'>
+                        <a href="mailTo:info@blink.co.zm" className="inline-block w-fit">
                             <p className='text-sm sm:text-xl lg:text-2xl tracking-tight pointer:hover:text-accent pointer:active:opacity-80 transition-all actionable'>INFO@BLINK.CO.ZM</p>
                         </a>
                     </div>
@@ -46,7 +46,7 @@ const Footer = () => {
                         <p className="md:text-base sm:text-sm text-xs font-semibold">CONNECT WITH US ON</p>
                         <div className="flex items-center gap-x-4 gap-y-1 flex-wrap mt-1 sm:mt-0">
                             {socials.map((social) => (
-                                <a key={social.name} target="_blank" className="actionable pointer:hover:text-accent pointer:active:opacity-80 cursor-pointer">
+                                <a key={social.name} target="_blank" href={social.link} className="actionable pointer:hover:text-accent pointer:active:opacity-80 cursor-pointer">
                                     <p className='text-[10px] sm:text-sm md:text-base'>{social.name}</p>
                                 </a>
                             ))}

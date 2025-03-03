@@ -79,7 +79,67 @@ export const digitalPackagegs = [
 
 export const team = [
     {
-        image: "",
+        image: "/images/blu-2.webp",
+        name: "Blu Bluseke",
+        position: "Chief Executive Officer",
+    },
+    {
+        image: "/images/blu-1.webp",
+        name: "Blu Bluseke",
+        position: "Chief Executive Officer",
+    },
+    {
+        image: "/images/blu-3.webp",
+        name: "Blu Bluseke",
+        position: "Chief Executive Officer",
+    },
+    {
+        image: "/images/blu-2.webp",
+        name: "Blu Bluseke",
+        position: "Chief Executive Officer",
+    },
+    {
+        image: "/images/blu-1.webp",
+        name: "Blu Bluseke",
+        position: "Chief Executive Officer",
+    },
+    {
+        image: "/images/blu-1.webp",
+        name: "Blu Bluseke",
+        position: "Chief Executive Officer",
+    },
+    {
+        image: "/images/blu-1.webp",
+        name: "Blu Bluseke",
+        position: "Chief Executive Officer",
+    },
+    {
+        image: "/images/blu-1.webp",
+        name: "Blu Bluseke",
+        position: "Chief Executive Officer",
+    },
+    {
+        image: "/images/blu-3.webp",
+        name: "Blu Bluseke",
+        position: "Chief Executive Officer",
+    },
+    {
+        image: "/images/blu-3.webp",
+        name: "Blu Bluseke",
+        position: "Chief Executive Officer",
+    },
+    {
+        image: "/images/blu-3.webp",
+        name: "Blu Bluseke",
+        position: "Chief Executive Officer",
+    },
+    {
+        image: "/images/blu-3.webp",
+        name: "Blu Bluseke",
+        position: "Chief Executive Officer",
+    },
+    {
+        image: "/images/blu-3.webp",
         name: "Blu Bluseke",
         position: "Chief Executive Officer",
     },
@@ -88,39 +148,63 @@ export const team = [
 export const officeImgs = [
     {
       id: 1,
-      type: "video",
-      src: "/videos/barlo.mp4",
-      description: "This is a Blink Video",
+      type: "image",
+      src: "/images/blink-office-1.jpeg",
+      description: "Blink Office",
     },
     {
       id: 2,
       type: "image",
-      src: "/images/access-bank.jpg",
-      description: "This is the Blink Office",
+      src: "/images/blink-office-2.jpeg",
+      description: "Blink Office",
     },
     {
       id: 3,
       type: "image",
-      src: "/images/access-bank.jpg",
-      description: "This is the Blink Office",
+      src: "/images/blink-office-3.jpeg",
+      description: "Blink Office",
     },
     {
       id: 4,
       type: "image",
-      src: "/images/access-bank.jpg",
-      description: "This is the Blink Office",
+      src: "/images/blink-office-1.jpeg",
+      description: "Blink Office",
     },
     {
       id: 5,
       type: "image",
-      src: "/images/access-bank.jpg",
-      description: "This is the Blink Office",
+      src: "/images/blink-office-2.jpeg",
+      description: "Blink Office",
     },
     {
       id: 6,
       type: "image",
-      src: "/images/access-bank.jpg",
-      description: "This is the Blink Office",
+      src: "/images/blink-office-3.jpeg",
+      description: "Blink Office",
+    },
+    {
+        id: 7,
+        type: "image",
+        src: "/images/blink-office-1.jpeg",
+        description: "Blink Office",
+    },
+    {
+        id: 8,
+        type: "image",
+        src: "/images/blink-office-2.jpeg",
+        description: "Blink Office",
+    },
+    {
+        id: 9,
+        type: "image",
+        src: "/images/blink-office-3.jpeg",
+        description: "Blink Office",
+    },
+    {
+        id: 10,
+        type: "image",
+        src: "/images/blink-office-1.jpeg",
+        description: "Blink Office",
     },
   ]
 

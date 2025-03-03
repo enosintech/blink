@@ -62,7 +62,7 @@ const OurSpace = () => {
   };
   
     return (
-      <div className="w-full pt-20" style={{height: height ? height : "100svh"}}>
+      <div className="w-full px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32 pt-20" style={{height: height ? height : "100svh"}}>
         <div className="w-full h-full">
           <div className='w-full h-[80%] relative rounded-t-lg overflow-hidden'>
             <div className="w-full h-full relative rounded-t-lg">

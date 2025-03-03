@@ -8,7 +8,7 @@ export default function AboutLayout({
     children: ReactNode
 }>) {
     return (
-        <div className="px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32">
+        <div>
             <AboutUsNav />
             {children}
             <SectionFooter />

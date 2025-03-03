@@ -19,7 +19,7 @@ const AboutUsNav = () => {
     }, [])
     
   return (
-    <div className="pt-24 w-full flex flex-col justify-between">
+    <div className="pt-24 px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32 w-full flex flex-col justify-between">
       <div className='w-full py-1'>
         <div className="border-2 border-white grid place-items-center p-2 w-fit rounded-full">
             <p className="font-semibold text-xs lg:text-base">ESTABLISHED IN 2022</p>
@@ -38,7 +38,7 @@ const AboutUsNav = () => {
             <div className='lg:w-[40%] 2xl:w-[35%] w-full mt-14'>
                 <p className="font-semibold text-sm lg:text-base mb-3">3 Years of Blink</p>
                 <div className="w-full h-[80%] lg:h-[90%] bg-black rounded border border-accent overflow-hidden">
-                    <video className="w-full h-full object-cover" muted controls playsInline={true} preload="metadata">
+                    <video className="w-full h-full object-cover" controls playsInline={true} preload="metadata">
                         <source src="/videos/showreel.mp4" type="video/mp4" />
                     </video>
                 </div>
