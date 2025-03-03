@@ -25,6 +25,7 @@ const About = () => {
       scrollTrigger: {
         trigger: sliderTrigger.current,
         pin: true,
+        anticipatePin: 1,
         scrub: 1,
         start: "top top",
         end: () => "+=" + slider.current?.offsetWidth,

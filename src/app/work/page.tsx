@@ -33,7 +33,7 @@ const Work = () => {
         <p className='pt-24 text-sm lg:text-base font-medium mt-10 sm:max-w-[80%]'>At Blink, we create bold, data-driven marketing strategies that captivate audiences and drive real results. From eye-catching campaigns to seamless brand experiences, our work speaks for itself. Explore our latest projects and see how we turn ideas into impact.</p>
         <div className="mt-20">
           <p className='font-bold text-lg sm:text-xl lg:text-2xl'>Our Recent Work</p>
-          <p className="mt-1 font-normal text-sm md:text-base xl:text-lg">
+          <p className="mt-1 font-medium text-sm md:text-base xl:text-lg">
             Explore some of our latest projects, showcasing our expertise and commitment to delivering high-quality solutions.  
           </p>
           <div className='w-full flex justify-center mt-14 relative'>
@@ -46,7 +46,7 @@ const Work = () => {
                         <p className='font-semibold text-xl'>{work.name}</p>
                         <p className="mt-1 text-muted-foreground text-base">{work.type}</p>
                       </div>
-                      <div className="mt-4 rounded-md overflow-hidden relative w-full h-40 lg:h-72">
+                      <div className="mt-4 rounded-md overflow-hidden relative w-full h-36 lg:h-72">
                         {work.mediaType === "img" ? 
                           <Image src={work.media} alt="work media" fill className="object-cover" />
                         : 
