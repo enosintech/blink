@@ -1,11 +1,9 @@
 "use client";
 
-import { useViewportHeight } from '@/hooks/useVIewportHeight';
 import { gsap } from '@/lib/gsap-loader';
 import { useGSAP } from '@gsap/react';
 import { Link } from 'next-view-transitions';
 import { usePathname } from 'next/navigation';
-import React, { useEffect, useState } from 'react'
 
 const AboutUsNav = () => {
 
