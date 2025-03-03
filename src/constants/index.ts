@@ -58,22 +58,37 @@ export const services = [
 
 export const digitalPackagegs = [
     {
-        name: "Gold Digital Package",
-        icon: "/images/gold.png",
+        name: "Gold",
         points: ["Social Media Starter Kit", "Content Strategy", "1 month content calender", "2 Still Graphics per week for one month" ],
-        price: "4999"
+        price: "17,000"
     },
     {
-        name: "Platinum Digital Package",
-        icon: "/images/platinum.png",
+        name: "Platinum",
         points: ["Social Media Starter Kit", "Content Strategy", "1 month content calender","1 month digital performance report", "3 Still Graphics per week for one month" ],
-        price: "7999"
+        price: "22,000"
     },
     {
-        name: "Diamond Digital Package",
-        icon: "/images/diamond.png",
+        name: "Diamond",
         points: ["Social Media Starter Kit", "Content Strategy", "1 month content calender","1 month digital performance report", "4 Still Graphics per week for one month", "1 Basic Reel Per month", "1 Social Media Campaign" ],
-        price: "9999"
+        price: "30,000"
+    }
+]
+
+export const brandingPackages = [
+    {
+        name: "Gold",
+        points: ["Social Media Starter Kit", "Content Strategy", "1 month content calender", "2 Still Graphics per week for one month" ],
+        price: "25,000"
+    },
+    {
+        name: "Platinum",
+        points: ["Social Media Starter Kit", "Content Strategy", "1 month content calender","1 month digital performance report", "3 Still Graphics per week for one month" ],
+        price: "30,000"
+    },
+    {
+        name: "Diamond",
+        points: ["Social Media Starter Kit", "Content Strategy", "1 month content calender","1 month digital performance report", "4 Still Graphics per week for one month", "1 Basic Reel Per month", "1 Social Media Campaign" ],
+        price: "35,000"
     }
 ]
 
