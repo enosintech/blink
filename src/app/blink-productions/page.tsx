@@ -22,7 +22,7 @@ const BlinkProductions = () => {
           </div>
           <div className="mt-4 w-full">
             <p className="font-semibold text-sm lg:text-base mb-3">Intro</p>
-            <div className="w-full h-[30vh] sm:h-[40vh] lg:w-[45%] 2xl:w-[40%] overflow-hidden rounded-lg border border-accent relative">
+            <div className="w-full h-[280px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[90svh] overflow-hidden rounded-lg border border-accent relative">
               <video controls playsInline className='w-full h-full object-cover'>
                 <source src="/videos/showreel.mp4" type="video/mp4" />
               </video>
