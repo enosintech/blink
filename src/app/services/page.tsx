@@ -81,7 +81,7 @@ const Services = () => {
                       <CarouselContent>
                         {digitalPackages.map((digital) => (
                           <CarouselItem key={digital.name} className='lg:basis-1/2 2xl:basis-1/3'>
-                            <div className='py-5 pb-10 pl-8 bg-black border border-accent relative rounded-md flex flex-col items-start min-w-[600px]'>
+                            <div className='py-5 pb-10 pl-8 bg-black border border-accent relative rounded-md flex flex-col items-start min-h-[400px]'>
                               <p className='text-accent font-semibold text-xl'>{digital.name}</p>
                               <div className='mt-4 text-center'>
                                 <p className='font-extrabold text-3xl sm:text-4xl'>K {digital.price}</p>
@@ -107,7 +107,7 @@ const Services = () => {
                     <CarouselContent>
                       {brandingPackages.map((digital) => (
                         <CarouselItem key={digital.name} className='lg:basis-1/2 2xl:basis-1/3'>
-                          <div className='py-5 pb-10 pl-8 bg-black border border-accent relative rounded-md flex flex-col items-start min-w-[600px]'>
+                          <div className='py-5 pb-10 pl-8 bg-black border border-accent relative rounded-md flex flex-col items-start min-h-[600px]'>
                             <p className='text-accent font-semibold text-xl'>{digital.name}</p>
                             <div className='mt-4'>
                               <p className='font-extrabold text-3xl sm:text-4xl'>K {digital.price}</p>
