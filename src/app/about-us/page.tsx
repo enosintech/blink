@@ -45,7 +45,7 @@ const About = () => {
           <div key={idx} className='w-[80vw] panel md:w-[70vw] lg:w-[40vw] h-full flex justify-start'>
             <div className='flex flex-col w-[90%] h-[85%] sm:h-full'>
               <div className='w-full h-[85%] rounded-lg border border-accent relative overflow-hidden bg-black'>
-                <Image src={worker.image} alt="worker image" fill className='object-cover object-top' />
+                <Image src={worker.image} alt="worker image" priority fill className='object-cover object-top' />
               </div>
               <div className="w-full h-[15%] mt-2">
                 <p className="font-semibold lg:text-lg">{worker.name}</p>

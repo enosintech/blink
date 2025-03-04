@@ -30,8 +30,8 @@ const BlinkProductions = () => {
           </div>
           <div className='mt-14 w-full'>
             <p className='font-bold text-lg sm:text-xl lg:text-2xl'>Videofolio</p>
-            <div className='w-full mt-4 flex justify-center relative'>
-              <Carousel className='w-[80%] sm:w-[90%] lg:w-full'>
+            <div className='w-full mt-4 flex flex-wrap justify-between gap-3 relative'>
+              {/* <Carousel className='w-[80%] sm:w-[90%] lg:w-full'>
                 <CarouselContent>
                   {videofolio.map((video) => (
                     <CarouselItem key={video.name} className='md:basis-1/2 2xl:basis-1/3'>
@@ -46,7 +46,15 @@ const BlinkProductions = () => {
                 </CarouselContent>
                 <CarouselPrevious className='bg-neutral-900 border-accent text-accent pointer:hover:text-neutral-900 pointer:hover:bg-accent' />
                 <CarouselNext className='bg-neutral-900 border-accent text-accent pointer:hover:text-neutral-900 pointer:hover:bg-accent' />
-              </Carousel>
+              </Carousel> */}
+              {videofolio.map((iframe) => (
+                <div key={iframe.name} className='w-[32%] py-4 pt-3 px-4 bg-black border border-accent rounded-md'>
+                  <div data-lenis-prevent  className='overflow-hidden w-full h-40 sm:h-56 lg:h-72 rounded-md bg-black'>
+                    <iframe data-lenis-prevent className='w-full h-full object-contain' src={iframe.link} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                  </div>
+                  <p className='text-accent mt-2 font-bold text-sm lg:text-xl'>{iframe.name}</p>
+                </div>
+              ))}
             </div>
           </div>
       </div>

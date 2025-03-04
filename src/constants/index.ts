@@ -94,7 +94,7 @@ export const brandingPackages = [
 
 export const team = [
     {
-        image: "/images/Blu.webp",
+        image: "/images/test.webp",
         name: "Bluseke Bluseke",
         position: "CEO and Founder",
     },
@@ -104,7 +104,7 @@ export const team = [
         position: "Client Strategy Associate",
     },
     {
-        image: "/images/Esther.webp",
+        image: "/images/test.webp",
         name: "Esther Masocha",
         position: "Digital and Strategy Supportr",
     },
