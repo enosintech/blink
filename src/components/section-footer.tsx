@@ -5,7 +5,7 @@ const SectionFooter = () => {
   return (
     <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start items-center gap-10 xl:max-h-80 h-[500px] relative mt-10 px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32">
         <div className='size-36 relative'>
-            <Image unoptimized src="/images/blink-eye.gif" alt="blinking eye" fill className="object-contain overflow-visible" />
+            <Image priority unoptimized src="/images/blink-eye.gif" alt="blinking eye" fill className="object-contain overflow-visible" />
         </div>
         <div>
             <div>

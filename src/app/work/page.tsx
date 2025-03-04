@@ -30,13 +30,10 @@ const Work = () => {
   return (
     <>
       <div className="w-screen sm:px-14 md:px-20 lg:px-24 xl:px-32 px-10 overflow-x-hidden">
-        <p className='pt-24 text-sm lg:text-base font-medium mt-10 sm:max-w-[80%]'>At Blink, we create bold, data-driven marketing strategies that captivate audiences and drive real results. From eye-catching campaigns to seamless brand experiences, our work speaks for itself. Explore our latest projects and see how we turn ideas into impact.</p>
+        <p className='pt-24 text-sm lg:text-xl xl:text-3xl font-medium text-justify mt-10'>At Blink, we create bold, data-driven marketing strategies that captivate audiences and drive real results. From eye-catching campaigns to seamless brand experiences, our work speaks for itself. Explore our latest projects and see how we turn ideas into impact.</p>
         <div className="mt-20">
           <p className='font-bold text-lg sm:text-xl lg:text-2xl'>Our Recent Work</p>
-          <p className="mt-1 font-medium text-sm md:text-base xl:text-lg">
-            Explore some of our latest projects, showcasing our expertise and commitment to delivering high-quality solutions.  
-          </p>
-          <div className='w-full flex justify-center mt-14 relative'>
+          <div className='w-full flex justify-center mt-8 relative'>
             <Carousel className='w-[80%] sm:w-[90%] lg:w-full'>
               <CarouselContent>
                 {work.map((work) => (

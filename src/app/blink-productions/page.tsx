@@ -8,7 +8,7 @@ const BlinkProductions = () => {
       <div className='pt-24 sm:px-14 md:px-20 lg:px-24 xl:px-32 px-10 w-full'>
           <div className="flex flex-col-reverse lg:flex-row justify-between w-full pb-10 pt-2">
             <div className=''>
-              <p className='text-sm lg:text-lg xl:text-3xl font-medium text-justify mt-10 lg:mt-0'>
+              <p className='text-sm lg:text-xl xl:text-3xl font-medium text-justify'>
                 Blink Productions delivers high-quality video production and editing, transforming ideas into captivating visual stories. From concept to final cut, we create compelling content for brands, ensuring every frame engages and inspires.
               </p>
             </div>
@@ -17,7 +17,7 @@ const BlinkProductions = () => {
             <p className="font-semibold text-sm lg:text-base mb-3">Intro</p>
             <div className="w-full h-[280px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[90svh] overflow-hidden rounded-lg border border-accent relative">
               <video controls playsInline className='w-full h-full object-cover'>
-                <source src="/videos/showreel.mp4" type="video/mp4" />
+                <source src="/videos/productions.mp4" type="video/mp4" />
               </video>
             </div>
           </div>

@@ -31,7 +31,7 @@ const Services = () => {
   return (
     <>
       <div className="pt-24 px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32">
-        <p className='text-sm md:text-base xl:text-lg font-medium'>
+        <p className='text-sm lg:text-xl xl:text-3xl font-medium text-justify'>
           At Blink, we fuse creativity with strategy to deliver marketing solutions that engage audiences and drive results. From branding and content creation to digital campaigns and performance marketing, we craft tailored strategies to help businesses stand out and grow. Let us bring your vision to life.
         </p>
         <div className="mt-20">
