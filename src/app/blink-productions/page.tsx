@@ -15,13 +15,10 @@ const BlinkProductions = () => {
     <>
       <div className='pt-24 sm:px-14 md:px-20 lg:px-24 xl:px-32 px-10 w-full'>
           <div className="flex flex-col-reverse lg:flex-row justify-between w-full pb-10 pt-2">
-            <div className='lg:max-w-[50%] 2xl:max-w-[40%]'>
-              <p className='text-sm lg:text-lg font-medium text-justify mt-10 lg:mt-0'>
+            <div className=''>
+              <p className='text-sm lg:text-lg xl:text-3xl font-medium text-justify mt-10 lg:mt-0'>
                 Blink Productions delivers high-quality video production and editing, transforming ideas into captivating visual stories. From concept to final cut, we create compelling content for brands, ensuring every frame engages and inspires.
               </p>
-            </div>
-            <div className='h-[30vh] sm:h-[35vh] md:h-[45vh] lg:h-[35vh] relative w-full lg:w-[40%] xl:w-[30%] bg-gradient-to-t from-black via-transparent to-transparent'>
-              <Image src="/images/astro.png" alt="astronaut" fill className='z-[-1] object-cover object-top' />
             </div>
           </div>
           <div className="mt-4 w-full">
@@ -40,8 +37,8 @@ const BlinkProductions = () => {
                   {videofolio.map((video) => (
                     <CarouselItem key={video.name} className='md:basis-1/2 2xl:basis-1/3'>
                       <div className="py-4 pt-3 px-4 bg-black border border-accent rounded-md">
-                        <div className='overflow-hidden w-full h-40 sm:h-56 lg:h-72 rounded-md bg-black'>
-                          <iframe className='w-full h-full object-contain' src={video.link} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                        <div data-lenis-prevent  className='overflow-hidden w-full h-40 sm:h-56 lg:h-72 rounded-md bg-black'>
+                          <iframe data-lenis-prevent className='w-full h-full object-contain' src={video.link} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                         </div>
                         <p className='text-accent mt-2 font-bold text-sm lg:text-xl'>{video.name}</p>
                       </div>

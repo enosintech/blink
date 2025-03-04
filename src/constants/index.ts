@@ -59,17 +59,17 @@ export const services = [
 export const digitalPackages = [
     {
         name: "Gold",
-        points: ["Social Media Starter Kit", "Content Strategy", "1 month content calender", "2 Still Graphics per week for one month" ],
+        points: ["Social Media Starter Kit (Social Media Banner and Profile Picture)", "Content Strategy", "1 month content calender", "2 Still Graphics per week for one month" ],
         price: "17,000"
     },
     {
         name: "Platinum",
-        points: ["Social Media Starter Kit", "Content Strategy", "1 month content calender","1 month digital performance report", "3 Still Graphics per week for one month" ],
+        points: ["Social Media Starter Kit (Social Media Banner and Profile Picture)", "Content Strategy", "1 month content calender","1 month digital performance report", "3 Still Graphics per week for one month" ],
         price: "22,000"
     },
     {
         name: "Diamond",
-        points: ["Social Media Starter Kit", "Content Strategy", "1 month content calender","1 month digital performance report", "4 Still Graphics per week for one month", "1 Basic Reel Per month", "1 Social Media Campaign" ],
+        points: ["Social Media Starter Kit (Social Media Banner and Profile Picture)", "Content Strategy", "1 month content calender","1 month digital performance report", "4 Still Graphics per week for 1 month", "1 Basic Reel Per month (Dependent on location)", "1 Social Media Campaign" ],
         price: "30,000"
     }
 ]
@@ -77,18 +77,18 @@ export const digitalPackages = [
 export const brandingPackages = [
     {
         name: "Gold",
-        points: ["Social Media Starter Kit", "Content Strategy", "1 month content calender", "2 Still Graphics per week for one month" ],
-        price: "25,000"
+        points: [ "Logo Architecture", "Business Card Design", "Letterhead Design", "Company Profile/ Pitch Deck", "Brand Manual - Standard, Powerpoint presentation template"],
+        price: "27,000"
     },
     {
         name: "Platinum",
-        points: ["Social Media Starter Kit", "Content Strategy", "1 month content calender","1 month digital performance report", "3 Still Graphics per week for one month" ],
+        points: [ "Logo Architecture", "Business Card Design", "Letterhead Design", "Company Profile/ Pitch Deck", "Brand Manual - Standard, Powerpoint presentation template", "Email Signature"],
         price: "30,000"
     },
     {
         name: "Diamond",
-        points: ["Social Media Starter Kit", "Content Strategy", "1 month content calender","1 month digital performance report", "4 Still Graphics per week for one month", "1 Basic Reel Per month", "1 Social Media Campaign" ],
-        price: "35,000"
+        points: ["Logo Architecture", "Business Card Design", "Letterhead Design", "Company Profile/ Pitch Deck", "Brand Manual - Standard", "Powerpoint Presentation template", "Social Media Starter Kit (Banners for Facebook & X, 1 Logo based profile icon, 1 logo based poster)", "Web Development"],
+        price: "45,000"
     }
 ]
 

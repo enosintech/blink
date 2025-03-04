@@ -37,7 +37,7 @@ const Services = () => {
         <div className="mt-20">
           <p className='font-bold text-xl lg:text-2xl'>Our Core Services</p>
           <div className="w-full mt-14 relative flex justify-center">
-            <Carousel className='w-[80%] sm:w-[90%] lg:w-full'>
+            <Carousel className='w-[80%] sm:w-[90%] lg:w-full min-[2000px]:w-[75%]'>
               <CarouselContent>
                 {services.map((service) => (
                   <CarouselItem key={service.name} className='lg:basis-1/2 2xl:basis-1/3'>
@@ -77,11 +77,11 @@ const Services = () => {
                 <div className="w-full flex justify-center mt-10 relative">
                   {toggle === "digital" 
                   ?
-                    <Carousel className='w-[80%] sm:w-[90%] lg:w-full'>
+                    <Carousel className='w-[80%] sm:w-[90%] lg:w-full min-[2000px]:w-[75%]'>
                       <CarouselContent>
                         {digitalPackages.map((digital) => (
                           <CarouselItem key={digital.name} className='lg:basis-1/2 2xl:basis-1/3'>
-                            <div className='py-5 pb-10 px-4 bg-black border border-accent relative rounded-md flex flex-col items-center'>
+                            <div className='py-5 pb-10 px-4 bg-black border border-accent relative rounded-md flex flex-col items-start min-w-[400px]'>
                               <p className='text-accent font-semibold text-xl'>{digital.name}</p>
                               <div className='mt-4 text-center'>
                                 <p className='font-extrabold text-3xl sm:text-4xl'>K {digital.price}</p>
@@ -107,7 +107,7 @@ const Services = () => {
                     <CarouselContent>
                       {brandingPackages.map((digital) => (
                         <CarouselItem key={digital.name} className='lg:basis-1/2 2xl:basis-1/3'>
-                          <div className='py-5 pb-10 px-4 bg-black border border-accent relative rounded-md flex flex-col items-center'>
+                          <div className='py-5 pb-10 px-4 bg-black border border-accent relative rounded-md flex flex-col items-start min-w-[400px]'>
                             <p className='text-accent font-semibold text-xl'>{digital.name}</p>
                             <div className='mt-4 text-center'>
                               <p className='font-extrabold text-3xl sm:text-4xl'>K {digital.price}</p>
