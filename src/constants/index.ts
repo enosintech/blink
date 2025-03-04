@@ -94,69 +94,94 @@ export const brandingPackages = [
 
 export const team = [
     {
-        image: "/images/blu-2.webp",
-        name: "Blu Bluseke",
-        position: "Chief Executive Officer",
-    },
-    {
-        image: "/images/blu-1.webp",
-        name: "Blu Bluseke",
-        position: "Chief Executive Officer",
+        image: "/images/blu-3.webp",
+        name: "Bluseke Bluseke",
+        position: "CEO and Founder",
     },
     {
         image: "/images/blu-3.webp",
-        name: "Blu Bluseke",
-        position: "Chief Executive Officer",
-    },
-    {
-        image: "/images/blu-2.webp",
-        name: "Blu Bluseke",
-        position: "Chief Executive Officer",
-    },
-    {
-        image: "/images/blu-1.webp",
-        name: "Blu Bluseke",
-        position: "Chief Executive Officer",
-    },
-    {
-        image: "/images/blu-1.webp",
-        name: "Blu Bluseke",
-        position: "Chief Executive Officer",
-    },
-    {
-        image: "/images/blu-1.webp",
-        name: "Blu Bluseke",
-        position: "Chief Executive Officer",
-    },
-    {
-        image: "/images/blu-1.webp",
-        name: "Blu Bluseke",
-        position: "Chief Executive Officer",
+        name: "Tabo C. Munyinda",
+        position: "Client Strategy Associate",
     },
     {
         image: "/images/blu-3.webp",
-        name: "Blu Bluseke",
-        position: "Chief Executive Officer",
+        name: "Esther Masocha",
+        position: "Digital and Strategy Supportr",
     },
     {
         image: "/images/blu-3.webp",
-        name: "Blu Bluseke",
-        position: "Chief Executive Officer",
+        name: "Tician Simatendele",
+        position: "Events Coordinator",
     },
     {
         image: "/images/blu-3.webp",
-        name: "Blu Bluseke",
-        position: "Chief Executive Officer",
+        name: "Leon Chansa",
+        position: "Client Strategy Associate",
     },
     {
         image: "/images/blu-3.webp",
-        name: "Blu Bluseke",
-        position: "Chief Executive Officer",
+        name: "Milimo M. Hachintu",
+        position: "Head of Projects and Operations",
     },
     {
         image: "/images/blu-3.webp",
-        name: "Blu Bluseke",
-        position: "Chief Executive Officer",
+        name: "Bwalya Ngoma",
+        position: "Head of Finance",
+    },
+    {
+        image: "/images/blu-3.webp",
+        name: "Emmelia Thokozile",
+        position: "Digital and Strategy Support",
+    },
+    {
+        image: "/images/blu-3.webp",
+        name: "Sibhongile L. Chitengi",
+        position: "Project Manager",
+    },
+    {
+        image: "/images/blu-3.webp",
+        name: "Amos Z. Mweemba",
+        position: "Executive Operations Coordinator",
+    },
+    {
+        image: "/images/blu-3.webp",
+        name: "Aggrey A. Lungu",
+        position: "Creative Director",
+    },
+    {
+        image: "/images/blu-3.webp",
+        name: "Amos. E. Phiri",
+        position: "Junior Designer",
+    },
+    {
+        image: "/images/blu-3.webp",
+        name: "Kellion Matina",
+        position: "Senior Designer",
+    },
+    {
+        image: "/images/blu-3.webp",
+        name: "Shephard Mulenga",
+        position: "Junior Designer",
+    },
+    {
+        image: "/images/blu-3.webp",
+        name: "Titan C. Chibwe",
+        position: "Senior Designer",
+    },
+    {
+        image: "/images/blu-3.webp",
+        name: "Amory Kapufi",
+        position: "Copywriter",
+    },
+    {
+        image: "/images/blu-3.webp",
+        name: "Mwangelwa Kamwi",
+        position: "Copywriter",
+    },
+    {
+        image: "/images/blu-3.webp",
+        name: "Kimberly Wayanika",
+        position: "Community Manager",
     },
 ]
 
