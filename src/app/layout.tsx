@@ -28,7 +28,7 @@ export default function RootLayout({
               <Navbar />
               <Cursor />
               <Scroller />
-              <SiteBackground />
+              {/* <SiteBackground /> */}
               {children}
             </SmoothScroll>
           </LoadingValueProvider>
