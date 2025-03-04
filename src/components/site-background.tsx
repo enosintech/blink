@@ -263,7 +263,7 @@ const SiteBackground = () => {
 
   return (
     <>
-        <div className='fixed top-0 left-0 w-full bg-black z-[-1] h-[1100px] sm:h-[100lvh]' style={{ opacity: `${loadingValue}%` }}>
+        <div className='fixed top-0 left-0 w-full bg-black z-[-1] h-[1500px] sm:h-[100lvh]' style={{ opacity: `${loadingValue}%` }}>
             <div className='w-full h-full gradient opacity-100'>
                 <div className={`w-full h-full ${pathname.startsWith("/blink-productions") && "opacity-0"}`}>
                     <div ref={containerRef} className='w-full h-full'></div>
