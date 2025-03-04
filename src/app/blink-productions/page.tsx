@@ -1,5 +1,4 @@
 import SectionFooter from '@/components/section-footer'
-import Image from 'next/image'
 import React from 'react'
 import {
   Carousel,
