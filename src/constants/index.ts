@@ -56,7 +56,7 @@ export const services = [
     },
 ];
 
-export const digitalPackagegs = [
+export const digitalPackages = [
     {
         name: "Gold",
         points: ["Social Media Starter Kit", "Content Strategy", "1 month content calender", "2 Still Graphics per week for one month" ],

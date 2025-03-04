@@ -10,7 +10,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import React, { useState } from 'react'
-import { brandingPackages, digitalPackagegs, services } from '@/constants';
+import { brandingPackages, digitalPackages, services } from '@/constants';
 import Image from 'next/image';
 import SectionFooter from '@/components/section-footer';
 import { Check } from 'lucide-react';
@@ -66,10 +66,10 @@ const Services = () => {
           <div className="mt-10">
                 <div className='w-full py-1 flex items-center justify-center'>
                   <div className='min-w-fit sm:text-base text-sm w-64 sm:w-72 flex items-center rounded-full bg-neutral-950'>
-                    <div onClick={() => setToggle("digital")} className={`${toggle === "digital" ? "bg-accent" : ""} rounded-full w-1/2 flex items-center justify-center py-2 transition-all`}>
+                    <div onClick={() => setToggle("digital")} className={`${toggle === "digital" ? "bg-accent" : ""} rounded-full cursor-pointer pointer:hover:opacity-80 pointer:active:opacity-60 actionable w-1/2 flex items-center justify-center py-2 transition-all`}>
                       <p className='font-semibold'>Digital</p>
                     </div>
-                    <div onClick={() => setToggle("branding")} className={`${toggle === "branding" ? "bg-accent" : ""} rounded-full w-1/2 flex items-center justify-center py-2 transition-all`}>
+                    <div onClick={() => setToggle("branding")} className={`${toggle === "branding" ? "bg-accent" : ""} rounded-full cursor-pointer pointer:hover:opacity-80 pointer:active:opacity-60 actionable w-1/2 flex items-center justify-center py-2 transition-all`}>
                       <p className='font-semibold'>Branding</p>
                     </div>
                   </div>
@@ -79,7 +79,7 @@ const Services = () => {
                   ?
                     <Carousel className='w-[80%] sm:w-[90%] lg:w-full'>
                       <CarouselContent>
-                        {digitalPackagegs.map((digital) => (
+                        {digitalPackages.map((digital) => (
                           <CarouselItem key={digital.name} className='lg:basis-1/2 2xl:basis-1/3'>
                             <div className='py-5 pb-10 px-4 bg-black border border-accent relative rounded-md flex flex-col items-center'>
                               <p className='text-accent font-semibold text-xl'>{digital.name}</p>
