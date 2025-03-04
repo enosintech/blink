@@ -28,7 +28,7 @@ const Footer = () => {
                 </div>
                 <p className="text-base xl:text-lg">BACK TO TOP</p>        
             </div>
-            <div className="aspect-square md:size-[30vw] size-[25vw] lg:size-[25vw] flex flex-col items-center relative overflow-hidden">
+            <div className="aspect-square size-[30vw] lg:size-[25vw] flex flex-col items-center relative overflow-hidden">
                 <Image src="/images/blink-eye.gif" priority alt="eye animation" fill className="object-contain" unoptimized />
             </div>
             <div className="w-full lg:w-1/2 h-[80%] sm:h-[60%] mt-5 lg:mt-0 lg:h-full px-4 flex flex-col justify-end gap-10 md:gap-20">

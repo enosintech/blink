@@ -81,7 +81,7 @@ const Services = () => {
                       <CarouselContent>
                         {digitalPackages.map((digital) => (
                           <CarouselItem key={digital.name} className='lg:basis-1/2 2xl:basis-1/3'>
-                            <div className='py-5 pb-10 px-8 bg-black border border-accent relative rounded-md flex flex-col items-start h-[500px] max-h-[500px]'>
+                            <div className='py-5 pb-10 px-3 md:px-5 lg:px-8 bg-black border border-accent relative rounded-md flex flex-col items-start h-[500px] max-h-[500px]'>
                               <p className='text-accent font-semibold text-xl'>{digital.name}</p>
                               <div className='mt-4'>
                                 <p className='font-extrabold text-3xl sm:text-4xl'>K {digital.price}</p>
@@ -90,8 +90,8 @@ const Services = () => {
                               <div className='mt-4 flex flex-col gap-2'>
                                 {digital.points.map((point) => (
                                   <div key={point} className='flex items-center w-full gap-4'>
-                                    <Check className="size-5 text-accent" />
-                                    <p className='font-medium text-muted-foreground'>{point}</p>
+                                    <Check className="size-4 lg:size-5  text-accent" />
+                                    <p className='font-medium text-[10px] sm:text-xs md:text-sm text-muted-foreground'>{point}</p>
                                   </div>
                                 ))}
                               </div>
