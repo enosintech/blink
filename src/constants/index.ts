@@ -99,26 +99,6 @@ export const team = [
         position: "CEO and Founder",
     },
     {
-        image: "/images/Tabo.webp",
-        name: "Tabo C. Munyinda",
-        position: "Client Strategy Associate",
-    },
-    {
-        image: "/images/test.webp",
-        name: "Esther Masocha",
-        position: "Digital and Strategy Supportr",
-    },
-    {
-        image: "/images/Tician.webp",
-        name: "Tician Simatendele",
-        position: "Events Coordinator",
-    },
-    {
-        image: "/images/Leon.webp",
-        name: "Leon Chansa",
-        position: "Client Strategy Associate",
-    },
-    {
         image: "/images/Milz.webp",
         name: "Milimo M. Hachintu",
         position: "Head of Projects and Operations",
@@ -129,14 +109,39 @@ export const team = [
         position: "Head of Finance",
     },
     {
+        image: "/images/Aggrey.webp",
+        name: "Aggrey A. Lungu",
+        position: "Creative Director",
+    },
+    {
+        image: "/images/Tabo.webp",
+        name: "Tabo C. Munyinda",
+        position: "Client Strategy Associate",
+    },
+    {
+        image: "/images/Leon.webp",
+        name: "Leon Chansa",
+        position: "Client Strategy Associate",
+    },
+    {
         image: "/images/TK.webp",
         name: "Emmelia Thokozile",
         position: "Digital and Strategy Support",
     },
     {
-        image: "/images/Sibo.webp",
-        name: "Sibhongile L. Chitengi",
-        position: "Project Manager",
+        image: "/images/Esther.webp",
+        name: "Esther Masocha",
+        position: "Digital and Strategy Support",
+    },
+    {
+        image: "/images/Titan.webp",
+        name: "Titan C. Chibwe",
+        position: "Graphics Designer & Illustrator",
+    },
+    {
+        image: "/images/Kellion.webp",
+        name: "Kellion Matina",
+        position: "Graphics Designer & Motion",
     },
     {
         image: "/images/Zawadi.webp",
@@ -144,34 +149,19 @@ export const team = [
         position: "Executive Operations Coordinator",
     },
     {
-        image: "/images/Aggrey.webp",
-        name: "Aggrey A. Lungu",
-        position: "Creative Director",
+        image: "/images/Sibo.webp",
+        name: "Sibhongile L. Chitengi",
+        position: "Project Manager",
     },
     {
         image: "/images/Amos.webp",
         name: "Amos. E. Phiri",
-        position: "Junior Designer",
-    },
-    {
-        image: "/images/Kellion.webp",
-        name: "Kellion Matina",
-        position: "Senior Designer",
+        position: "Junior Graphic Designer",
     },
     {
         image: "/images/Shepard.webp",
         name: "Shephard Mulenga",
-        position: "Junior Designer",
-    },
-    {
-        image: "/images/Titan.webp",
-        name: "Titan C. Chibwe",
-        position: "Senior Designer",
-    },
-    {
-        image: "/images/Amory.webp",
-        name: "Amory Kapufi",
-        position: "Copywriter",
+        position: "Junior Graphic Designer",
     },
     {
         image: "/images/Yandhi.webp",
@@ -179,9 +169,19 @@ export const team = [
         position: "Copywriter",
     },
     {
+        image: "/images/Amory.webp",
+        name: "Amory Kapufi",
+        position: "Copywriter",
+    },
+    {
         image: "/images/Kim.webp",
         name: "Kimberly Wayanika",
         position: "Community Manager",
+    },
+    {
+        image: "/images/Tician.webp",
+        name: "Tician Simatendele",
+        position: "Events Coordinator",
     },
 ]
 
