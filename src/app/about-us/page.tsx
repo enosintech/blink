@@ -39,7 +39,7 @@ const About = () => {
   }, [])
 
   return (
-    <div ref={sliderTrigger} className="w-full pt-20 px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32 relative" style={{height: height ? height : "100svh"}}>
+    <div ref={sliderTrigger} className="w-full overflow-x-hidden pt-20 px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32 relative" style={{height: height ? height : "100svh"}}>
       <div ref={slider} className='w-fit h-full flex relative'>
         {team.map((worker, idx) => (
           <div key={idx} className='w-[80vw] panel md:w-[70vw] lg:w-[40vw] h-full flex justify-start'>
