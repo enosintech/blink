@@ -369,26 +369,26 @@ export const clients = [
 export const socials = [
     {
         name: "Facebook",
-        link: "#",
+        link: "https://web.facebook.com/BlinkMarketingSolutionZmLtd/?_rdc=1&_rdr#",
     },
     {
         name: "LinkedIn",
-        link: "#",
+        link: "https://www.linkedin.com/company/blink-marketing-zm?originalSubdomain=zm",
     },
     {
         name: "Instagram",
-        link: "#",
+        link: "https://www.instagram.com/blinkmarketing_zm/",
     },
     {
         name: "Behance",
-        link: "#",
+        link: "https://www.behance.net/blink_anbu",
     },
     {
         name: "Twitter/X",
-        link: "#",
+        link: "https://x.com/_BlinkMarketing",
     },
     {
         name: "TikTok",
-        link: "#",
+        link: "https://www.tiktok.com/@blinkmarketing_zm",
     },
 ]

@@ -197,7 +197,7 @@ const Work = () => {
             </motion.p>
         </motion.div>
 
-        <div className='carousel rectangle relative w-full h-[700px] md:h-[760px] xl:h-[800px] 2xl:h-[95vh] -mt-3 sm:mt-3 flex items-center justify-center overflow-hidden' ref={carouselRef} onTouchStart={onTouchStart}
+        <div className='carousel rectangle relative w-full h-[700px] md:h-[760px] xl:h-[800px] 2xl:h-[850px] -mt-3 sm:mt-3 flex items-center justify-center overflow-hidden' ref={carouselRef} onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
         >

@@ -115,18 +115,6 @@ const SiteBackground = () => {
                 }
             })
 
-            gsap.fromTo(".gradient", {
-                opacity: 0.25
-            }, {
-                opacity: 1,
-                scrollTrigger: {
-                    trigger: "footer",
-                    start: "top bottom",
-                    end: "top center",
-                    scrub: true,
-                }
-            })
-
             gsap.fromTo(uniformsRef.current.u_amplitude, {
                 value: 1.5
             } ,{
@@ -136,16 +124,6 @@ const SiteBackground = () => {
                     start: "top bottom",
                     end: "top center",
                     scrub: true
-                }
-            })
-
-            gsap.to(uniformsRef.current.u_amplitude, {
-                value: 2.0,
-                scrollTrigger: {
-                    trigger: "footer",
-                    start: "top bottom",
-                    end: "top top",
-                    scrub: true,
                 }
             })
 

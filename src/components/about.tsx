@@ -47,7 +47,7 @@ const About = () => {
             <p className='font-medium text-sm md:text-base lg:text-lg 2xl:text-xl text-white'>Learn About Us</p> 
         </Link>
       </div>
-      <div className='mt-20 md:mt-32 w-full h-[220px] sm:h-[300px] md:h-[400px] xl:h-[600px] 2xl:h-[90vh] deep-shadow md:rounded-lg lg:rounded-xl rounded-md overflow-hidden relative imgTrigger'>
+      <div className='mt-20 md:mt-32 w-full h-[220px] sm:h-[300px] md:h-[400px] xl:h-[600px] 2xl:h-[750px] deep-shadow md:rounded-lg lg:rounded-xl rounded-md overflow-hidden relative imgTrigger'>
         <Image src="/images/office.webp" alt="blink office" fill className='object-cover scale-125 scale-img' />
       </div>
     </div>

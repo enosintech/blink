@@ -1,15 +1,48 @@
 "use client";
 
-import React from 'react'
-import { motion } from 'framer-motion'; 
+import React, { useRef} from 'react'
+import { motion, useInView } from 'framer-motion'; 
 
 import { clients } from '@/constants'; 
 import Image from 'next/image';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from '@/lib/gsap-loader';
 
 const Clients = () => {
+
+  const headingRef = useRef(null);
+  const isInView = useInView(headingRef, { once: true });
+
+  useGSAP(() => {
+
+    ScrollTrigger.create({
+      trigger: ".promo",
+      start: "top bottom",
+      end: "bottom center",
+      pin: ".clients",
+      pinSpacing: false
+    })
+
+  }, []) 
+
   return (
-    <div className="pt-14 lg:pt-24 pb-10 px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32 mt-5 md:mt-12 flex items-center flex-col">
-      <p className="text-accent text-xl md:text-3xl lg:text-4xl text-center font-semibold">700+ TRUSTED CLIENTS</p>
+    <div className="pt-14 lg:pt-24 pb-10 clients px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32 mt-5 md:mt-12 flex flex-col">
+      <motion.div
+          ref={headingRef}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+          <p className="text-accent text-sm md:text-base px-1">CLIENTS</p>
+          <motion.p
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          className="text-2xl md:text-3xl lg:text-5xl font-semibold mt-3 text-white"
+          >
+           We Partner with Leading Brands
+          </motion.p>
+      </motion.div>
 
       <div className="relative w-full mt-4 overflow-hidden client-carousel h-[350px] md:h-[450px] flex items-center">
 

@@ -89,8 +89,8 @@ const Services = () => {
                               </div>
                               <div className='mt-4 flex flex-col gap-2'>
                                 {digital.points.map((point) => (
-                                  <div key={point} className='flex items-center w-full gap-4'>
-                                    <Check className="size-4 lg:size-5  text-accent" />
+                                  <div key={point} className='flex items-start w-full gap-4'>
+                                    <Check className="size-4 lg:size-5 flex-shrink-0 text-accent" />
                                     <p className='font-medium text-[10px] sm:text-xs md:text-sm text-muted-foreground'>{point}</p>
                                   </div>
                                 ))}
