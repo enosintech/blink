@@ -41,7 +41,7 @@ const AboutUsNav = () => {
         <div className="w-full flex lg:flex-row lg:items-center flex-col justify-between">
             <div className='flex flex-col'>
                 <div className='flex items-center gap-3 text-base md:text-lg xl:text-xl font-medium'>
-                    <div onClick={() => setActiveIndex(0)} className={`px-4 py-1 rounded-full border border-white cursor-pointer select-none pointer:hover:opacity-80 pointer:active:opacity-60 transition-all ${activeIndex === 0 ? "border-white" : "border-transparent"}`}>
+                    <div onClick={() => setActiveIndex(0)} className={`px-4 py-1 rounded-full border cursor-pointer select-none pointer:hover:opacity-80 pointer:active:opacity-60 transition-all ${activeIndex === 0 ? "border-white" : "border-transparent"}`}>
                         <p>About</p>
                     </div>
                     <div onClick={() => setActiveIndex(1)} className={`px-4 py-1 rounded-full border cursor-pointer select-none pointer:hover:opacity-80 pointer:active:opacity-60 transition-all ${activeIndex === 1 ? "border-white" : "border-transparent"}`}>
@@ -55,7 +55,7 @@ const AboutUsNav = () => {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -50 }}
                         transition={{ duration: 0.2, ease: "easeInOut" }}
-                        className="mt-8 min-h-[350px] md:min-h-[150px] overflow-visible">
+                        className="mt-8 min-h-[300px] md:min-h-[150px] overflow-visible">
                         <p className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium text-justify">{aboutBlink[activeIndex]}</p>
                     </motion.div>
                 </AnimatePresence>
