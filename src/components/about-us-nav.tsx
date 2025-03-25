@@ -55,8 +55,8 @@ const AboutUsNav = () => {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -50 }}
                         transition={{ duration: 0.2, ease: "easeInOut" }}
-                        className="mt-8 min-h-[300px] md:min-h-[150px] overflow-visible">
-                        <p className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium text-justify">{aboutBlink[activeIndex]}</p>
+                        className="mt-8 min-h-[280px] md:min-h-[150px] overflow-visible">
+                        <p className="text-base sm:text-xl lg:text-2xl xl:text-3xl font-medium md:text-justify">{aboutBlink[activeIndex]}</p>
                     </motion.div>
                 </AnimatePresence>
             </div>
