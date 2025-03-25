@@ -75,7 +75,7 @@ const Services = () => {
 
                         <p className="text-white/70 mt-5 font-medium text-sm md:text-base 2xl:text-lg">{services[activeIndex].description}</p>
 
-                        <Link href={"/services"} className="mt-3 actionable">
+                        <Link href={"/services"} className="mt-3 actionable w-fit inline-block">
                             <p className="text-accent text-sm md:text-base xl:text-lg font-bold pointer:hover:opacity-80 pointer:active:opacity-60">Learn More</p>
                         </Link>
                     </motion.div>

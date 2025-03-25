@@ -14,10 +14,14 @@ import { brandingPackages, digitalPackages, services } from '@/constants';
 import Image from 'next/image';
 import SectionFooter from '@/components/section-footer';
 import { Check } from 'lucide-react';
+import { noTriggerToAnimations } from '@/lib/animations';
+import { useLoadingValue } from '@/context/loadingValueContext';
 
 const Services = () => {
 
   const  [ toggle, setToggle ] = useState("digital")
+
+  const { loadingValue } = useLoadingValue();
 
   useGSAP(() => {
 
@@ -28,10 +32,20 @@ const Services = () => {
 
   }, [])
 
+  useGSAP(() => {
+      if(loadingValue === 100) {
+          noTriggerToAnimations(".services-screen", {
+          duration: 2.5,
+          opacity: 1,
+          delay: 0.5
+          })
+      }
+  }, [loadingValue])
+
   return (
     <>
-      <div className="pt-24 px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32">
-        <p className='text-sm lg:text-xl xl:text-3xl font-medium text-justify'>
+      <div className="pt-24 px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32 services-screen opacity-0">
+        <p className='text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium text-justify'>
           At Blink, we fuse creativity with strategy to deliver marketing solutions that engage audiences and drive results. From branding and content creation to digital campaigns and performance marketing, we craft tailored strategies to help businesses stand out and grow. Let us bring your vision to life.
         </p>
         <div className="mt-20">
@@ -116,7 +130,7 @@ const Services = () => {
                             <div className='mt-4 flex flex-col gap-2'>
                               {digital.points.map((point) => (
                                 <div key={point} className='flex items-center w-full gap-4'>
-                                  <Check className="size-4 lg:size-5  text-accent" />
+                                  <Check className="size-4 lg:size-5 flex-shrink-0 text-accent" />
                                   <p className='font-medium text-[10px] sm:text-xs md:text-sm text-muted-foreground'>{point}</p>
                                 </div>
                               ))}

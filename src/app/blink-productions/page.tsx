@@ -1,15 +1,33 @@
+"use client";
+
 import SectionFooter from '@/components/section-footer'
 import React from 'react'
 import { videofolio } from '@/constants'
+import { useGSAP } from '@gsap/react';
+import { noTriggerToAnimations } from '@/lib/animations';
+import { useLoadingValue } from '@/context/loadingValueContext';
 
 const BlinkProductions = () => {
+
+  const { loadingValue } = useLoadingValue();
+
+  useGSAP(() => {
+      if(loadingValue === 100) {
+          noTriggerToAnimations(".productions-screen", {
+          duration: 2.5,
+          opacity: 1,
+          delay: 0.5
+          })
+      }
+  }, [loadingValue])
+
   return (
     <>
-      <div className='pt-24 sm:px-14 md:px-20 lg:px-24 xl:px-32 px-10 w-full'>
+      <div className='pt-24 sm:px-14 md:px-20 lg:px-24 xl:px-32 px-10 w-full productions-screen opacity-0'>
           <div className="flex flex-col-reverse lg:flex-row justify-between w-full pb-10 pt-2">
             <div className=''>
-              <p className='text-sm lg:text-xl xl:text-3xl font-medium text-justify'>
-                Blink Productions delivers high-quality video production and editing, transforming ideas into captivating visual stories. From concept to final cut, we create compelling content for brands, ensuring every frame engages and inspires.
+              <p className='text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium text-justify'>
+                Lights. Camera. Disruption.... At Blink Productions, storytelling meets strategy, creative collides with AI, and every frame is designed to leave a mark. Forget the ordinary. This is storytelling without limits. This is Blink Productions
               </p>
             </div>
           </div>

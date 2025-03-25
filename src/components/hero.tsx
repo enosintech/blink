@@ -4,6 +4,7 @@ import { useLoadingValue } from '@/context/loadingValueContext';
 import { useViewportHeight } from '@/hooks/useVIewportHeight';
 import { gsap } from '@/lib/gsap-loader';
 import { useGSAP } from '@gsap/react';
+import { ArrowDown } from 'lucide-react';
 import { Link } from "next-view-transitions";
 import React from 'react';
 
@@ -43,11 +44,49 @@ const Hero = () => {
       }
     }, [loadingValue])
 
+    useGSAP(() => {
+      const tl = gsap.timeline({
+        defaults: {
+            ease: "power4.inOut",
+            duration: 1
+        }
+      });
+
+      tl.to(".arrow-1", {
+          y: "105%"
+      })
+      
+      tl.to(".arrow-2", {
+          y: 0
+      })
+
+      tl.to(".arrow-1", {
+          opacity: 0
+      })
+
+      tl.to(".arrow-2", {
+          y: "105%"
+      })
+
+      tl.to(".arrow-1", {
+          y: "-105%"
+      }, "<")
+      
+      tl.to(".arrow-1", {
+          y: 0,
+          opacity: 1
+      })
+
+      tl.repeat(-1)
+
+    }, [])
+
   return (
     <div style={{ height: height ? height : "100svh" }} className="pt-20 w-full hero">
       <div className="relative w-full h-full px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32 flex flex-col pt-10 md:pt-0 justify-center">
-        <div className="border-4 flex justify-center py-[1px] border-white w-7 h-14 lg:w-8 lg:h-16 rounded-full bottom-14 lg:bottom-10 right-10 sm:right-14 md:right-20 lg:right-24 xl:right-32 absolute main-text opacity-0">
-          <div className="w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-white animate-prompt-scroll transition-all"></div>
+        <div className='grid opacity-0 main-text place-items-center md:size-12 size-10 overflow-hidden absolute bottom-14 lg:bottom-10 right-10 sm:right-14 md:right-20 lg:right-24 xl:right-32'>
+            <ArrowDown className='md:size-11 size-9 arrow-1' />
+            <ArrowDown className='md:size-11 size-9 absolute -translate-y-[100%] arrow-2' />
         </div>
         <div className='flex flex-col gap-8 md:gap-10 lg:gap-12 -translate-y-20 md:translate-y-0'>
             <div className='flex flex-col gap-3 md:gap-6'>
