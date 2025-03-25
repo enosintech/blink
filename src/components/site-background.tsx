@@ -67,7 +67,7 @@ const SiteBackground = () => {
         }
 
         return newVelocity;
-    }, []);
+    }, [VELOCITY_CONFIG.acceleration, VELOCITY_CONFIG.friction, VELOCITY_CONFIG.maxVelocity, VELOCITY_CONFIG.minVelocity]);
 
     useGSAP(() => {
         gsap.set(".gradient", { opacity: 1 });
@@ -75,7 +75,6 @@ const SiteBackground = () => {
 
         if (loadingValue !== 100) {
             const loadingFactor = loadingValue / 100;
-            const adjustedAcceleration = VELOCITY_CONFIG.acceleration * loadingFactor * 10;
             
             velocityRef.current = calculateVelocity(velocityRef.current, true);
 
@@ -185,7 +184,7 @@ const SiteBackground = () => {
             cancelAnimationFrame(animationFrameId);
             rendererRef.current?.dispose();
         };
-    }, []);
+    }, [calculateVelocity]);
 
     useEffect(() => {
         const handleResize = () => {
@@ -234,7 +233,7 @@ const SiteBackground = () => {
         return () => {
             window.removeEventListener('mousemove', handleMouseMove as EventListener);
         };
-    }, [timelineComplete, pathname]);
+    }, [timelineComplete, pathname, calculateVelocity]);
 
     const height = useViewportHeight();
 
