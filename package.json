@@ -5,8 +5,20 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "lint": "next lint"
+  },
+  "overrides": {
+    "next-view-transitions": {
+      "react": "^19.0.0",
+      "react-dom": "^19.0.0"
+    },
+    "react-tilt": {
+      "@types/react": "^19.0.0",
+      "@types/react-dom": "^19.0.0",
+      "react": "^19.0.0",
+      "react-dom": "^19.0.0"
+    }
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

@@ -12,6 +12,10 @@ export const navLinks = [
         link: "/services"
     },
     {
+        name: "Passion Projects",
+        link: "/passion"
+    },
+    {
         name: "Blink Productions",
         link: "/blink-productions"
     },
@@ -141,7 +145,7 @@ export const team = [
     {
         image: "/images/Kellion.webp",
         name: "Kellion Matina",
-        position: "Graphics Designer & Motion",
+        position: "Graphics Designer & Motion Graphics",
     },
     {
         image: "/images/Zawadi.webp",
@@ -155,7 +159,7 @@ export const team = [
     },
     {
         image: "/images/Amos.webp",
-        name: "Amos. E. Phiri",
+        name: "Amos E. Phiri",
         position: "Junior Graphic Designer",
     },
     {
@@ -257,7 +261,8 @@ export const work = [
         categories: [
             "Brand Awareness",
             "Visual Design"
-        ]
+        ],
+        link: "https://www.behance.net/Blink_Zambia"
     },
     {
         name: "Zed Mobile",
@@ -267,7 +272,8 @@ export const work = [
         categories: [
             "Brand Campaign",
             "Visual Identity"
-        ]
+        ],
+        link: "https://www.behance.net/Blink_Zambia"
     },
     {
         name: "Holiday Inn",
@@ -278,7 +284,8 @@ export const work = [
             "Hospitality",
             "Brand Strategy",
             "Signage"
-        ]
+        ],
+        link: "https://www.behance.net/Blink_Zambia"
     },
     {
         name: "First Capital Bank",
@@ -288,17 +295,19 @@ export const work = [
         categories: [
             "Ad Awareness",
             "Brand Identity",
-        ]
+        ],
+        link: "https://www.behance.net/Blink_Zambia"
     },
     {
-        name: "Tenga/ Access",
+        name: "Tenga / Access Bank",
         type: "Ad Campaign",
         media: "/images/access-bank.jpg",
         mediaType: "img",
         categories: [
             "Brand Awareness",
             "Product Awareness",
-        ]
+        ],
+        link: "https://www.behance.net/Blink_Zambia"
     },
     {
         name: "Rocomamas",
@@ -308,7 +317,8 @@ export const work = [
         categories: [
             "Brand Awareness",
             "Visual Design"
-        ]
+        ],
+        link: "https://www.behance.net/Blink_Zambia"
     },
 ]
 
@@ -390,5 +400,9 @@ export const socials = [
     {
         name: "TikTok",
         link: "https://www.tiktok.com/@blinkmarketing_zm",
+    },
+    {
+        name: "YouTube",
+        link: "https://www.youtube.com/@blinkmarketingzm",
     },
 ]

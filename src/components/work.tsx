@@ -7,14 +7,14 @@ import Image from 'next/image';
 import React, { ReactNode, useEffect, useRef, useState } from 'react';
 import { motion, useInView } from "framer-motion";
 
-const WorkListing = ({ children, title, type, categories } : { children: ReactNode, title: string, categories: string[], type: string }) => {
+const WorkListing = ({ children, title, type, categories, link } : { children: ReactNode, title: string, categories: string[], type: string, link: string }) => {
     return (
       <div className='w-full h-full flex flex-col p-1'>
         <div className='w-full flex-1 rounded-md overflow-hidden relative'>
 
-            <div className="absolute p-3 top-3 right-3 actionable cursor-pointer pointer:active:opacity-80 group rounded-full bg-neutral-950 border border-accent z-10 flex items-center justify-center">
+            <a href={link} target="_blank" className="absolute p-3 top-3 right-3 actionable cursor-pointer pointer:active:opacity-80 group rounded-full bg-neutral-950 border border-accent z-10 flex items-center justify-center">
               <ArrowUpRight className="size-5 md:size-6 text-white pointer:group-hover:text-accent" />
-            </div>
+            </a>
 
             {children}
         </div>
@@ -208,7 +208,7 @@ const Work = () => {
                 className='carousel-card absolute w-[90%] sm:w-[75%] md:w-[65%] lg:w-[55%] 2xl:w-[45%] h-[65%] md:h-[75%] lg:h-[80%] rounded-xl transform transition-transform duration-500'
             >
                 <div className="w-full h-full bg-black rounded-xl deep-shadow border-accent border">
-                    <WorkListing title={item.name} categories={item.categories} type={item.type}>
+                    <WorkListing link={item.link} title={item.name} categories={item.categories} type={item.type}>
                         <div className='w-full h-full bg-black relative'>
                             {item.mediaType === "img" ?
                                 <Image fill alt="portfolio image" src={item.media} className="object-cover" />    

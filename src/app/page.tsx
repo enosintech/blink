@@ -4,13 +4,14 @@ import Footer from '@/components/footer';
 import Hero from '@/components/hero'
 import Highlights from '@/components/highlights';
 import Services from '@/components/services';
+import SmoothScroll from '@/components/smooth-scroll';
 import Video from '@/components/video';
 import Work from '@/components/work';
 import React from 'react'
 
 const Home = () => {
   return (
-    <div>
+    <SmoothScroll>
       <Hero />
       <About />
       <Services />
@@ -19,7 +20,7 @@ const Home = () => {
       <Clients />
       <Video />
       <Footer />
-    </div>
+    </SmoothScroll>
   )
 }
 

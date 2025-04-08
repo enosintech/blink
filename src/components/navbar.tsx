@@ -109,7 +109,7 @@ const Navbar = () => {
             <div></div>
         </div>
 
-        <div className="absolute w-full h-0 top-[100%] left-0 bg-[rgba(0,0,0,0.3)] mobile-nav pointer-events-none opacity-0 backdrop-blur flex flex-col xl:hidden font-semibold sm:text-base text-sm">
+        <div className="absolute w-full h-0 top-[100%] left-0 bg-[rgba(0,0,0,0.3)] mobile-nav pointer-events-none opacity-0 backdrop-blur flex flex-col 2xl:hidden font-semibold sm:text-base text-sm">
             {navLinks.map((link) => (
                 <Link href={link.link} key={link.name} className={`w-0 ${pathname === "/" ? "h-1/5" : "h-1/4"} px-10 mobile-nav-buttons opacity-0 sm:px-14 md:px-20 flex items-center border-t border-accent pointer:hover:opacity-80 pointer:active:opacity-60 cursor-pointer actionable`}>
                     <p className={`${pathname.startsWith(link.link) ? "text-accent" : "text-white"} opacity-0 mobile-nav-text truncate`}>{link.name}</p>
@@ -126,7 +126,7 @@ const Navbar = () => {
             <Link href={"/"} className='relative w-24 sm:w-36 md:w-40 2xl:w-44 h-12 actionable'>
                 <Image fill alt="blink logo" src="/images/logo.png" className='object-contain overflow-visible' />
             </Link>
-            <div className='xl:hidden cursor-pointer actionable' onClick={() => setNavVisible((prev) => !prev)}>
+            <div className='2xl:hidden cursor-pointer actionable' onClick={() => setNavVisible((prev) => !prev)}>
                 <motion.svg
                     width="40"
                     height="40"
@@ -159,7 +159,7 @@ const Navbar = () => {
                     />
                 </motion.svg>
             </div>
-            <div className='xl:flex hidden text-base 2xl:text-lg items-center gap-14'>
+            <div className='2xl:flex hidden text-base 2xl:text-lg items-center gap-14'>
                 {navLinks.map((link) => (
                     <Link href={link.link} key={link.name}>
                         <p className={`font-medium actionable pointer:hover:text-accent pointer:active:opacity-75 transition-all ${pathname.startsWith(link.link) ? "text-accent" : "text-white"}`}>{link.name}</p>

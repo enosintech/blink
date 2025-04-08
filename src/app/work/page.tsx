@@ -9,6 +9,7 @@ import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import { useLoadingValue } from '@/context/loadingValueContext';
 import { noTriggerToAnimations } from '@/lib/animations';
+import SmoothScroll from '@/components/smooth-scroll';
 
 const Work = () => {
 
@@ -34,14 +35,21 @@ const Work = () => {
   }, [loadingValue])
 
   return (
-    <>
+    <SmoothScroll>
       <div className="w-screen sm:px-14 md:px-20 lg:px-24 xl:px-32 px-10 overflow-x-hidden work-screen opacity-0">
         <p className='pt-24 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium text-justify mt-10'>At Blink, we create bold, data-driven marketing strategies that captivate audiences and drive real results. From eye-catching campaigns to seamless brand experiences, our work speaks for itself. Explore our latest projects and see how we turn ideas into impact.</p>
         <div className="mt-20">
           <p className='font-bold text-lg sm:text-xl lg:text-2xl'>Work Showcase</p>
           <div className='w-full flex flex-wrap gap-4 mt-8 relative'>
             {work.map((work) => (
-                <div key={work.name} className="pb-4 overflow-hidden w-full lg:w-[48%] 2xl:w-[32%] bg-black border border-accent rounded-md group">
+                <div key={work.name} className="pb-4 overflow-hidden w-full lg:w-[48%] 2xl:w-[32%] bg-black border relative border-accent rounded-md group">
+
+                  <div className="mt-4 px-4 absolute top-2 right-3 z-50">
+                    <a href={work.link} target="_blank" className="flex items-center cursor-pointer actionable group-hover:bg-black group-hover:text-white pointer:hover:opacity-80 pointer:active:opacity-60 w-fit gap-2 border-accent border rounded-full px-3 py-2">
+                      <p className='font-semibold'>VIEW MORE</p>
+                      <ArrowUpRight className='size-6 xl:size-7' />
+                    </a>
+                  </div>
 
                   <div className="overflow-hidden relative w-full h-[22rem]">
                     <div className='w-full h-full absolute group-hover:opacity-0 transition-all duration-500 z-10 bg-gradient-to-b from-black via-black/40 to-transparent'></div>
@@ -68,18 +76,13 @@ const Work = () => {
                       </div>
                     ))}
                   </div>
-                  <div className="mt-4 px-4">
-                    <div className="flex items-center cursor-pointer actionable pointer:hover:opacity-80 pointer:active:opacity-60 w-fit gap-2 border-accent border rounded-full px-3 py-2">
-                      <ArrowUpRight className='size-6 xl:size-7' />
-                    </div>
-                  </div>
                 </div>
             ))}
           </div>
         </div>
       </div>
       <SectionFooter />
-    </>
+    </SmoothScroll>
   )
 }
 

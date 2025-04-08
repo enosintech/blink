@@ -27,7 +27,7 @@ const BlinkProductions = () => {
           <div className="flex flex-col-reverse lg:flex-row justify-between w-full pb-10 pt-2">
             <div className=''>
               <p className='text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium text-justify'>
-                Lights. Camera. Disruption.... At Blink Productions, storytelling meets strategy, creative collides with AI, and every frame is designed to leave a mark. Forget the ordinary. This is storytelling without limits. This is Blink Productions
+                Lights. Camera. Disruption... Where storytelling meets strategy, creativity collides with AI, and every frame is crafted to leave a mark. Forget the ordinary, we’re here to challenge conventions and create narratives that resonate. This is storytelling without limits. This is Blink Productions.
               </p>
             </div>
           </div>

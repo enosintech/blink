@@ -16,6 +16,7 @@ import SectionFooter from '@/components/section-footer';
 import { Check } from 'lucide-react';
 import { noTriggerToAnimations } from '@/lib/animations';
 import { useLoadingValue } from '@/context/loadingValueContext';
+import SmoothScroll from '@/components/smooth-scroll';
 
 const Services = () => {
 
@@ -43,10 +44,10 @@ const Services = () => {
   }, [loadingValue])
 
   return (
-    <>
+    <SmoothScroll>
       <div className="pt-24 px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32 services-screen opacity-0">
         <p className='text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium text-justify'>
-          At Blink, we fuse creativity with strategy to deliver marketing solutions that engage audiences and drive results. From branding and content creation to digital campaigns and performance marketing, we craft tailored strategies to help businesses stand out and grow. Let us bring your vision to life.
+          We&apos;re dedicated to helping small and medium-sized businesses thrive with customized, budget-friendly marketing strategies. From captivating branding to cutting-edge digital solutions, our SME packages are designed to create meaningful connections with your audience and accelerate your growth. Ready to elevate your business? Explore our packages.
         </p>
         <div className="mt-20">
           <p className='font-bold text-xl lg:text-2xl'>Our Core Services</p>
@@ -148,7 +149,7 @@ const Services = () => {
         </div>
       </div>
       <SectionFooter />
-    </>
+    </SmoothScroll>
   )
 }
 
