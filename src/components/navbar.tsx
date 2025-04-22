@@ -38,7 +38,7 @@ const Navbar = () => {
 
             tl.to(".mobile-nav", {
                 opacity: 1,
-                height: 180,
+                height: 250,
                 pointerEvents: "all",
             })
 
@@ -111,12 +111,12 @@ const Navbar = () => {
 
         <div className="absolute w-full h-0 top-[100%] left-0 bg-[rgba(0,0,0,0.3)] mobile-nav pointer-events-none opacity-0 backdrop-blur flex flex-col 2xl:hidden font-semibold sm:text-base text-sm">
             {navLinks.map((link) => (
-                <Link href={link.link} key={link.name} className={`w-0 ${pathname === "/" ? "h-1/5" : "h-1/4"} px-10 mobile-nav-buttons opacity-0 sm:px-14 md:px-20 flex items-center border-t border-accent pointer:hover:opacity-80 pointer:active:opacity-60 cursor-pointer actionable`}>
+                <Link href={link.link} key={link.name} className={`w-0 ${pathname === "/" ? "h-1/6" : "h-1/5"} px-10 mobile-nav-buttons opacity-0 sm:px-14 md:px-20 flex items-center border-t border-accent pointer:hover:opacity-80 pointer:active:opacity-60 cursor-pointer actionable`}>
                     <p className={`${pathname.startsWith(link.link) ? "text-accent" : "text-white"} opacity-0 mobile-nav-text truncate`}>{link.name}</p>
                 </Link>
             ))}
             {pathname === "/" && 
-                <div onClick={handleLetsTalk} className="w-0 h-1/5 bg-accent px-10 sm:px-14 md:px-20 mobile-nav-buttons opacity-0 flex items-center gap-2 pointer:hover:opacity-80 pointer:active:opacity-60 cursor-pointer actionable">
+                <div onClick={handleLetsTalk} className="w-0 h-1/6 bg-accent px-10 sm:px-14 md:px-20 mobile-nav-buttons opacity-0 flex items-center gap-2 pointer:hover:opacity-80 pointer:active:opacity-60 cursor-pointer actionable">
                     <p className="opacity-0 mobile-nav-text">Let&apos;s Talk</p>
                 </div>
             }

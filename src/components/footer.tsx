@@ -33,7 +33,7 @@ const Footer = () => {
 
                 <div className='mt-14 text-xs sm:text-sm lg:text-base'>
                     <p className='font-medium'>CONNECT WITH US ON</p>
-                    <div className='flex items-center xl:justify-center flex-wrap mt-3 gap-4'>
+                    <div className='flex items-center xl:justify-center flex-wrap mt-3 gap-4 md:gap-6'>
                         {socials.map((social) => (
                             <a key={social.name} href={social.link} target="_blank" className='inline-block cursor-pointer actionable transition-all pointer:hover:text-accent pointer:active:opacity-80'>
                                 <p key={social.name}>{social.name}</p>

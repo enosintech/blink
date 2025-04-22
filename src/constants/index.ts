@@ -406,3 +406,136 @@ export const socials = [
         link: "https://www.youtube.com/@blinkmarketingzm",
     },
 ]
+
+export const redbullAvengers: {leftOrRight: 'left' | 'right', id: number, name: string, description: string, image: string, link: string, isLimited: boolean, color: string}[] = [
+    {
+        id: 1,
+        name: "Arc Reactor",
+        description: "Fuel your mind with tech-grade tang. Tangy citrus meets a sharp kick of ginger. As brilliant and bold as Stark himself.",
+        image: "/images/ironman.webp",
+        link: '#',
+        isLimited: true,
+        leftOrRight: "left",
+        color: "#B4001C"
+    },
+    {
+        id: 2,
+        name: "Born of Thunder",
+        description: "A strike of electric lemon straight from Asgard. Crackling citrus power. A spark of lightning in every sip.",
+        image: "/images/thor.webp",
+        link: '#',
+        isLimited: false,
+        leftOrRight: "right",
+        color: "#2C3E50"
+    },
+    {
+        id: 3,
+        name: "Rage Monster",
+        description: "Green Apple & High Caffeine - Unleash the beast within… responsibly.",
+        image: "/images/hulk.webp",
+        link: '#',
+        isLimited: true,
+        leftOrRight: "left",
+        color: "#3C9A3F"
+    },
+    {
+        id: 4,
+        name: "Widow’s Bite",
+        description: "Deadly smooth, dark berry energy. Lethal focus in every sip. Sleek. Silent. Striking.",
+        image: "/images/black-widow.webp",
+        link: '#',
+        isLimited: false,
+        leftOrRight: "right",
+        color: "#0D0D0D"
+    },
+    {
+        id: 5,
+        name: "The Void",
+        description: "Multiverse melon collides with dragon fruit magic. Enter the astral plane with a multidimensional taste only the worthy can handle.",
+        image: "/images/strange.webp",
+        link: '#',
+        isLimited: false,
+        leftOrRight: "left",
+        color: "#A6192E"
+    },
+    {
+        id: 6,
+        name: "Pure Mischief",
+        description: "Frosted lime and mint chaos. Surprisingly sweet. Like Loki, you’ll never see it coming.",
+        image: "/images/loki.webp",
+        link: '#',
+        isLimited: false,
+        leftOrRight: "right",
+        color: "#4CBB17"
+    },
+    {
+        id: 7,
+        name: "Vibranium Rush",
+        description: "Rooted in tradition, bursting with strength and crafted from the heart of Wakanda.",
+        image: "/images/black-panther.webp",
+        link: '#',
+        isLimited: false,
+        leftOrRight: "left",
+        color: "#1C1C1C"
+    },
+    {
+        id: 8,
+        name: "Precision Grape",
+        description: "Sharp grape with laser focus. No caffeine crashes, only targets hit.",
+        image: "/images/hawkeye.webp",
+        link: '#',
+        isLimited: true,
+        leftOrRight: "right",
+        color: "#6A0DAD"
+    },
+    {
+        id: 9,
+        name: "Silver Steel – Falcon",
+        description: "A red apple and blackberry boost. Forget feathers. These are steel-forged.",
+        image: "/images/falcon.webp",
+        link: '#',
+        isLimited: false,
+        leftOrRight: "left",
+        color: "#D50032"
+    },
+    {
+        id: 10,
+        name: "Atomic Thrust",
+        description: "Sparkling cranberry, quantum intensity. Small sip for a giant impact.",
+        image: "/images/antman.webp",
+        link: '#',
+        isLimited: true,
+        leftOrRight: "right",
+        color: "#D32F2F"
+    },
+    {
+        id: 11,
+        name: "Infinity Force",
+        description: "The taste of perfectly balanced smoked vanilla and explosive blackcurrant. Dark. Rich. Powerful.",
+        image: "/images/thor.webp",
+        link: '#',
+        isLimited: true,
+        leftOrRight: "left",
+        color: "#C0C0C0"
+    },
+    {
+        id: 12,
+        name: "Web Shooter",
+        description: "A punch of berry energy, perfect for leaping into action, or catching that last train.",
+        image: "/images/spiderman.webp",
+        link: '#',
+        isLimited: false,
+        leftOrRight: "right",
+        color: "#1565C0"
+    },
+    {
+        id: 13,
+        name: "Super Soldier",
+        description: "Classic blueberry, loaded with electrolytes. Timeless strength in a modern boost - salute the can, then sip it.",
+        image: "/images/america.webp",
+        link: '#',
+        isLimited: true,
+        leftOrRight: "left",
+        color: "#D32F2F"
+    },
+]
