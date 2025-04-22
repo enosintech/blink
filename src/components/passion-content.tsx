@@ -83,7 +83,7 @@ const PassionContent = ({ leftOrRight, isLimited, name, description, image, link
                     }
                     <p className='absolute left-[101%] top-0 bottom-0 my-auto h-fit text-6xl text-nowrap font-extrabold can-text'>{name} {name} {name} {name} {name} {name} {name} {name} {name} {name} {name} {name}</p>
                     <div className='w-56 h-[33rem] can-back relative translate-y-[20%] will-change-transform'>
-                        <Image priority src={image} alt={"ironman"} className='object-cover' fill />
+                        <Image src={image} alt={"ironman"} className='object-cover' fill />
                     </div>
                 </div>
             </div>
@@ -100,7 +100,7 @@ const PassionContent = ({ leftOrRight, isLimited, name, description, image, link
                 }
                 <p className='absolute left-[101%] top-0 bottom-0 my-auto h-fit text-6xl text-nowrap font-extrabold can-text2'>{name} {name} {name} {name} {name} {name} {name} {name} {name} {name} {name} {name}</p>
                 <div className='w-56 h-[33rem] can-back2 relative translate-y-[20%] will-change-transform'>
-                    <Image priority src={image} alt={"superhero can"} className='object-cover' fill />
+                    <Image src={image} alt={"superhero can"} className='object-cover' fill />
                 </div>
             </div>
             <a href={link} target="_blank" className='cursor-pointer inline-block actionable mt-5'>
