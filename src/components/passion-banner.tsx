@@ -1,14 +1,11 @@
 "use client";
 
-import { useViewportHeight } from '@/hooks/useVIewportHeight';
 import { triggerToAnimations } from '@/lib/animations';
 import { gsap } from '@/lib/gsap-loader';
 import { useGSAP } from '@gsap/react';
 import React from 'react'
 
 const PassionBanner = () => {
-
-    const height = useViewportHeight();
 
     useGSAP(() => {
 

@@ -243,9 +243,8 @@ const SiteBackground = () => {
                 className='fixed top-0 left-0 w-full bg-black z-[-1] h-[1500px] sm:h-[100lvh]' 
                 style={{ opacity: `${loadingValue}%` }}
             >
-                <div className={`w-full h-full opacity-100 relative`}>
-                    {pathname === "/" && <div className='w-full h-full gradient opacity-100 absolute top-0 left-0'></div>}
-                    <div className={`w-full h-full ${pathname.startsWith("/blink-productions") && "opacity-0"} ${pathname.startsWith("/passion") && "opacity-60"}`}>
+                <div className='w-full h-full gradient opacity-100'>
+                    <div className={`w-full h-full ${pathname.startsWith("/blink-productions") && "opacity-0"} ${pathname.startsWith("/passion") && "opacity-50"}`}>
                         <div ref={containerRef} className='w-full h-full'></div>
                     </div>
                 </div>

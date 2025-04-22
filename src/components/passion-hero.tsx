@@ -35,7 +35,7 @@ const PassionHero = () => {
     setActiveCan((prev) => (prev - 1 + totalCans) % totalCans);
   };
 
-  const getCanStyle = (index: any) => {
+  const getCanStyle = (index: number) => {
     // Calculate relative position considering active can
     let relativePosition = index - activeCan;
     
