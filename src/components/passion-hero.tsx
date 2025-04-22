@@ -73,7 +73,7 @@ const PassionHero = () => {
       </p>
     
       <div className="w-full mt-10 h-[550px] relative">
-        <div className="absolute left-1/2 bottom-20 translate-y-32 sm:translate-y-28 md:translate-y-20 lg:translate-y-0 transform -translate-x-1/2 w-full">
+        <div className="absolute left-1/2 bottom-20 transform -translate-x-1/2 w-full">
           {canImages.map((image, index) => (
             <motion.div
               key={index}
