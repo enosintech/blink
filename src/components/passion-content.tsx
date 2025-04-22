@@ -90,7 +90,7 @@ const PassionContent = ({ leftOrRight, isLimited, name, description, image, link
         </div>
         <div className='w-full lg:hidden flex flex-col items-center py-4'>
             <p className='font-bold text-muted-foreground text-base'>RED BULL EDITIONS</p> 
-            <p className='font-semibold text-4xl md:text-5xl mt-2'>{name}</p>
+            <p className='font-semibold text-4xl md:text-5xl text-center mt-2'>{name}</p>
             <p className='text-sm md:text-base mt-4 text-center'>{description}</p>
             <div style={{ backgroundColor: color}} className='w-full sm:w-[450px] h-[550px] mt-5 rounded-lg overflow-hidden relative flex justify-center items-end'>
                 {isLimited && 
