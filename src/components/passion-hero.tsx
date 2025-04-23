@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import React from 'react';
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -25,6 +25,7 @@ const canImages = [
 const PassionHero = () => {
 
   const [activeCan, setActiveCan] = useState(0);
+
   const totalCans = canImages.length;
   
   const handleNext = () => {
@@ -36,30 +37,36 @@ const PassionHero = () => {
   };
 
   const getCanStyle = (index: number) => {
-    // Calculate relative position considering active can
     let relativePosition = index - activeCan;
-    
-    // Handle wraparound for infinite carousel effect
+  
     if (relativePosition > totalCans / 2) {
       relativePosition -= totalCans;
     } else if (relativePosition < -totalCans / 2) {
       relativePosition += totalCans;
     }
-    
-    // Position parameters
-    const xOffset = relativePosition * 170; // horizontal spacing
-    const yOffset = Math.abs(relativePosition) * 50; // vertical curve
-    const rotation = relativePosition * 5; // rotation angle
-    const scale = relativePosition === 0 ? 1.1 : 0.9; // active can is larger
-    
+  
+    const xOffset = relativePosition * 180;
+    const yOffset = Math.abs(relativePosition) * 40;
+    const rotation = relativePosition * 3;
+    const scale = relativePosition === 0 ? 1.2 : 1;
+  
+    const isAtEdge = Math.abs(relativePosition) === Math.floor(totalCans / 2);
+    const opacity = isAtEdge ? 0 : 1;
+  
     return {
       x: xOffset,
-      y: relativePosition === 0 ? 60 : yOffset, // active can is elevated
+      y: relativePosition === 0 ? 40 : yOffset,
       rotate: rotation,
       scale: scale,
       zIndex: totalCans - Math.abs(relativePosition),
+      opacity,
     };
   };
+  
+
+  useEffect(() => {
+    console.log(activeCan)
+  }, [activeCan])
 
   return (
     <div className="bg-gradient-to-b pt-14 flex flex-col items-center from-transparent via-5% to-[99%] via-black to-transparent w-full px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32">
@@ -69,10 +76,10 @@ const PassionHero = () => {
         <p className="">Avengers Assemble Editions</p>
       </div>
       <p className="text-sm sm:text-base md:text-lg lg:text-xl text-center mt-5 md:max-w-[80%] lg:max-w-[60%]">
-        Red Bull: Avengers Assemble Editions fuse classic energy with bold, heroic flavours. Choose your can. Power up.
+        Fuse classic energy with bold, heroic flavours. Choose your can. Power up.
       </p>
     
-      <div className="w-full mt-10 h-[550px] relative">
+      <div className="w-full mt-20 h-[550px] relative">
         <div className="absolute left-1/2 bottom-20 transform -translate-x-1/2 w-full">
           {canImages.map((image, index) => (
             <motion.div
@@ -91,7 +98,7 @@ const PassionHero = () => {
                 marginLeft: "-144px",
                 bottom: "0",
                 transformOrigin: "bottom center",
-                willChange: "transform" 
+                willChange: "opacity, transform" 
               }}
             >
                 <Image fill src={image} alt={"superhero-can"} className="object-cover" />

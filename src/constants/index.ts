@@ -413,7 +413,7 @@ export const redbullAvengers: {leftOrRight: 'left' | 'right', id: number, name: 
         name: "Arc Reactor",
         description: "Fuel your mind with tech-grade tang. Tangy citrus meets a sharp kick of ginger. As brilliant and bold as Stark himself.",
         image: "/images/ironman.webp",
-        link: '#',
+        link: 'https://www.behance.net/gallery/224331651/Redbull-x-Avengers',
         isLimited: true,
         leftOrRight: "left",
         color: "#B4001C"
@@ -423,7 +423,7 @@ export const redbullAvengers: {leftOrRight: 'left' | 'right', id: number, name: 
         name: "Born of Thunder",
         description: "A strike of electric lemon straight from Asgard. Crackling citrus power. A spark of lightning in every sip.",
         image: "/images/thor.webp",
-        link: '#',
+        link: 'https://www.behance.net/gallery/224331651/Redbull-x-Avengers',
         isLimited: false,
         leftOrRight: "right",
         color: "#2C3E50"
@@ -433,7 +433,7 @@ export const redbullAvengers: {leftOrRight: 'left' | 'right', id: number, name: 
         name: "Rage Monster",
         description: "Green Apple & High Caffeine - Unleash the beast within… responsibly.",
         image: "/images/hulk.webp",
-        link: '#',
+        link: 'https://www.behance.net/gallery/224331651/Redbull-x-Avengers',
         isLimited: true,
         leftOrRight: "left",
         color: "#3C9A3F"
@@ -443,7 +443,7 @@ export const redbullAvengers: {leftOrRight: 'left' | 'right', id: number, name: 
         name: "Widow’s Bite",
         description: "Deadly smooth, dark berry energy. Lethal focus in every sip. Sleek. Silent. Striking.",
         image: "/images/black-widow.webp",
-        link: '#',
+        link: 'https://www.behance.net/gallery/224331651/Redbull-x-Avengers',
         isLimited: false,
         leftOrRight: "right",
         color: "#0D0D0D"
@@ -453,7 +453,7 @@ export const redbullAvengers: {leftOrRight: 'left' | 'right', id: number, name: 
         name: "The Void",
         description: "Multiverse melon collides with dragon fruit magic. Enter the astral plane with a multidimensional taste only the worthy can handle.",
         image: "/images/strange.webp",
-        link: '#',
+        link: 'https://www.behance.net/gallery/224331651/Redbull-x-Avengers',
         isLimited: false,
         leftOrRight: "left",
         color: "#A6192E"
@@ -463,7 +463,7 @@ export const redbullAvengers: {leftOrRight: 'left' | 'right', id: number, name: 
         name: "Pure Mischief",
         description: "Frosted lime and mint chaos. Surprisingly sweet. Like Loki, you’ll never see it coming.",
         image: "/images/loki.webp",
-        link: '#',
+        link: 'https://www.behance.net/gallery/224331651/Redbull-x-Avengers',
         isLimited: false,
         leftOrRight: "right",
         color: "#4CBB17"
@@ -473,7 +473,7 @@ export const redbullAvengers: {leftOrRight: 'left' | 'right', id: number, name: 
         name: "Vibranium Rush",
         description: "Rooted in tradition, bursting with strength and crafted from the heart of Wakanda.",
         image: "/images/black-panther.webp",
-        link: '#',
+        link: 'https://www.behance.net/gallery/224331651/Redbull-x-Avengers',
         isLimited: false,
         leftOrRight: "left",
         color: "#1C1C1C"
@@ -483,17 +483,17 @@ export const redbullAvengers: {leftOrRight: 'left' | 'right', id: number, name: 
         name: "Precision Grape",
         description: "Sharp grape with laser focus. No caffeine crashes, only targets hit.",
         image: "/images/hawkeye.webp",
-        link: '#',
+        link: 'https://www.behance.net/gallery/224331651/Redbull-x-Avengers',
         isLimited: true,
         leftOrRight: "right",
         color: "#6A0DAD"
     },
     {
         id: 9,
-        name: "Silver Steel – Falcon",
+        name: "Silver Steel",
         description: "A red apple and blackberry boost. Forget feathers. These are steel-forged.",
         image: "/images/falcon.webp",
-        link: '#',
+        link: 'https://www.behance.net/gallery/224331651/Redbull-x-Avengers',
         isLimited: false,
         leftOrRight: "left",
         color: "#D50032"
@@ -503,7 +503,7 @@ export const redbullAvengers: {leftOrRight: 'left' | 'right', id: number, name: 
         name: "Atomic Thrust",
         description: "Sparkling cranberry, quantum intensity. Small sip for a giant impact.",
         image: "/images/antman.webp",
-        link: '#',
+        link: 'https://www.behance.net/gallery/224331651/Redbull-x-Avengers',
         isLimited: true,
         leftOrRight: "right",
         color: "#D32F2F"
@@ -512,18 +512,18 @@ export const redbullAvengers: {leftOrRight: 'left' | 'right', id: number, name: 
         id: 11,
         name: "Infinity Force",
         description: "The taste of perfectly balanced smoked vanilla and explosive blackcurrant. Dark. Rich. Powerful.",
-        image: "/images/thor.webp",
-        link: '#',
+        image: "/images/thanos.webp",
+        link: 'https://www.behance.net/gallery/224331651/Redbull-x-Avengers',
         isLimited: true,
         leftOrRight: "left",
-        color: "#C0C0C0"
+        color: "#4B0082"
     },
     {
         id: 12,
         name: "Web Shooter",
         description: "A punch of berry energy, perfect for leaping into action, or catching that last train.",
         image: "/images/spiderman.webp",
-        link: '#',
+        link: 'https://www.behance.net/gallery/224331651/Redbull-x-Avengers',
         isLimited: false,
         leftOrRight: "right",
         color: "#1565C0"
@@ -533,9 +533,64 @@ export const redbullAvengers: {leftOrRight: 'left' | 'right', id: number, name: 
         name: "Super Soldier",
         description: "Classic blueberry, loaded with electrolytes. Timeless strength in a modern boost - salute the can, then sip it.",
         image: "/images/america.webp",
-        link: '#',
+        link: 'https://www.behance.net/gallery/224331651/Redbull-x-Avengers',
         isLimited: true,
         leftOrRight: "left",
         color: "#D32F2F"
+    },
+]
+
+export const redBullMotion = [
+    {
+        image: "/images/america_motion.webp",
+        id: 1
+    },
+    {
+        image: "/images/antman_motion.webp",
+        id: 2
+    },
+    {
+        image: "/images/black-panther_motion.webp",
+        id: 3
+    },
+    {
+        image: "/images/black-widow_motion.webp",
+        id: 4
+    },
+    {
+        image: "/images/falcon_motion.webp",
+        id: 5
+    },
+    {
+        image: "/images/hawkeye_motion.webp",
+        id: 6
+    },
+    {
+        image: "/images/hulk_motion.webp",
+        id: 7
+    },
+    {
+        image: "/images/ironman_motion.webp",
+        id: 8
+    },
+    {
+        image: "/images/loki_motion.webp",
+        id: 9
+    },
+    {
+        image: "/images/spiderman_motion.webp",
+        id: 10
+    },
+    {
+        image: "/images/strange_motion.webp",
+        id: 11
+    },
+    {
+        image: "/images/thanos_motion.webp",
+        id: 12
+    },
+    {
+        image: "/images/thor_motion.webp",
+        id: 13
     },
 ]
