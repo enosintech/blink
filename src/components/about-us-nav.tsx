@@ -7,7 +7,6 @@ import { useState } from 'react';
 import { motion } from "framer-motion";
 import { useLoadingValue } from '@/context/loadingValueContext';
 import { noTriggerToAnimations } from '@/lib/animations';
-import { ArrowDownFromLine } from 'lucide-react';
 
 const AboutUsNav = () => {
 
