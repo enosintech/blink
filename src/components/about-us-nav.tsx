@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { motion } from "framer-motion";
 import { useLoadingValue } from '@/context/loadingValueContext';
 import { noTriggerToAnimations } from '@/lib/animations';
+import { ArrowDownFromLine } from 'lucide-react';
 
 const AboutUsNav = () => {
 
@@ -59,6 +60,10 @@ const AboutUsNav = () => {
                         <p className="text-base sm:text-xl lg:text-2xl xl:text-3xl font-medium md:text-justify">{aboutBlink[activeIndex]}</p>
                     </motion.div>
                 </AnimatePresence>
+
+                <a href='/files/blink-profile.pdf' className='inline-block w-fit cursor-pointer actionable pointer:hover:opacity-80 pointer:active:opacity-60' download>
+                    <p className='text-accent font-semibold text-sm sm:text-base md:text-lg'>Download Company Profile</p>
+                </a>
             </div>
         </div>
       </div>

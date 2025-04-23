@@ -106,7 +106,7 @@ const PassionHero = () => {
           ))}
         </div>
         
-        <div className="absolute top-0 lg:top-10 left-0 right-0 flex justify-center gap-[12rem] md:gap-[32rem] xl:gap-[60rem] z-50">
+        <div className="absolute -top-[8%] sm:top-0 lg:top-10 left-0 right-0 flex justify-center gap-[12rem] md:gap-[32rem] xl:gap-[60rem] z-50">
           <button 
             onClick={handlePrev}
             className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-3 rounded-full"

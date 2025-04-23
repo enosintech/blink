@@ -54,9 +54,13 @@ const About = () => {
   return (
     <div ref={sliderTrigger} className="w-full overflow-x-hidden pt-20 px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32 relative opacity-0" style={{height: height ? height : "100svh"}}>
       <p className='font-bold text-xl md:text-2xl py-5'>Meet the Team &rarr;</p>
-      <div ref={slider} className='w-fit h-[90%] flex relative'>
+      <div ref={slider} className='w-fit h-[90%] flex relative' style={{
+            willChange: "transform"
+          }}>
         {team.map((worker, idx) => (
-          <div key={idx} className='w-[80vw] panel md:w-[60vw] xl:w-[35vw] max-w-[600px] h-full flex justify-start'>
+          <div key={idx} style={{
+            willChange: "transform"
+          }} className='w-[80vw] panel md:w-[60vw] xl:w-[35vw] max-w-[600px] h-full flex justify-start'>
             <div className='flex flex-col w-[90%] h-[85%] sm:h-full'>
               <div className='w-full h-[85%] rounded-lg border border-accent relative overflow-hidden bg-black'>
                 <Image src={worker.image} alt="worker image" priority fill className='object-cover object-top' />
