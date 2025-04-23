@@ -11,7 +11,7 @@ const PassionExplore = () => {
           {redBullMotion.map((item) => (
             <div
               key={item.id}
-              className={`w-full h-[500px] sm:h-[800px] md:h-[500px] lg:h-[600px] xl:h-[450px] 2xl:h-[70vh] rounded-lg relative overflow-hidden`}
+              className={`w-full h-[400px] sm:h-[800px] md:h-[500px] lg:h-[600px] xl:h-[450px] 2xl:h-[70vh] rounded-lg relative overflow-hidden`}
             >
               <Image src={item.image} alt="motion images" fill className='object-cover' />
             </div>
