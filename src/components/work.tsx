@@ -45,7 +45,7 @@ const Work = () => {
 
           const targetScale = maxScale - (stepsFromEnd * scaleDecrement);
 
-          // @ts-ignore
+          // @ts-expect-error
           card.style.zIndex = index;
 
           gsap.to(card, {
