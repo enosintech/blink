@@ -1,180 +1,84 @@
 "use client";
 
 import { work } from '@/constants';
-import { gsap } from '@/lib/gsap-loader';
-import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { gsap, ScrollTrigger } from '@/lib/gsap-loader';
 import Image from 'next/image';
-import React, { ReactNode, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from "framer-motion";
-
-const WorkListing = ({ children, title, type, categories, link } : { children: ReactNode, title: string, categories: string[], type: string, link: string }) => {
-    return (
-      <div className='w-full h-full flex flex-col p-1'>
-        <div className='w-full flex-1 rounded-md overflow-hidden relative'>
-
-            <a href={link} target="_blank" className="absolute p-3 top-3 right-3 actionable cursor-pointer pointer:active:opacity-80 group rounded-full bg-neutral-950 border border-accent z-10 flex items-center justify-center">
-              <ArrowUpRight className="size-5 md:size-6 text-white pointer:group-hover:text-accent" />
-            </a>
-
-            {children}
-        </div>
-        <div className='w-full h-fit min-h-[15%] flex flex-col justify-evenly'>
-          <div className='w-full flex items-center mt-1'>
-            <p className='text-white font-bold text-lg md:text-2xl px-1'>{title}</p>
-          </div>
-          <div className='w-full flex items-center flex-wrap gap-2 mt-2 mb-2'>
-            <div className='border-accent border text-accent rounded-full px-2 py-1'>
-              <p className='font-semibold tracking-tighter text-[10px] leading-[1rem] truncate'>{type}</p>
-            </div>
-            {categories.map((cate) => (
-              <div key={cate} className='border-white border text-white rounded-full px-2 py-1'>
-                <p className='font-semibold tracking-tighter text-[10px] leading-[1rem] truncate'>{cate}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    )
-}
+import { useGSAP } from '@gsap/react';
 
 const Work = () => {
     
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const carouselRef = useRef<HTMLDivElement>(null);
-    const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+    const [ mounted, setMounted ] = useState(false);
     const headingRef = useRef(null);
+
     const isInView = useInView(headingRef, { once: true });
 
-    const [touchStart, setTouchStart] = useState<number | null>(null);
-    const [touchEnd, setTouchEnd] = useState<number | null>(null);
-    const [isDragging, setIsDragging] = useState(false);
-    const [startX, setStartX] = useState(0);
+    useEffect(() => {
+      setMounted(true)
 
-    // Minimum swipe distance required (in pixels)
-    const minSwipeDistance = 50;
+      return () => setMounted(false)
+    }, [])
 
-    const updateCarousel = (newIndex: number) => {
-        const timeline = gsap.timeline();
-        
-        // Calculate indices for previous, current, and next cards
-        const prevIndex = (newIndex - 1 + work.length) % work.length;
-        const nextIndex = (newIndex + 1) % work.length;
-    
-        // Reset all cards
-        cardsRef.current.forEach((card) => {
-          if (card) {
-            timeline.set(card, {
-              x: 0,
-              scale: 0.7,
-              opacity: 0.5,
-              zIndex: 0,
-            }, 0);
-          }
-        });
-    
-        // Animate previous card
-        if (cardsRef.current[prevIndex]) {
-          timeline.to(cardsRef.current[prevIndex], {
-            x: '-60%',
-            scale: 0.8,
-            opacity: 0.7,
-            zIndex: 1,
-            duration: 0.5,
-            ease: 'power2.out',
-          }, 0);
-        }
-    
-        if (cardsRef.current[newIndex]) {
-          timeline.to(cardsRef.current[newIndex], {
-            x: 0,
-            scale: 1,
-            opacity: 1,
-            zIndex: 2,
-            duration: 0.5,
-            ease: 'power2.out',
-          }, 0);
-        }
-    
-        if (cardsRef.current[nextIndex]) {
-          timeline.to(cardsRef.current[nextIndex], {
-            x: '60%',
-            scale: 0.8,
-            opacity: 0.7,
-            zIndex: 1,
-            duration: 0.5,
-            ease: 'power2.out',
-          }, 0);
-        }
-      };
-    
-      const handlePrevious = () => {
-        setCurrentIndex((prev) => (prev - 1 + work.length) % work.length);
-      };
-    
-      const handleNext = () => {
-        setCurrentIndex((prev) => (prev + 1) % work.length);
-      };
+    useGSAP(() => {
+      if(mounted) {
 
-      const onTouchStart = (e: React.TouchEvent) => {
-        setTouchStart(e.targetTouches[0].clientX);
-        setStartX(e.targetTouches[0].clientX);
-        setIsDragging(true);
-      };
-    
-      const onTouchMove = (e: React.TouchEvent) => {
-        if (!isDragging) return;
-        
-        setTouchEnd(e.targetTouches[0].clientX);
-        
-        const currentX = e.targetTouches[0].clientX;
-        const dragDistance = currentX - startX;
-        
-        cardsRef.current.forEach((card, index) => {
-          if (!card) return;
-          
-          if (index === currentIndex) {
-            gsap.to(card, {
-              x: dragDistance,
-              duration: 0.1,
-            });
-          } else if (index === (currentIndex - 1 + work.length) % work.length) {
-            gsap.to(card, {
-              x: -window.innerWidth * 0.6 + dragDistance,
-              duration: 0.1,
-            });
-          } else if (index === (currentIndex + 1) % work.length) {
-            gsap.to(card, {
-              x: window.innerWidth * 0.6 + dragDistance,
-              duration: 0.1,
-            });
-          }
-        });
-      };
-    
-      const onTouchEnd = () => {
-        setIsDragging(false);
-    
-        if (!touchStart || !touchEnd) return;
-    
-        const distance = touchStart - touchEnd;
-        const isLeftSwipe = distance > minSwipeDistance;
-        const isRightSwipe = distance < -minSwipeDistance;
-    
-        if (isLeftSwipe) {
-          handleNext();
-        } else if (isRightSwipe) {
-          handlePrevious();
-        } else {
-          updateCarousel(currentIndex);
-        }
-    
-        setTouchStart(null);
-        setTouchEnd(null);
-      };
+        const cards = document.querySelectorAll(".card-item");
+        const numCards = cards.length;
 
-      useEffect(() => {
-        updateCarousel(currentIndex);
-      }, [currentIndex]);
+        if (numCards === 0) {
+          console.warn("No '.card-item' elements found.");
+          return;
+        }
+
+        const scaleDecrement = 0.03;
+        const maxScale = 1.0;
+
+        const lastCardSt = ScrollTrigger.create({
+          trigger: cards[numCards - 1],
+          end: "top center"
+        })
+
+        cards.forEach((card, index) => {
+
+          const stepsFromEnd = numCards - 1 - index;
+
+          const targetScale = maxScale - (stepsFromEnd * scaleDecrement);
+
+          // @ts-ignore
+          card.style.zIndex = index;
+
+          gsap.to(card, {
+            scrollTrigger: {
+              trigger: card,
+              pin: true,
+              pinSpacing: false,
+              pinType: "transform",
+              start: "center center",
+              end: () => lastCardSt.end,
+              toggleActions: "play none none reverse",
+            },
+            scale: targetScale,
+            duration: 0.7,
+            ease: "power3.inOut"
+          })
+
+          ScrollTrigger.refresh();
+        })
+
+        gsap.to(".pin-text", {
+          scrollTrigger: {
+            trigger: cards[0],
+            pin: ".pin-text",
+            pinType: "transform",
+            start: "center center",
+            end: () => lastCardSt.end,
+            toggleActions: "play none none reverse"
+          },
+        })
+
+      }
+    }, [mounted])
 
   return (
     <div className='w-full pt-10 lg:pt-24 pb-10 px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32 flex items-center flex-col justify-center'>
@@ -184,7 +88,7 @@ const Work = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className='w-full'
+            className='w-full pin-text mb-10'
         >
             <p className="text-accent text-sm md:text-base px-1">OUR WORK</p>
             <motion.p
@@ -197,46 +101,38 @@ const Work = () => {
             </motion.p>
         </motion.div>
 
-        <div className='carousel rectangle relative w-full h-[700px] md:h-[760px] xl:h-[800px] 2xl:h-[850px] -mt-3 sm:mt-3 flex items-center justify-center overflow-hidden' ref={carouselRef} onTouchStart={onTouchStart}
-            onTouchMove={onTouchMove}
-            onTouchEnd={onTouchEnd}
-        >
-            {work.map((item, index) => (
-            <div
-                key={item.name}
-                ref={(el) => {(cardsRef.current[index] = el)}}
-                className='carousel-card absolute w-[90%] sm:w-[75%] md:w-[65%] lg:w-[55%] 2xl:w-[45%] h-[65%] md:h-[75%] lg:h-[80%] rounded-xl transform transition-transform duration-500'
-            >
-                <div className="w-full h-full bg-black rounded-xl deep-shadow border-accent border">
-                    <WorkListing link={item.link} title={item.name} categories={item.categories} type={item.type}>
-                        <div className='w-full h-full bg-black relative'>
-                            {item.mediaType === "img" ?
-                                <Image fill alt="portfolio image" src={item.media} className="object-cover" />    
-                            : 
-                            <video className='w-full h-full object-cover' autoPlay loop playsInline muted>
-                                <source src={item.media} type='video/mp4' />
-                            </video>
-                            }
+        <div className='flex flex-col carousel mt-14 w-full'>
+          {work.map((item) => (
+            <div key={item.name} className='mb-[80px] relative card-item p-5 lg:p-7 2xl:p-9 bg-black border-accent border rounded-2xl h-[500px] w-full flex lg:flex-row flex-col'>
+              <div className='w-full lg:h-full h-[40%] sm:h-1/2  lg:w-1/2 rounded-xl relative overflow-hidden'>
+                {item.mediaType === "img" ?
+                    <Image fill alt="portfolio image" src={item.media} className="object-cover" />    
+                : 
+                  <video className='w-full h-full object-cover' autoPlay loop playsInline muted>
+                      <source src={item.media} type='video/mp4' />
+                  </video>
+                }
+              </div>
+              <div className='w-full lg:h-full h-[60%] sm:h-1/2 lg:w-1/2 mt-3 lg:mt-0' >
+                <div className='lg:pl-10 lg:pr-5 h-full flex flex-col justify-between'>
+                  <div>
+                    <p className='font-extrabold text-xl md:text-2xl lg:text-3xl 2xl:text-4xl'>{item.name} {item.subLink && <span className='font-semibold'> — {item.subLink}</span>}</p>
+                    <p className='mt-4 text-justify font-medium lg:text-base md:text-sm text-xs'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque alias, ex maiores commodi autem at dolorum. </p>
+                    <div className='mt-5 flex gap-3'>
+                      {item.categories.map((cate) => (
+                        <div key={cate} className='border-accent bg-black border text-white rounded-full px-2 md:px-4 py-2'>
+                          <p className='font-bold text-[10px] leading-[1rem] md:text-xs lg:text-sm'>{cate}</p>
                         </div>
-                    </WorkListing>
+                      ))}
+                    </div>
+                  </div>
+                  <a className='inline-block cursor-pointer hover:opacity-80 active:opacity-70 actionable' href="https://www.behance.net/Blink_Zambia" target="_blank">
+                    <p className='font-bold lg:text-base text-xs md:text-sm'>GO TO BEHANCE &rarr;</p>
+                  </a>
                 </div>
+              </div>
             </div>
-            ))}
-        </div>
-
-        <div className='carousel-buttons w-fit flex items-center gap-3 -translate-y-10'>
-            <div
-                onClick={handlePrevious}
-                className='bg-neutral-900 border-accent border grid place-items-center rounded-full p-2 actionable pointer:hover:opacity-80 pointer:active:opacity-60 cursor-pointer'
-            >
-                <ChevronLeft className='text-accent size-8 xl:size-10' />
-            </div>
-            <div
-                onClick={handleNext}
-                className='bg-neutral-900 border-accent border grid place-items-center rounded-full p-2 actionable pointer:hover:opacity-80 pointer:active:opacity-60 cursor-pointer'
-            >
-                <ChevronRight className='text-accent size-8 xl:size-10' />
-            </div>
+          ))}
         </div>
     </div>
   )

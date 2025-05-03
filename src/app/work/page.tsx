@@ -45,9 +45,9 @@ const Work = () => {
                 <div key={work.name} className="pb-4 overflow-hidden w-full lg:w-[48%] 2xl:w-[32%] bg-black border relative border-accent rounded-md group">
 
                   <div className="mt-4 px-4 absolute top-2 right-3 z-50">
-                    <a href={work.link} target="_blank" className="flex items-center cursor-pointer actionable group-hover:bg-black group-hover:text-white pointer:hover:opacity-80 pointer:active:opacity-60 w-fit gap-2 border-accent border rounded-full px-3 py-2">
-                      <p className='font-semibold'>VIEW MORE</p>
-                      <ArrowUpRight className='size-6 xl:size-7' />
+                    <a href={work.link} target="_blank" className="flex items-center cursor-pointer actionable bg-black group-hover:text-white pointer:hover:opacity-80 pointer:active:opacity-60 w-fit gap-2 border-accent border rounded-full px-3 py-2">
+                      <p className='font-bold'>GO TO BEHANCE</p>
+                      <ArrowUpRight className='size-5 xl:size-6' />
                     </a>
                   </div>
 

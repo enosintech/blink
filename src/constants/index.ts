@@ -299,7 +299,8 @@ export const work = [
         link: "https://www.behance.net/Blink_Zambia"
     },
     {
-        name: "Tenga / Access Bank",
+        name: "Access Bank",
+        subLink: "Tenga",
         type: "Ad Campaign",
         media: "/images/access-bank.jpg",
         mediaType: "img",
