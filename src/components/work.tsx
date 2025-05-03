@@ -23,7 +23,7 @@ const Work = () => {
     useGSAP(() => {
       if(mounted) {
 
-        const cards = document.querySelectorAll(".card-item");
+        const cards = document.querySelectorAll(".card-item") as NodeListOf<HTMLElement>;
         const numCards = cards.length;
 
         if (numCards === 0) {
@@ -45,8 +45,7 @@ const Work = () => {
 
           const targetScale = maxScale - (stepsFromEnd * scaleDecrement);
 
-          // @ts-expect-error
-          card.style.zIndex = index;
+          card.style.zIndex = String(index);
 
           gsap.to(card, {
             scrollTrigger: {
