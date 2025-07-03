@@ -103,7 +103,7 @@ const Work = () => {
         <div className='flex flex-col carousel mt-14 w-full'>
           {work.map((item) => (
             <div key={item.name} className='mb-[80px] relative card-item p-5 lg:p-7 2xl:p-9 bg-black border-accent border rounded-2xl h-[500px] w-full flex lg:flex-row flex-col'>
-              <div className='w-full lg:h-full h-[40%] sm:h-1/2  lg:w-1/2 rounded-xl relative overflow-hidden'>
+              <div className='w-full lg:h-full h-[60%]  lg:w-1/2 rounded-xl relative overflow-hidden'>
                 {item.mediaType === "img" ?
                     <Image fill alt="portfolio image" src={item.media} className="object-cover" />    
                 : 
@@ -112,12 +112,12 @@ const Work = () => {
                   </video>
                 }
               </div>
-              <div className='w-full lg:h-full h-[60%] sm:h-1/2 lg:w-1/2 mt-3 lg:mt-0' >
+              <div className='w-full lg:h-full h-[40%] lg:w-1/2 mt-3 lg:mt-0' >
                 <div className='lg:pl-10 lg:pr-5 h-full flex flex-col justify-between'>
                   <div>
-                    <p className='font-extrabold text-xl md:text-2xl lg:text-3xl 2xl:text-4xl'>{item.name} {item.subLink && <span className='font-semibold'> — {item.subLink}</span>}</p>
-                    <p className='mt-4 text-justify font-medium lg:text-base md:text-sm text-xs'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque alias, ex maiores commodi autem at dolorum. </p>
-                    <div className='mt-5 flex gap-3'>
+                    <p className='font-extrabold text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl'>{item.name} {item.subLink && <span className='font-semibold'> — {item.subLink}</span>}</p>
+                    {/* <p className='mt-4 text-justify font-medium lg:text-base md:text-sm text-xs'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque alias, ex maiores commodi autem at dolorum. </p> */}
+                    <div className='mt-5 flex flex-wrap gap-3'>
                       {item.categories.map((cate) => (
                         <div key={cate} className='border-accent bg-black border text-white rounded-full px-2 md:px-4 py-2'>
                           <p className='font-bold text-[10px] leading-[1rem] md:text-xs lg:text-sm'>{cate}</p>

@@ -45,7 +45,7 @@ const Footer = () => {
         </div>
         <div className='w-full mt-5 py-2 flex lg:flex-row flex-col lg:items-center justify-between'>
             <div>
-                <p className='font-semibold text-xs xl:text-base'>ALN House, Mushemi Road, Rhodes Park, Lusaka</p>
+                <p className='font-semibold text-xs xl:text-base'>House No.2, 32 A Leopards Lane, Kabulonga, Lusaka</p>
                 <p className='text-muted-foreground mt-1 lg:mt-0 text-xs'>{new Date().getFullYear()} Blink Marketing Solutions - All Rights Reserved</p>
             </div>
             <div onClick={handleBackToTop} className='bg-black w-fit mt-10 lg:mt-0 rounded-full border border-accent p-2 md:p-3 cursor-pointer pointer:hover:opacity-80 pointer:active:opacity-60 actionable grid place-items-center'>
