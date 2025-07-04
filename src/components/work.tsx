@@ -67,17 +67,6 @@ const Work = () => {
           ScrollTrigger.refresh();
         })
 
-        gsap.to(".pin-text", {
-          scrollTrigger: {
-            trigger: cards[0],
-            pin: ".pin-text",
-            pinType: "transform",
-            start: "center center",
-            end: () => lastCardSt.end,
-            toggleActions: "play none none reverse"
-          },
-        })
-
       }
     }, [mounted])
 
@@ -91,10 +80,7 @@ const Work = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className='w-full pin-text mb-2 md:mb-10'
-            style={{
-              willChange: "transform"
-            }}
+            className='w-full mb-10'
         >
             <p className="text-accent text-sm md:text-base px-1">OUR WORK</p>
             <motion.p
