@@ -15,9 +15,11 @@ const Work = () => {
     const isInView = useInView(headingRef, { once: true });
 
     useEffect(() => {
+
       setMounted(true)
 
       return () => setMounted(false)
+
     }, [])
 
     useGSAP(() => {
@@ -80,14 +82,19 @@ const Work = () => {
     }, [mounted])
 
   return (
-    <div className='w-full pt-10 lg:pt-24 pb-10 px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32 flex items-center flex-col justify-center'>
+    <div className='w-full pt-10 lg:pt-24 pb-10 px-10 sm:px-14 md:px-20 lg:px-24 xl:px-32 flex items-center flex-col justify-center' style={{
+            willChange: "transform"
+          }}>
         
         <motion.div
             ref={headingRef}
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className='w-full pin-text mb-10'
+            className='w-full pin-text mb-2 md:mb-10'
+            style={{
+              willChange: "transform"
+            }}
         >
             <p className="text-accent text-sm md:text-base px-1">OUR WORK</p>
             <motion.p
@@ -100,9 +107,13 @@ const Work = () => {
             </motion.p>
         </motion.div>
 
-        <div className='flex flex-col carousel mt-14 w-full'>
+        <div className='flex flex-col carousel mt-14 w-full' style={{
+            willChange: "transform"
+          }}>
           {work.map((item) => (
-            <div key={item.name} className='mb-[80px] relative card-item p-5 lg:p-7 2xl:p-9 bg-black border-accent border rounded-2xl h-[500px] w-full flex lg:flex-row flex-col'>
+            <div key={item.name} className='mb-[80px] relative card-item p-5 lg:p-7 2xl:p-9 bg-black border-accent border rounded-2xl h-[500px] w-full flex lg:flex-row flex-col' style={{
+              willChange: "transform"
+            }}>
               <div className='w-full lg:h-full h-[60%]  lg:w-1/2 rounded-xl relative overflow-hidden'>
                 {item.mediaType === "img" ?
                     <Image fill alt="portfolio image" src={item.media} className="object-cover" />    
