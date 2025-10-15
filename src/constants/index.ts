@@ -118,11 +118,6 @@ export const team = [
         position: "Creative Director",
     },
     {
-        image: "/images/Tabo.webp",
-        name: "Tabo C. Munyinda",
-        position: "Client Strategy Associate",
-    },
-    {
         image: "/images/Leon.webp",
         name: "Leon Chansa",
         position: "Client Strategy Associate",
@@ -173,19 +168,9 @@ export const team = [
         position: "Copywriter",
     },
     {
-        image: "/images/Amory.webp",
-        name: "Amory Kapufi",
-        position: "Copywriter",
-    },
-    {
         image: "/images/Kim.webp",
         name: "Kimberly Wayanika",
         position: "Community Manager",
-    },
-    {
-        image: "/images/Tician.webp",
-        name: "Tician Simatendele",
-        position: "Events Coordinator",
     },
 ]
 

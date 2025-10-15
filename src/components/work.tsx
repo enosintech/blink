@@ -16,7 +16,7 @@ const Work = () => {
 
     useEffect(() => {
 
-      setMounted(true)
+      setMounted(true)                                                                                 
 
       return () => setMounted(false)
 
@@ -89,7 +89,7 @@ const Work = () => {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             className="text-2xl md:text-3xl lg:text-5xl font-semibold mt-3 text-white"
             >
-            Explore Our Recent Successful Work
+              Explore Our Recent Successful Work
             </motion.p>
         </motion.div>
 
