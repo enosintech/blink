@@ -128,11 +128,6 @@ export const team = [
         position: "Digital and Strategy Support",
     },
     {
-        image: "/images/Esther.webp",
-        name: "Esther Masocha",
-        position: "Digital and Strategy Support",
-    },
-    {
         image: "/images/Titan.webp",
         name: "Titan C. Chibwe",
         position: "Graphics Designer & Illustrator",
@@ -145,7 +140,7 @@ export const team = [
     {
         image: "/images/Zawadi.webp",
         name: "Amos Z. Mweemba",
-        position: "Executive Operations Coordinator",
+        position: "Client Strategy Associate",
     },
     {
         image: "/images/Sibo.webp",
@@ -170,7 +165,7 @@ export const team = [
     {
         image: "/images/Kim.webp",
         name: "Kimberly Wayanika",
-        position: "Community Manager",
+        position: "Digital and Strategy Support",
     },
 ]
 
