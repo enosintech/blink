@@ -16,6 +16,10 @@ export const navLinks = [
         link: "/passion"
     },
     {
+        name: "Case Study",
+        link: "/case-study"
+    },
+    {
         name: "Blink Productions",
         link: "/blink-productions"
     },

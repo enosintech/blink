@@ -159,7 +159,7 @@ const Navbar = () => {
                     />
                 </motion.svg>
             </div>
-            <div className='2xl:flex hidden text-base 2xl:text-lg items-center gap-14'>
+            <div className='2xl:flex hidden text-sm items-center gap-12'>
                 {navLinks.map((link) => (
                     <Link href={link.link} key={link.name}>
                         <p className={`font-medium actionable pointer:hover:text-accent pointer:active:opacity-75 transition-all ${pathname.startsWith(link.link) ? "text-accent" : "text-white"}`}>{link.name}</p>
