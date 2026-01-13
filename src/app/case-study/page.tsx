@@ -1,7 +1,6 @@
 "use client";
 
 import { Download, FileText, Target, Users, HardDrive, Shield, Award, BrainCircuit } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 import SmoothScroll from '@/components/smooth-scroll';
 import { useGSAP } from '@gsap/react';
@@ -101,7 +100,7 @@ const CaseStudy = () => {
                 >
                     <SectionHeader icon={<FileText className="text-accent" />} title="What to Cover" />
                     <ul className="list-inside list-disc space-y-2 text-neutral-400 md:text-base text-sm">
-                        <li><strong>Diagnosis:</strong> Explain the plateau's cause and the data you'd prioritize.</li>
+                        <li><strong>Diagnosis:</strong> Explain the plateau&apos;s cause and the data you&apos;d prioritize.</li>
                         <li><strong>Strategy:</strong> Outline your core strategy and how channels will work cohesively.</li>
                         <li><strong>30-60-90 Day Plan:</strong> Detail your priorities and expected outcomes.</li>
                         <li><strong>Local Market Context:</strong> Demonstrate deep understanding of Zambian/African user behavior.</li>
