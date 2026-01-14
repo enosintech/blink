@@ -115,7 +115,7 @@ const CaseStudy = () => {
                     <ul className="list-inside list-disc space-y-2 text-neutral-400 mt-2 md:text-base text-sm">
                         <li>Maximum of <strong>five</strong> slides.</li>
                         <li>Maximum of <strong>800</strong> words.</li>
-                        <li>Maximum of <strong>seven</strong> minute Loom video.</li>
+                        <li>Maximum of <strong>seven</strong> minute video.</li>
                     </ul>
                 </section>
                 
