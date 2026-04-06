@@ -79,6 +79,12 @@ const Work = () => {
                 </div>
             ))}
           </div>
+          <p className='pt-24 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium text-justify'>Websites that dont just exist, they perform. Explore the digital experiences we have built to engage users and drive results with this video uploaded:</p>
+          <div className="w-full h-[280px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[90svh] overflow-hidden rounded-lg border border-accent relative mt-5">
+            <video controls playsInline preload='metadata' className='w-full h-full object-cover'>
+              <source src="/videos/blink-sites.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
       </div>
       <SectionFooter />

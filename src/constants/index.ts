@@ -16,10 +16,6 @@ export const navLinks = [
         link: "/passion"
     },
     {
-        name: "Case Study",
-        link: "/case-study"
-    },
-    {
         name: "Blink Productions",
         link: "/blink-productions"
     },
@@ -27,9 +23,9 @@ export const navLinks = [
 
 export const services = [
     {
-        name: "Product Design & Development",
+        name: "Website Design & Development",
         icon: "/icons/design.png",
-        description: "From concept to launch, we create innovative and user-centric products tailored to your business needs.",
+        description: "We design and develop high-performing, responsive websites that are visually compelling, user-friendly and optimized for conversion.",
         link: "#"
     },
     {
