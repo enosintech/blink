@@ -79,11 +79,15 @@ const Work = () => {
                 </div>
             ))}
           </div>
-          <p className='pt-24 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium text-justify'>Websites that dont just exist, they perform. Explore the digital experiences we have built to engage users and drive results with this video uploaded:</p>
-          <div className="w-full h-[280px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[90svh] overflow-hidden rounded-lg border border-accent relative mt-5">
-            <video controls playsInline preload='metadata' className='w-full h-full object-cover'>
-              <source src="/videos/blink-sites.mp4" type="video/mp4" />
-            </video>
+          <div className="w-full h-[380px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[90svh] overflow-hidden rounded-lg border border-accent relative mt-5 bg-black">
+            <div className='w-full h-[25%] lg:h-[20%] xl:h-[10%]'>
+              <p className='my-5 px-5 text-sm sm:text-lg lg:text-xl xl:text-2xl font-normal text-justify'>Websites that dont just exist, they perform. Explore the digital experiences we have built to engage users and drive results</p>
+            </div>
+            <div className='w-full h-[75%] lg:h-[80%] xl:h-[90%]'>
+              <video controls playsInline preload='metadata' className='w-full h-full object-cover'>
+                <source src="/videos/blink-sites.mp4" type="video/mp4" />
+              </video>
+            </div>
           </div>
         </div>
       </div>
