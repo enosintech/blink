@@ -40,7 +40,7 @@ const Work = () => {
         <p className='pt-24 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-medium text-justify mt-10'>At Blink, we create bold, data-driven marketing strategies that captivate audiences and drive real results. From eye-catching campaigns to seamless brand experiences, our work speaks for itself. Explore our latest projects and see how we turn ideas into impact.</p>
         <div className="mt-20">
           <p className='font-bold text-lg sm:text-xl lg:text-2xl'>Work Showcase</p>
-          <div className='w-full flex flex-wrap gap-4 mt-8 relative'>
+          <div className='w-full flex justify-between flex-wrap gap-4 mt-8 relative'>
             {work.map((work) => (
                 <div key={work.name} className="pb-4 overflow-hidden w-full lg:w-[48%] 2xl:w-[32%] bg-black border relative border-accent rounded-md group">
 
