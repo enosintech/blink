@@ -123,11 +123,6 @@ export const team = [
         position: "Client Strategy Associate",
     },
     {
-        image: "/images/TK.webp",
-        name: "Emmelia Thokozile",
-        position: "Digital and Strategy Support",
-    },
-    {
         image: "/images/Titan.webp",
         name: "Titan C. Chibwe",
         position: "Graphics Designer & Illustrator",
