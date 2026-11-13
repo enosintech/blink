@@ -157,11 +157,6 @@ export const team = [
         name: "Mwangelwa Kamwi",
         position: "Copywriter",
     },
-    {
-        image: "/images/Kim.webp",
-        name: "Kimberly Wayanika",
-        position: "Digital and Strategy Support",
-    },
 ]
 
 export const officeImgs = [
